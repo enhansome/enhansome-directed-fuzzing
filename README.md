@@ -1,1 +1,1223 @@
-# enhansome-directed-fuzzing
+# awesome-directed-fuzzing with stars
+
+Directed Fuzzing seems to be a current hot research topic. This repository aims to provide a curated list of research papers focusing on directed greybox fuzzing (see more [directed whitebox fuzzing](./whitebox.md) and [miscellaneous](./misc.md)).
+
+***
+
+### \[CCS'17] Directed Greybox Fuzzing
+
+[\[paper\]](https://mboehme.github.io/paper/CCS17.pdf) [\[project\]](https://github.com/aflgo) [\[slides\]](https://www.slideshare.net/mboehme/aflgo-directed-greybox-fuzzing) [\[talk\]](https://www.youtube.com/watch?v=jiECNix0HuQ)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Existing Greybox Fuzzers (GF) cannot be effectively directed, for instance, towards problematic changes or patches, towards critical system calls or dangerous locations, or towards functions in the stacktrace of a reported vulnerability that we wish to reproduce. In this paper, we introduce Directed Greybox Fuzzing (DGF) which generates inputs with the objective of reaching a given set of target program locations efficiently. We develop and evaluate a simulated annealing-based power schedule that gradually assigns more energy to seeds that are closer to the target locations while reducing energy for seeds that are further away. Experiments with our implementation AFLGo demonstrate that DGF outperforms both directed symbolic-execution-based whitebox fuzzing and undirected greybox fuzzing. We show applications of DGF to patch testing and crash reproduction, and discuss the integration of AFLGo into Google’s continuous fuzzing platform OSS-Fuzz. Due
+to its directedness, AFLGo could find 39 bugs in several well-fuzzed, security-critical projects like LibXML2. 17 CVEs were assigned.
+</details>
+
+***
+
+### \[CCS'18] Hawkeye: Towards a Desired Directed Grey-box Fuzzer
+
+[\[paper\]](https://hongxuchen.github.io/pdf/hawkeye.pdf) [\[project\]](https://sites.google.com/view/fot-the-fuzzer/DGF?authuser=0) [\[slides\]](https://hongxuchen.github.io/pdf/hawkeye-slides.pdf) [\[talk\]](https://www.youtube.com/watch?v=BSPj7GAQt5U\&list=PLn0nrSd4xjjbyUeai0oevMrT8_IwnBo4R\&index=7)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Grey-box fuzzing is a practically effective approach to test realworld programs. However, most existing grey-box fuzzers lack directedness, i.e. the capability of executing towards user-specified target sites in the program. To emphasize existing challenges in directed fuzzing, we propose Hawkeye to feature four desired properties of directed grey-box fuzzers. Owing to a novel static analysis on the program under test and the target sites, Hawkeye precisely collects the information such as the call graph, function and basic block level distances to the targets. During fuzzing, Hawkeye evaluates exercised seeds based on both static information and the execution traces to generate the dynamic metrics, which are then used for seed prioritization, power scheduling and adaptive mutating.
+These strategies help Hawkeye to achieve better directedness and gravitate towards the target sites. We implemented Hawkeye as a fuzzing framework and evaluated it on various real-world programs under different scenarios. The experimental results showed that Hawkeye can reach the target sites and reproduce the crashes much faster than state-of-the-art grey-box fuzzers such as AFL and AFLGo. Specially, Hawkeye can reduce the time to exposure for certain vulnerabilities from about 3.5 hours to 0.5 hour. By now, Hawkeye has detected more than 41 previously unknown crashes in projects such as Oniguruma, MJS with the target sites provided by vulnerability prediction tools; all these crashes are confirmed and 15 of them have been assigned CVE IDs.
+</details>
+
+***
+
+### \[DSN'19] 1dVul: Discovering 1-day Vulnerabilities through Binary Patches
+
+[\[paper\]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8809537)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Discovering 1-day vulnerabilities in binary patches is worthwhile but challenging. One of the key difficulties lies in generating inputs that could reach the patched code snippet while making the unpatched program crash. In this paper, we named it as a target-oriented input generation problem or a ToIG problem for clarity. Existing solutions for the ToIG problem either suffer from path explosion or may get stuck by complex checks. In the paper, we present a new solution to improve the efficiency of ToIG which leverage a combination of a distance-based directed fuzzing mechanism and a dominator-based directed symbolic execution mechanism. To demonstrate its efficiency, we design and implement 1dVul, a tool for 1-day vulnerability discovering at binary-level, based on the solution. Demonstrations show that 1dVul has successfully generated inputs for 130 targets from a total of 209 patch targets identified from applications in DARPA Cyber Grant Challenge, while the state-of-the-art solutions AFLGo and Driller can only reach 99 and 107 targets, respectively, within the same limited time budget. Further-more, 1dVul runs 2.2X and 3.6X faster than AFLGo and Driller, respectively, and has confirmed 96 vulnerabilities from the unpatched programs.
+</details>
+
+***
+
+### \[ICPC'19] Sequence coverage directed greybox fuzzing
+
+[\[paper\]](https://dl.acm.org/doi/10.1109/ICPC.2019.00044)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Existing directed fuzzers are not efficient enough. Directed symbolic-execution-based whitebox fuzzers, e.g. BugRedux, spend lots of time on heavyweight program analysis and constraints solving at runtime. Directed greybox fuzzers, such as AFLGo, perform well at runtime, but considerable calculation during instrumentation phase hinders the overall performance.
+
+In this paper, we propose Sequence-coverage Directed Fuzzing (SCDF), a lightweight directed fuzzing technique which explores towards the user-specified program statements efficiently. Given a set of target statement sequences of a program, SCDF aims to generate inputs that can reach the statements in each sequence in order and trigger bugs in the program. Moreover, we present a novel energy schedule algorithm, which adjusts on demand a seed's energy according to its ability of covering the given statement sequences calculated on demand. We implement the technique in a tool LOLLY in order to achieve efficiency both at instrumentation time and at runtime. Experiments on several real-world software projects demonstrate that LOLLY outperforms two well-established tools on efficiency and effectiveness, i.e., AFLGo-a directed greybox fuzzer and BugRedux-a directed symbolic-execution-based whitebox fuzzer.
+
+</details>
+
+***
+
+### \[CCS'19] Poster: Directed Hybrid Fuzzing on Binary Code
+
+[\[paper\]](https://dl.acm.org/doi/abs/10.1145/3319535.3363275)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Hybrid fuzzers combine both fuzzing and concolic execution with the wish that the fuzzer will quickly explore input spaces and the concolic execution will solve the complex path conditions. However, existing hybrid fuzzers such as Driller cannot be effectively directed, for instance, towards unsafe system calls or suspicious locations, or towards functions in the call stack of a reported vulnerability that we wish to reproduce. In this poster, we propose DrillerGO, a directed hybrid fuzzing system, to mitigate this problem. It mainly consists of a static analysis and a dynamic analysis module. In the static analysis, it searches suspicious API call strings in the recovered control flow graph (CFG). After targeting some suspicious API call lines, it runs the concolic execution along with path guiding. The path guiding is helped by backward pathfinding, which is a novel technique to find paths backward from the target to the start of main(). Also, we will show that DrillerGo can find the crashes faster than Driller through experimental results.
+</details>
+
+***
+
+### \[ICSE'19] LEOPARD: Identifying Vulnerable Code for Vulnerability Assessment through Program Metrics
+
+[\[paper\]](https://arxiv.org/pdf/1901.11479.pdf) [\[project\]](https://sites.google.com/site/leopardsite2017/)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Identifying potentially vulnerable locations in a code base is critical as a pre-step for effective vulnerability assessment; i.e., it can greatly help security experts put their time and effort to where it is needed most. Metric-based and pattern-based methods have been presented for identifying vulnerable code. The former relies on machine learning and cannot work well due to the severe imbalance between non-vulnerable and vulnerable code or lack of features to characterize vulnerabilities. The latter needs the prior knowledge of known vulnerabilities and can only identify similar but not new types of vulnerabilities.
+
+In this paper, we propose and implement a generic, lightweight and extensible framework, LEOPARD, to identify potentially vulnerable functions through program metrics. LEOPARD requires no prior knowledge about known vulnerabilities. It has two steps by combining two sets of systematically derived metrics. First, it
+uses complexity metrics to group the functions in a target application into a set of bins. Then, it uses vulnerability metrics to rank the functions in each bin and identifies the top ones as potentially vulnerable. Our experimental results on 11 real-world projects have demonstrated that, LEOPARD can cover 74.0% of vulnerable functions by identifying 20% of functions as vulnerable and outperform machine learning-based and static analysis-based techniques. We further propose three applications of LEOPARD for manual code review and fuzzing, through which we discovered 22 new bugs in real applications like PHP, radare2 and FFmpeg, and eight of them are new vulnerabilities.
+
+</details>
+
+***
+
+### \[arxiv'19] V-Fuzz: Vulnerability-Oriented Evolutionary Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/1901.01142.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Fuzzing is a technique of finding bugs by executing a software recurrently with a large number of abnormal inputs. Most of the existing fuzzers consider all parts of a software equally, and pay too much attention on how to improve the code coverage. It is inefficient as the vulnerable code only takes a tiny fraction of the entire code. In this paper, we design and implement a vulnerability-oriented evolutionary fuzzing prototype named V-Fuzz, which aims to find bugs efficiently and quickly in a limited time. V-Fuzz consists of two main components: a neural network-based vulnerability prediction model and a vulnerability-oriented evolutionary fuzzer. Given a binary program to V-Fuzz, the vulnerability prediction model will give a prior estimation on which parts of the software are more likely to be vulnerable. Then, the fuzzer leverages an evolutionary algorithm to generate inputs which tend to arrive at the vulnerable locations, guided by the vulnerability prediction result. Experimental results demonstrate that V-Fuzz can find bugs more efficiently than state-of-the-art fuzzers. Moreover, V-Fuzz has discovered 10 CVEs, and 3 of them are newly discovered. We reported the new CVEs, and they have been confirmed and fixed.
+</details>
+
+***
+
+### \[SANER'20] Sequence directed hybrid fuzzing
+
+[\[paper\]](./sequence_hybrid.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Existing directed grey-box fuzzers are effective compared with coverage-based fuzzers. However, they fail to achieve a balance between effectiveness and efficiency, and it is difficult to cover complex paths due to random mutation. To mitigate the issue, we propose a novel approach, sequence directed hybrid fuzzing (SDHF), which leverages a sequence-directed strategy and concolic execution technique to enhance the effectiveness of fuzzing. Given a set of target statement sequences of a program, SDHF aims to generate inputs that can reach the statements in each sequence in order and trigger potential bugs in the program. We implement the proposed approach in a tool called Berry and evaluate its capability on crash reproduction, true positive verification, and vulnerability detection. Experimental results demonstrate that Berry outperforms four state-of-the-art fuzzers, including directed fuzzers BugRedux, AFLGo and Lolly, and undirected hybrid fuzzer QSYM. Moreover, Berry found 7 new vulnerabilities in real-world programs such as UPX and GNU Libextractor, and 3 new CVEs were assigned.
+</details>
+
+***
+
+### \[ICSE'20] Targeted Greybox Fuzzing with Static Lookahead Analysis
+
+[\[paper\]](https://mariachris.github.io/Pubs/ICSE-2020.pdf) [\[talk\]](https://www.youtube.com/watch?v=86vvChVr9bQ)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Automatic test generation typically aims to generate inputs that explore new paths in the program under test in order to find bugs. Existing work has, therefore, focused on guiding the exploration toward program parts that are more likely to contain bugs by using an offline static analysis. In this paper, we introduce a novel technique for targeted greybox fuzzing using an online static analysis that guides the fuzzer toward a set of target locations, for instance, located in recently modified parts of the program. This is achieved by first semantically analyzing each program path that is explored by an input in the fuzzer’s test suite. The results of this analysis are then used to control the fuzzer’s specialized power schedule, which determines how often to fuzz inputs from the test suite. We implemented our technique by extending a state-of-the-art, industrial fuzzer for Ethereum smart contracts and evaluate its effectiveness on 27 real-world benchmarks. Using an online analysis is particularly suitable for the domain of smart contracts since it does not require any code instrumentation-adding instrumentation to contracts changes their semantics. Our experiments show that targeted fuzzing significantly outperforms standard greybox fuzzing for reaching 83% of the challenging target locations (up to 14x of median speed-up).
+</details>
+
+***
+
+### \[Usenix'20] FuzzGuard: Filtering out Unreachable Inputs in Directed Grey-box Fuzzing through Deep Learning
+
+[\[paper\]](http://kaichen.org/paper/conference/sec20summer-final343.pdf) [\[project\]](https://github.com/zongpy/FuzzGuard) ⭐ 32 | 🐛 8 | 📅 2020-02-28 [\[slides\]](https://www.usenix.org/system/files/sec20_slides_zong.pdf) [\[talk\]](https://www.usenix.org/conference/usenixsecurity20/presentation/zong)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Recently, directed grey-box fuzzing (DGF) becomes popular in the field of software testing. Different from coverage-based fuzzing whose goal is to increase code coverage for triggering more bugs, DGF is designed to check whether a piece of potentially buggy code (e.g., string operations) really contains a bug. Ideally, all the inputs generated by DGF should reach the target buggy code until triggering the bug. It is a waste of time when executing with unreachable inputs. Unfortunately, in real situations, large numbers of the generated inputs cannot let a program execute to the target, greatly impacting the efficiency of fuzzing, especially when the buggy code is embedded in the code guarded by various constraints. 
+
+In this paper, we propose a deep-learning-based approach to predict the reachability of inputs (i.e., miss the target or not) before executing the target program, helping DGF filtering out the unreachable ones to boost the performance of fuzzing. To apply deep learning with DGF, we design a suite of new techniques (e.g., step-forwarding approach, representative data selection) to solve the problems of unbalanced labeled data and insufficient time in the training process. Further, we implement the proposed approach called FuzzGuard and equip it
+with the state-of-the-art DGF (e.g., AFLGo). Evaluations on 45 real vulnerabilities show that FuzzGuard boosts the fuzzing efficiency of the vanilla AFLGo up to 17.1×. Finally, to understand the key features learned by FuzzGuard, we illustrate their connection with the constraints in the programs
+
+</details>
+
+***
+
+### \[Usenix'20] ParmeSan: Sanitizer-guided Greybox Fuzzing
+
+[\[paper\]](https://download.vusec.net/papers/parmesan_sec20.pdf) [\[project\]](https://github.com/vusec/parmesan) ⭐ 177 | 🐛 2 | 🌐 C++ | 📅 2024-04-19 [\[slides\]](https://www.usenix.org/system/files/sec20_slides_osterlund.pdf) [\[talk\]](https://www.usenix.org/conference/usenixsecurity20/presentation/osterlund)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+One of the key questions when fuzzing is where to look for vulnerabilities. Coverage-guided fuzzers indiscriminately optimize for covering as much code as possible given that bug coverage often correlates with code coverage. Since code coverage overapproximates bug coverage, this approach is less than ideal and may lead to non-trivial timeto-exposure (TTE) of bugs. Directed fuzzers try to address this problem by directing the fuzzer to a basic block with a potential vulnerability. This approach can greatly reduce the TTE for a specific bug, but such special-purpose fuzzers can then greatly underapproximate overall bug coverage.
+
+In this paper, we present sanitizer-guided fuzzing, a new design point in this space that specifically optimizes for bug coverage. For this purpose, we make the key observation that while the instrumentation performed by existing software sanitizers are regularly used for detecting fuzzer-induced error conditions, they can further serve as a generic and effective mechanism to identify interesting basic blocks for guiding fuzzers. We present the design and implementation of
+ParmeSan, a new sanitizer-guided fuzzer that builds on this observation. We show that ParmeSan greatly reduces the TTE of real-world bugs, and finds bugs 37% faster than existing state-of-the-art coverage-based fuzzers (Angora) and 288% faster than directed fuzzers (AFLGo), while still covering the same set of bugs.
+
+</details>
+
+***
+
+### \[RAID'20] Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities
+
+[\[paper\]](https://arxiv.org/pdf/2002.10751.pdf) [\[project\]](https://github.com/strongcourage/uafuzz) ⭐ 351 | 🐛 3 | 🌐 C | 📅 2023-09-25
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing focuses on automatically testing specific parts of the code by taking advantage of additional information such as (partial) bug stack trace, patches or risky operations. Key applications include bug reproduction, patch testing and static analysis report verification. Although directed fuzzing has received a lot of attention recently, hard-to-detect vulnerabilities such as Use-After-Free (UAF) are still not well addressed, especially at the binary level. We propose UAFuzz, the first (binary-level) directed greybox fuzzer dedicated to UAF bugs. The technique features a fuzzing engine tailored to UAF specifics, a lightweight code instrumentation and an efficient bug triage step. Experimental evaluation for bug reproduction on real cases demonstrates that UAFuzz
+significantly outperforms state-of-the-art directed fuzzers in terms of fault detection rate, time to exposure and bug triaging. UAFUZZ has also been proven effective in patch testing, leading to the discovery of 30 new bugs (7 CVEs) in programs such as Perl, GPAC and GNU Patch. Finally, we provide to
+the community a large fuzzing benchmark dedicated to UAF, built on both real codes and real bugs.
+</details>
+
+***
+
+### \[arxiv'20] TOFU: Target-Oriented FUzzer
+
+[\[paper\]](https://arxiv.org/pdf/2004.14375.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Program fuzzing—providing randomly constructed inputs to a computer program—has proved to be a powerful way to uncover bugs, find security vulnerabilities, and generate test inputs that increase code coverage. In many applications, however, one is interested in a target-oriented approach—one wants to find an input that causes the program to reach a specific target point in the program. We have created TOFU (for Target-Oriented FUzzer) to address the directed fuzzing problem. TOFU’s search is biased according to a distance metric that scores each input according to how close the input’s execution trace gets to the target locations. TOFU is also input-structure aware (i.e., the search makes use of a specification of a superset of the program’s allowed inputs). Our experiments on xmllint show that TOFU is 28% faster than AFLGo, while reaching 45% more targets. Moreover, both distanceguided search and exploitation of knowledge of the input structure
+contribute significantly to TOFU’s performance.
+</details>
+
+***
+
+### \[arxiv'20] SoK: The Progress, Challenges, and Perspectives of Directed Greybox Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2005.11907.pdf)
+
+**Tags:** survey
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Greybox fuzzing has been the most scalable an practical approach to software testing. Most greybox fuzzing tools are coverage guided as code coverage is strongly correlated with bug coverage. However, since most covered codes may not contain bugs, blindly extending code coverage is less efficient, especially for corner cases. Unlike coverage-based fuzzers who extend the code coverage in an undirected manner, a directed fuzzer spends most of its time budget on reaching specific target locations (e.g., the bug-prone zone) without wasting resources stressing unrelated parts. Thus, directed greybox fuzzing is particularly suitable for
+scenarios such as patch testing, bug reproduction, and special bug hunting. In this paper, we conduct the first in-depth study of directed greybox fuzzing. We investigate 28 state-of-the-art fuzzers (82% are published after 2019) closely related to DGF, which have various directed types and optimization techniques.
+Based on the feature of DGF, we extract 15 metrics to conduct a thorough assessment of the collected tools and systemize the knowledge of this field. Finally, we summarize the challenges and provide perspectives of this field, aiming to facilitate and boost future research on this topic
+</details>
+
+***
+
+### \[PRDC'20] GTFuzz: Guard Token Directed Grey-Box Fuzzing
+
+[\[paper\]](https://ieeexplore.ieee.org/document/9320425)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzing is an effective technique to find bugs in programs with the guidance of user-specified target locations. However, it can hardly reach a target location guarded by certain syntax tokens (Guard Tokens for short), which is often seen in programs with string operations or grammar/lexical parsing. Only the test inputs containing Guard Tokens are likely to reach the target locations, which challenges the effectiveness of mutation-based fuzzers. In this paper, a Guard Token directed grey-box fuzzer called GTFuzz is presented, which extracts Guard Tokens according to the target locations first and then exploits them to direct the fuzzing. Specifically, to ensure the new test cases generated from mutations contain Guard Tokens, new strategies of seed prioritization, dictionary generation, and seed mutation are also proposed, so as to make them likely to reach the target locations. Experiments on real-world software show that GTFuzz can reach the target locations, reproduce crashes, and expose bugs more efficiently than the state-of-the-art grey-box fuzzers (i.e., AFL, AFLGO and FairFuzz). Moreover, GTFuzz identified 23 previously undiscovered bugs in LibXML2 and MJS.
+</details>
+
+***
+
+### \[arxiv'20] DeFuzz: Deep Learning Guided Directed Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2010.12149.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Fuzzing is one of the most effective technique to identify potential software vulnerabilities. Most of the fuzzers aim to improve the code coverage, and there is lack of directedness (e.g., fuzz the specified path in a software). In this paper, we proposed a deep learning (DL) guided directed fuzzing for software vulnerability detection, named DeFuzz. DeFuzz includes two main schemes: (1) we employ a pre-trained DL prediction model to identify the potentially vulnerable functions and the locations (i.e., vulnerable addresses). Precisely, we employ Bidirectional-LSTM (BiLSTM) to identify attention words, and the vulnerabilities are associated with these attention words in functions. (2) then we employ directly fuzzing to fuzz the potential vulnerabilities by generating inputs that tend to arrive the predicted locations. To evaluate the effectiveness and practical of the proposed DeFuzz technique, we have conducted experiments on real-world data sets. Experimental results show that our DeFuzz can discover coverage more and faster than AFL. Moreover, DeFuzz exposes 43 more bugs than AFL on real-world applications.Fuzzing is one of the most effective technique to identify potential software vulnerabilities. Most of the fuzzers aim to improve the code coverage, and there is lack of directedness (e.g., fuzz the specified path in a software). In this paper, we proposed a deep learning (DL) guided directed fuzzing for software vulnerability detection, named DeFuzz. DeFuzz includes two main schemes: (1) we employ a pre-trained DL prediction model to identify the potentially vulnerable functions and the locations (i.e., vulnerable addresses). Precisely, we employ Bidirectional-LSTM (BiLSTM) to identify attention words, and the vulnerabilities are associated with these attention words in functions. (2) then we employ directly fuzzing to fuzz the potential vulnerabilities by generating inputs that tend to arrive the predicted locations. To evaluate the effectiveness and practical of the proposed DeFuzz technique, we have conducted experiments on real-world data sets. Experimental results show that our DeFuzz can discover coverage more and faster than AFL. Moreover, DeFuzz exposes 43 more bugs than AFL on real-world applications.
+</details>
+
+***
+
+### \[Appl.Sci.'21] Constructing More Complete Control Flow Graphs Utilizing Directed Gray-Box Fuzzing
+
+[\[paper\]](http://scholar.google.com/scholar_url?url=https://www.mdpi.com/2076-3417/11/3/1351/pdf\&hl=en\&sa=X\&d=711092365885842228\&ei=xtEhYLeDEomImQGchIPoBg\&scisig=AAGBfm0RiHu5HK9O-eFeXC2IQVAB_j7uuQ\&nossl=1\&oi=scholaralrt\&hist=PwFTpwMAAAAJ:9999838452572663757:AAGBfm1XQkPGAWqsnVNmnoCjOFuDv3QJWQ\&html=)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Control Flow Graphs (CFGs) provide fundamental data for many program analyses, such as malware analysis, vulnerability detection, code similarity analysis, etc. Existing techniques for constructing control flow graphs include static, dynamic, and hybrid analysis, which each having their own advantages and disadvantages. However, due to the difficulty of resolving indirect jump relations, the existing techniques are limited in completeness. In this paper, we propose a practical
+technique that applies static analysis and dynamic analysis to construct more complete control flow graphs. The main innovation of our approach is to adopt directed gray-box fuzzing (DGF) instead of coverage-based gray-box fuzzing (CGF) used in the existing approach to generate test cases that can exercise indirect jumps. We first employ a static analysis to construct the static CFGs without indirect jump relations. Then, we utilize directed gray-box fuzzing to generate test cases and resolve indirect jump relations by monitoring the execution traces of these test cases. Finally, we combine the static CFGs with indirect jump relations to construct more complete CFGs. In addition, we also propose an iterative feedback mechanism to further improve the completeness of CFGs. We have implemented
+our technique in a prototype and evaluated it through comparing with the existing approaches on eight benchmarks. The results show that our prototype can resolve more indirect jump relations and construct more complete CFGs than existing approaches.
+</details>
+
+***
+
+### \[DAC'21] DirectFuzz: Automated Test Generation for RTL Designs using Directed Graybox Fuzzing
+
+[\[paper\]](https://ieeexplore.ieee.org/document/9586289)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+A critical challenge in RTL verification is to generate effective test inputs. Recently, RFUZZ proposed to use an automated software testing technique, namely Graybox Fuzzing, to effectively generate test inputs to maximize the coverage of the whole hardware design. For a scenario where a tiny fraction of a large hardware design needs to be tested, the RFUZZ approach is extremely time consuming. In this work, we present DirectFuzz, a directed test generation mechanism. DirectFuzz uses Directed Graybox Fuzzing to generate test inputs targeted towards a module instance, which enables targeted testing. Our experimental results show that DirectFuzz covers the target sites up to 17.5× faster (2.23× on average) than RFUZZ on a variety of RTL designs.
+</details>
+
+***
+
+### \[CCS'21] Regression Greybox Fuzzing
+
+[\[paper\]](https://mboehme.github.io/paper/CCS21.pdf) [\[project\]](https://github.com/aflchurn/aflchurn) ⭐ 67 | 🐛 0 | 🌐 Jupyter Notebook | 📅 2022-05-19 [\[dataset\]](https://www.kaggle.com/marcelbhme/aflchurn-ccs21/code)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+What you change is what you fuzz! In an empirical study of all fuzzer-generated bug reports in OSSFuzz, we found that four in every five bugs have been introduced by recent code changes. That is, 77% of 23k bugs are regressions. For a newly added project, there is usually an initial burst of new reports at 2-3 bugs per day. However, after that initial burst, and after weeding out most of the existing bugs, we still get a constant rate of 3-4 bug reports per week. The constant rate can only be explained by an increasing regression rate. Indeed, the probability that a reported bug is a regression (i.e., we could identify the bug-introducing commit) increases from 20% for the first bug to 92% after a few hundred bug reports.
+In this paper, we introduce regression greybox fuzzing (RGF) a fuzzing approach that focuses on code that has changed more recently or more often. However, for any active software project, it is impractical to fuzz sufficiently each code commit individually. Instead, we propose to fuzz all commits simultaneously, but code present in more (recent) commits with higher priority. We observe that most code is never changed and relatively old. So, we identify means to strengthen the signal from executed code-of-interest. We also extend the concept of power schedules to the bytes of a seed and introduce Ant Colony Optimization to assign more energy to those bytes which promise to generate more interesting inputs.
+Our large-scale fuzzing experiment demonstrates the validity of our main hypothesis and the efficiency of regression greybox fuzzing. We conducted our experiments in a reproducible manner within Fuzzbench, an extensible fuzzer evaluation platform. Our experiments involved 3+ CPU-years worth of fuzzing campaigns and 20 bugs in 15 open-source C programs available on OSSFuzz.
+</details>
+
+***
+
+### \[ICAIS'21] KCFuzz: Directed Fuzzing Based on Keypoint Coverage
+
+[\[paper\]](https://link.springer.com/chapter/10.1007/978-3-030-78609-0_27)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing, as an efficient method to focus on a specific set of targets in the program, often works better than random fuzzing when combined with a researcher’s empirical judgment. However, the current directed fuzzing work is not efficient enough. In previous studies, some have generated closer seed inputs by guiding the execution path through the distance from the target region, but the distance guided algorithm is less robust. Some studies used selective symbolic execution for directed testing to alleviate the path explosion problem, but it brings a higher false-positive rate. In this paper, we propose a keypoint coverage-based fuzzing (KCFuzz) method, which extracts the keypoint list using a control flow graph, obtains the keypoint list coverage information through runtime instrumentation, calculates the test priority of the seeds based on the overall coverage and keypoint coverage using an energy scheduling algorithm, and continuously generates test inputs closer to the target according to the specified mutation strategy. On this basis, a hybrid testing framework is implemented, using keypoint coverage directed fuzzing to generate a seed queue covering keypoints, using offspring generation strategies and hybrid execution technology, and further exploring the new state of the program according to changes in overall and keypoint coverage. The experimental results show that the KCFuzz method can efficiently induce the generation of seed queues to reach the target region, and at the same time, the depth and validity of the exploration paths are higher than those of the most advanced directed fuzzing methods such as AFLGo.
+</details>
+
+***
+
+### \[Usenix'21] Constraint-guided Directed Greybox Fuzzing
+
+[\[paper\]](https://www.usenix.org/system/files/sec21fall-lee-gwangmu.pdf) [\[slides\]](https://www.usenix.org/system/files/sec21_slides_lee-gwangmu.pdf) [\[talk\]](https://www.youtube.com/watch?v=v3PUtjGC2_g)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed greybox fuzzing is an augmented fuzzing technique intended for the targeted usages such as crash reproduction and proof-of-concept generation, which gives directedness to fuzzing by driving the seeds toward the designated program locations called target sites. However, we find that directed greybox fuzzing can still suffer from the long fuzzing time before exposing the targeted crash, because it does not consider the ordered target sites and the data conditions. This paper presents constraint-guided directed greybox fuzzing that aims to satisfy a sequence of constraints rather than merely reaching a set of target sites. Constraint-guided grey-box fuzzing defines a constraint as the combination of a target site and the data conditions, and drives the seeds to satisfy the constraints in the specified order. We automatically generate the constraints with seven types of crash dumps and four types of patch changelogs, and evaluate the prototype system CAFL against the representative directed greybox fuzzing system AFLGo with 47 real-world crashes and 12 patch changelogs. The evaluation shows CAFL outperforms AFLGo by 2.88x for crash reproduction, and better performs in PoC generation as the constraints get explicit.
+</details>
+
+***
+
+### \[ASE'21 NIER] Towards Systematic and Dynamic Task Allocation for Collaborative Parallel Fuzzing
+
+[\[paper\]](https://thuanpv.github.io/publications/AFLTeam-ASE21-NIER.pdf) [\[project\]](https://github.com/MelbourneFuzzingHub/aflteam) ⭐ 75 | 🐛 2 | 🌐 Python | 📅 2022-09-05
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Parallel coverage-guided greybox fuzzing is the most common setup for vulnerability discovery at scale. However, so far it has received little attention from the research community compared to single-mode fuzzing, leaving open several problems particularly in its task allocation strategies. Current approaches focus on managing micro tasks, at the seed input level, and their task division algorithms are either ad-hoc or static. In this paper, we leverage research on graph partitioning and search algorithms to propose a systematic and dynamic task allocation solution that works at the macro-task level. First, we design an attributed graph to capture both the program structures (e.g., program call graph) and fuzzing information (e.g., branch hit counts, bug discovery probability). Second, our graph partitioning algorithm divides the global program search space into sub-search-spaces. Finally our search algorithm prioritizes these sub-search-spaces (i.e., tasks) and explores them to maximize code coverage and number of bugs found. We implemented a prototype tool called AFLTeam. In our preliminary experiments on well-tested benchmarks, AFLTeam achieved higher code coverage (up to 16.4% branch coverage improvement) compared to the default parallel mode of AFL and discovered 2 zero-day bugs in FFmpeg and JasPer toolkits.
+</details>
+
+***
+
+### \[arxiv'21] Finding Counterexamples of Temporal Logic properties in Software Implementations via Greybox Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2109.02312.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Software model checking is a verification technique which is widely used for checking temporal properties of software systems. Even though it is a property verification technique, its common usage in practice is in "bug finding", that is, finding violations of temporal properties. Motivated by this observation and leveraging the recent progress in fuzzing, we build a greybox fuzzing framework to find violations of Linear-time Temporal Logic (LTL) properties.
+Our framework takes as input a sequential program written in C/C++, and an LTL property. It finds violations, or counterexample traces, of the LTL property in stateful software systems; however, it does not achieve verification. Our work substantially extends directed greybox fuzzing to witness arbitrarily complex event or-derings. We note that existing directed greybox fuzzing approaches are limited to witnessing reaching a location or witnessing simple event orderings like use-after-free. At the same time, compared to model checkers, our approach finds the counterexamples faster, thereby finding more counterexamples within a given time budget.
+Our LTL-Fuzzer tool, built on top of the AFL fuzzer, is shown to be effective in detecting bugs in well-known protocol implementations, such as OpenSSL and Telnet. We use LTL-Fuzzer to reproduce known vulnerabilities (CVEs), to find 15 zero-day bugs by checking properties extracted from RFCs (for which 10 CVEs have been assigned), and to find violations of both safety as well as liveness properties in real-world protocol implementations. Our work represents a practical advance over software model checkers — while simultaneously representing a conceptual advance over existing greybox fuzzers. Our work thus provides a starting point for understanding the unexplored synergies between software model checking and greybox fuzzing.
+</details>
+
+***
+
+### \[S\&P'22] BEACON : Directed Grey-Box Fuzzing with Provable Path Pruning
+
+[\[paper\]](https://qingkaishi.github.io/public_pdfs/SP22.pdf) [\[project\]](https://hub.docker.com/r/yguoaz/beacon)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Unlike coverage-based fuzzing that gives equal attention to every part of a code, directed fuzzing aims to direct a fuzzer to a specific target in the code, e.g., the code with potential vulnerabilities. Despite much progress, we observe that existing directed fuzzers are still not efficient as they often symbolically or concretely execute a lot of program paths that cannot reach the target code. They thus waste a lot of computational resources. This paper presents BEACON, which can effectively direct a grey-box fuzzer in the sea of paths in a provable manner. That is, assisted by a lightweight static analysis that computes abstracted preconditions for reaching the target, we can prune 82.94% of the executing paths at runtime with negligible analysis overhead (<5h) but with the guarantee that the pruned paths must be spurious with respect to the target. We have implemented our approach, BEACON, and compared it to five state-of-the-art (directed) fuzzers in the application scenario of vulnerability reproduction. The evaluation results demonstrate that BEACON is 11.50x faster on average than existing directed grey-box fuzzers and it can also improve the speed of the conventional coverage-guided fuzzers, AFL, AFL++, and Mopt, to reproduce specific bugs with 6.31x ,11.86x, and 10.92x speedup, respectively. More interestingly, when used to test the vulnerability patches, BEACON found 14 incomplete fixes of existing CVE-identified vulnerabilities and 8 new bugs while 10 of them are exploitable with new CVE ids assigned.
+</details>
+
+***
+
+### \[ICSE'22] WindRanger: A Directed Greybox Fuzzer driven by Deviation Basic Block
+
+[\[paper\]](https://drive.google.com/file/d/1VTlFoOE5uUzL7_b5OwGWCEcMDlNC_SBF/view) [\[project\]](https://sites.google.com/view/windranger-directed-fuzzing/home?authuser=0) [\[talk\]](https://www.youtube.com/watch?v=MUmaI4evzc4)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzing (DGF) is a security testing technique that aims to steer the fuzzer towards predefined target sites in the program. To gain directness, DGF prioritizes the seeds whose execution traces are closer to the target sites. Therefore, evaluating the distance between the execution trace of a seed and the target sites (aka, the seed distance) is important for DGF. The first directed grey-box fuzzer, AFLGo, uses an approach of calculating the basic block level distances during static analysis and accumulating the distances of the executed basic blocks to compute the seed distance. Following AFLGo, most of the existing state-of-the-art DGF techniques use all the basic blocks on the execution trace and only the control flow information for seed distance calculation. However, not every basic block is equally important and there are certain basic blocks where the execution trace starts to deviate from the target sites (aka, deviation basic blocks).
+
+In this paper, we propose a technique called WindRanger which leverages deviation basic blocks to facilitate DGF. To identify the deviation basic blocks, WindRanger applies both static reachability analysis and dynamic filtering. To conduct directed fuzzing, WindRanger uses the deviation basic blocks and their related data flow information for seed distance calculation, mutation, seed prioritization as well as explore-exploit scheduling. We evaluated WindRanger on 3 datasets consisting of 29 programs. The experiment results show that WindRanger outperforms AFLGo, AFL, and Fairfuzz by reaching the target sites 21%, 34%, and 37% faster and detecting the target crashes 44%, 66%, and 77% faster respectively. Moreover, we found a 0-day vulnerability with a CVE ID assigned in ffmpeg (a popular multimedia library extensively fuzzed by OSS-fuzz) with WindRanger by supplying manually identified suspect locations as the target sites.
+
+</details>
+
+***
+
+### \[ASIACCS'22] TargetFuzz: Using DARTs to Guide Directed Greybox Fuzzers
+
+[\[paper\]](https://www.honda-ri.de/pubs/pdf/4940.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Software development is a continuous and incremental process. Developers continuously improve their software in small batches rather than in one large batch. The high frequency of small batches makes it essential to use effective testing methods that detect bugs under limited testing time. To this end, researchers propose directed greybox fuzzing (DGF) which aims to generate test cases towards stressing certain target sites. Different from the coverage-based greybox fuzzing (CGF) which aims to maximize code coverage in the whole program, the goal of DGF is to cover potentially buggy code regions (e.g., a recently modified program region). While prior works improve several aspects of DGF (such as power scheduling, input prioritization, and target selection), little attention has been given to improving the seed selection process. Existing DGF tools use seed corpora mainly tailored for CGF (i.e., a set of seeds that cover different regions of the program). We observe that using CGFbased corpora limits the bug-finding capability of a directed greybox fuzzer. To mitigate this shortcoming, we propose TargetFuzz, a mechanism that provides a DGF tool with a target-oriented seed corpus. We refer to this corpus as DART corpus, which contains only 'close' seeds to the targets. This way, DART corpus guides DGF to the targets, thereby exposing bugs even under limited fuzzing time. Evaluations on 34 real bugs show that AFLGo (a state-of-theart directed greybox fuzzer), when equipped with DART corpus, finds 10 additional bugs and achieves 4.03× speedup, on average, in the time-to-exposure compared to a generic CGF-based corpus.
+</details>
+
+***
+
+### \[S\&P'22] Exploit the Last Straw That Breaks Android Systems
+
+[\[paper\]](https://yuanxzhang.github.io/paper/strawfuzzer-oakland22.pdf) [\[project\]](https://github.com/kekeLian/StrawFuzzer) ⭐ 65 | 🐛 1 | 🌐 Java | 📅 2021-08-11
+
+<details>
+  <summary>Click to see the abstract!</summary>
+The Android system services usually play a critical role in running multiple important tasks, and delivering seamless user experiences, e.g., conveniently storing user data. In this paper, we conduct the first systematic security study on the data storing process in Android system services, and consequently discover a novel class of design flaws (named Straw), which can lead to serious DoS (Denial-of-Service) attacks, e.g., permanently crashing the whole victim Android device. Then we propose a novel directed fuzzing based approach, called StrawFuzzer, to automatically vet all system services against the straw vulnerabilities. StrawFuzzer balances the tradeoff between path exploration and vulnerability exploitation. By applying StrawFuzzer on three Android systems with the latest security updates, we identified 35 unique straw vulnerabilities affecting 474 interfaces across 77 system services and successfully generated corresponding exploits, which can be used to conduct various permanent/temporary DoS attacks. We have reported our findings with suggestions for repairing the vulnerabilities to corresponding vendors. Up to now, Google has rated our vulnerability as high severity.
+</details>
+
+***
+
+### \[ICSE'22] Linear-time Temporal Logic guided Greybox Fuzzing
+
+[\[paper\]](https://abhikrc.com/pdf/ICSE22-LTLFuzz.pdf) [\[project\]](https://github.com/ltlfuzzer/LTL-Fuzzer/) ⭐ 59 | 🐛 5 | 🌐 C | 📅 2024-04-01 [\[talk\]](https://www.youtube.com/watch?v=zwAN4uNPs8M)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Software model checking as well as runtime verification are verification techniques which are widely used for checking temporal properties of software systems. Even though they are property verification techniques, their common usage in practice is in "bug finding", that is, finding violations of temporal properties. Motivated by this observation and leveraging the recent progress in fuzzing, we build a greybox fuzzing framework to find violations
+of Linear-time Temporal Logic (LTL) properties.
+
+Our framework takes as input a sequential program written in C/C++, and an LTL property. It finds violations, or counterexample traces, of the LTL property in stateful software systems; however, it does not achieve verification. Our work substantially extends directed greybox fuzzing to witness arbitrarily complex event orderings. We note that existing directed greybox fuzzing approaches are limited to witnessing reaching a location or witnessing simple event orderings like use-after-free. At the same time, compared to model checkers, our approach finds the counterexamples faster,
+thereby finding more counterexamples within a given time budget.
+
+Our LTL-Fuzzer tool, built on top of the AFL fuzzer, is shown to be effective in detecting bugs in well-known protocol implementations, such as OpenSSL and Telnet. We use LTL-Fuzzer to reproduce known vulnerabilities (CVEs), to find 15 zero-day bugs by checking properties extracted from RFCs (for which 12 CVEs have been assigned), and to find violations of both safety as well as liveness properties in real-world protocol implementations. Our work represents a practical advance over software model checkers — while simultaneously representing a conceptual advance over existing greybox fuzzers. Our work thus provides a starting point for understanding the unexplored synergies among software model checking, runtime verification and greybox fuzzing.
+
+</details>
+
+***
+
+### \[thesis] Directing greybox fuzzing to discover bugs in hardware and software - Sadullah Canakci
+
+[\[paper\]](https://open.bu.edu/bitstream/handle/2144/44702/Canakci_bu_0017E_16967.pdf?sequence=8\&isAllowed=y)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Computer systems are deeply integrated into our daily routines such as online shopping, checking emails, and posting photos on social media platforms. Unfortunately, with the wide range of functionalities and sensitive information stored in computer systems, they have become fruitful targets for attackers. Cybersecurity ventures estimate that the cost of cyber attacks will reach $10.5 trillion USD annually by 2025. Moreover, data breaches have resulted in the leakage of millions of people’s social security numbers, social media account passwords, and healthcare information. With the increasing complexity and connectivity of computer systems, the intensity and volume of cyber attacks will continue to increase. Attackers will continuously look for bugs in the systems and ways to exploit them for gaining unauthorized access or leaking sensitive information. Minimizing bugs in systems is essential to remediate security weaknesses. To this end, researchers proposed a myriad of methods to discover bugs. In the software domain, one prominent method is fuzzing, the process of repeatedly running a program under test with “random” inputs to trigger bugs. Among different variants of fuzzing, greybox fuzzing (GF) has especially seen widespread adoption thanks to its practicality and bug-finding capability. In GF, the fuzzer collects feedback from the program (e.g., code coverage) during its execution and guides the input generation based on the feedback. Due to its success in finding bugs in the software domain, GF has gained traction in the hardware domain as well. Several works adapted GF to the hardware domain by addressing the differences between hardware and software. These works demonstrated that GF can be leveraged to discover bugs in hardware designs such as processors. In this thesis, we propose three different fuzzing mechanisms, one for software and two for hardware, to expose bugs in the multiple layers of systems. Each mechanism focuses on different aspects of GF to assist the fuzzing procedure for triggering bugs in hardware and software. The first mechanism, TargetFuzz, focuses on producing an effective seed corpus when fuzzing software. The seed corpus consists of a set of inputs serving as starting points to the fuzzer. We demonstrate that carefully selecting seeds to steer GF towards potentially buggy code regions increases the bug-finding capability of GF. Compared to prior works, TargetFuzz discovered 10 additional bugs and achieved 4.03× speedup, on average, in the total elapsed time for finding bugs. The second mechanism, DirectFuzz, adapts a specific variant of GF for software fuzzing, namely directed greybox fuzzing (DGF), to the hardware domain. The main use case of DGF in software is patch testing where the goal is to steer fuzzing towards recently modified code region. Similar to software, hardware design is an incremental and continuous process. Therefore, it is important to prioritize testing of a new component in a hardware design rather than previously well-tested components. DirectFuzz takes several differences between hardware and software (such as clock sensitivity, concurrent execution of multiple code fragments, hardware-specific coverage) into account to successfully adapt DGF to the hardware domain. DirectFuzz relies on coverage feedback applicable to a wide range of hardware designs and requires limited design knowledge. While this increases its ease of adoption to many different hardware designs, its effectiveness (i.e., bug-finding success) becomes limited in certain hardware designs such as processors. Overall, compared to a state-of-the-work hardware fuzzer, DirectFuzz covers specified targets sites (e.g., modified hardware regions) 2.23× faster. Our third mechanism named ProcessorFuzz relies on novel coverage feedback tailored for processors to increase the effectiveness of fuzzing in processors. Specifically, ProcessorFuzz monitors value changes in control and status registers which form the backbone of a processor. ProcessorFuzz addresses several drawbacks of existing works in processor fuzzing. Specifically, existing works can introduce significant instrumentation overhead, result in misleading guidance, and have lack of support for widely-used hardware languages. ProcessorFuzz revealed 8 new bugs in widely-used open source processors and identified bugs 1.23× faster than a prior work.
+</details>
+
+***
+
+### \[Usenix'22] BRAKTOOTH: Causing Havoc on Bluetooth Link Manager via Directed Fuzzing
+
+[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 577 | 🐛 32 | 📅 2024-08-31
+
+<details>
+  <summary>Click to see the abstract!</summary>
+In this paper we propose, design and evaluate a systematic directed fuzzing framework to automatically discover implementation bugs in arbitrary Bluetooth Classic (BT) devices. The core of our fuzzer is the first over-the-air approach that takes full control of the BT controller baseband from the host. This enables us to intercept and modify arbitrary packets, as well as to inject packets out-of-order in lower layers of closed-source BT stack, i.e., Link Manager Protocol (LMP) and Baseband. To systematically guide our fuzzing process, we propose an extensible and novel rule-based approach to automatically construct the protocol state machine during normal over-the-air communication. In particular, by writing a simple set of rules to identify protocol messages, we can dynamically construct an abstracted protocol state machine, fuzz packets resulting from a state and validate responses from target devices. As of today, we have fuzzed 13 BT devices from 11 vendors and we have discovered a total of 18 unknown implementation flaws, with 24 common vulnerability exposures (CVEs) assigned. Furthermore, our discoveries were awarded with six bug bounties from certain vendors. Finally, to show
+the broader applicability of our framework beyond BT, we have extended our approach to fuzz other wireless protocols, which additionally revealed 6 unknown bugs in certain Wi-Fi and BLE Host stacks.
+</details>
+
+***
+
+### \[arxiv'22] Multiple Targets Directed Greybox Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2206.14977.pdf) [\[project\]](https://github.com/HongliangLiang/leofuzz) ⭐ 18 | 🐛 2 | 🌐 C | 📅 2023-04-07
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed greybox fuzzing (DGF) can quickly discover or reproduce bugs in programs by seeking to reach a program location or explore some locations in order. However, due to their static stage division and coarse-grained energy scheduling, prior DGF tools perform poorly when facing multiple target locations (targets for short). In this paper, we present multiple targets directed greybox fuzzing which aims to reach multiple programs locations in a fuzzing campaign. Specifically, we propose a novel strategy to adaptively coordinate exploration and exploitation stages, and a novel energy scheduling strategy by considering more relations between seeds and target locations. We implement our approaches in a tool called LeoFuzz and evaluate it on crash reproduction, true positives verification, and vulnerability exposure in real-world programs. Experimental results show that LeoFuzz outperforms six state-of-the-art fuzzers, i.e., QYSM, AFLGo, Lolly, Berry, Beacon and WindRanger in terms of effectiveness and efficiency. Moreover, LeoFuzz has detected 23 new vulnerabilities in real-world programs, and 11 of them have been assigned CVE IDs.
+</details>
+
+***
+
+### \[arxiv'22] FishFuzz: Throwing Larger Nets to Catch Deeper Bugs
+
+[\[paper\]](https://arxiv.org/pdf/2207.13393.pdf) [\[project\]](https://zenodo.org/record/6405418#.YuzNvexBz_o)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Greybox fuzzing is the de-facto standard to discover bugs during development. Fuzzers execute many inputs to maximize the amount of reached code. Recently, Directed Greybox Fuzzers (DGFs) propose an alternative strategy that goes beyond “just” coverage: driving testing toward specific code targets by selecting “closer” seeds. DGFs go through different phases: exploration (i.e., reaching interesting locations) and exploitation (i.e., triggering bugs). In practice, DGFs leverage coverage to directly measure exploration, while exploitation is, at best, measured indirectly by alternating between different targets. Specifically, we observe two limitations in existing DGFs: (i) they lack precision in their distance metric, i.e., averaging multiple
+paths and targets into a single score (to decide which seeds to prioritize), and (ii) they assign energy to seeds in a round-robin fashion without adjusting the priority of the targets (exhaustively explored targets should be dropped).
+
+We propose FishFuzz, which draws inspiration from trawl fishing: first casting a wide net, scraping for high coverage, then slowly pulling it in to maximize the harvest. The core of our fuzzer is a novel seed selection strategy that builds on two concepts: (i) a novel multi-distance metric whose precision is independent of the number of targets, and (ii) a dynamic target ranking to automatically discard exhausted targets. This strategy allows FishFuzz to seamlessly scale to tens of thousands of targets and dynamically alternate between exploration and exploitation phases. We evaluate FishFuzz by leveraging all sanitizer labels as targets. Extensively comparing FishFuzz against modern DGFs and coverage-guided fuzzers shows that FishFuzz reached higher coverage compared to the direct competitors, reproduces existing bugs (70.2% faster), and finally discovers 25 new bugs (18 CVEs) in 44 programs.
+
+</details>
+
+***
+
+### \[CCS'22] MC2: Rigorous and Efficient Directed Greybox Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2208.14530.pdf) [\[project\]](https://hub.docker.com/r/abhishekshah212/mc2)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed greybox fuzzing is a popular technique for targeted software testing that seeks to find inputs that reach a set of target sites in a program. Most existing directed greybox fuzzers do not provide any theoretical analysis of their performance or optimality. In this paper, we introduce a complexity-theoretic framework to pose directed greybox fuzzing as a oracle-guided search problem where some feedback about the input space (e.g., how close an input is to the target sites) is received by querying an oracle. Our framework assumes that each oracle query can return arbitrary content with a large but constant amount of information. Therefore, we use the number of oracle queries required by a fuzzing algorithm to find a target-reaching input as the performance metric. Using our framework, we design a randomized directed greybox fuzzing algorithm that makes a logarithmic (wrt. the number of all possible inputs) number of queries in expectation to find a target-reaching input. We further prove that the number of oracle queries required
+by our algorithm is optimal, i.e., no fuzzing algorithm can improve (i.e., minimize) the query count by more than a constant factor. We implement our approach in MC2 and outperform state-of-theart directed greybox fuzzers on challenging benchmarks (Magma and Fuzzer Test Suite) by up to two orders of magnitude (i.e., 134×) on average. MC2 also found 15 previously undiscovered bugs that other state-of-the-art directed greybox fuzzers failed to find.
+</details>
+
+***
+
+### \[ACSAC'22] One Fuzz Doesn’t Fit All: Optimizing Directed Fuzzing via Target-tailored Program State Restriction
+
+[\[paper\]](https://hexhive.epfl.ch/publications/files/22ACSAC2.pdf) [\[project\]](https://github.com/HexHive/SieveFuzz) ⭐ 31 | 🐛 4 | 🌐 C | 📅 2023-05-16
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Fuzzing is the de-facto default technique to discover software flaws, randomly testing programs to discover crashing test cases. Yet, a particular scenario may only care about specific code regions (for, e.g., bug reproduction, patch or regression testing)—spurring the adoption of directed fuzzing. Given a set of pre-determined target locations, directed fuzzers drive exploration toward them through distance minimization strategies that (1) isolate the closest-reaching test cases and (2) mutate them stochastically. However, these strategies are applied onto every explored test case—irrespective of whether they ever reach the targets—stalling progress on the paths where targets are unreachable. Accelerating directed fuzzing requires prioritizing target-reachable paths.
+
+To overcome the bottleneck of wasteful exploration in directed fuzzing, we introduce tripwiring: a lightweight technique to preempt and terminate the fuzzing of paths that will never reach target locations. By constraining exploration to only the set of target-reachable program paths, tripwiring curtails directed fuzzers’ search noise—while unshackling them from the high-overhead instrumentation and bookkeeping of distance minimization—enabling
+directed fuzzers to obtain up to 99× higher test case throughput. We implement tripwiring-directed fuzzing as a prototype, SieveFuzz, and evaluate it alongside the state-of-the-art directed fuzzers AFLGo, BEACON and the leading undirected fuzzer AFL++. Overall, across nine benchmarks, SieveFuzz’s tripwiring enables it to trigger bugs on an average 47% more consistently and 117% faster than AFLGo, BEACON and AFL++.
+
+</details>
+
+***
+
+### \[S\&P'23] SELECTFUZZ: Efficient Directed Fuzzing with Selective Path Exploration
+
+[\[paper\]](https://csdl-downloads.ieeecomputer.org/proceedings/sp/2023/9336/00/933600b050.pdf?Expires=1672859666\&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jc2RsLWRvd25sb2Fkcy5pZWVlY29tcHV0ZXIub3JnL3Byb2NlZWRpbmdzL3NwLzIwMjMvOTMzNi8wMC85MzM2MDBiMDUwLnBkZiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY3Mjg1OTY2Nn19fV19\&Signature=IHxAaMfG4NH8KIS~~p~jcceRLTaa2g~ycPozrqmd32BjBgMJubIjijrHoqnFJajhk0yEQgQXsf8z4PzsWXSV4XpI1m6AbpVYDib-YC6nr3DHheezNDdWFkwv8vI2jcMuxBsRU7mgZ7hT89YtD1OM1USnlaEXmzfPVJ~o0AJKD44isdnfnIPNLo2u~pIme04mFmR-xP~k8TMv-44jQ6O~ktmABwsR2TEY9dPL7BZI8BgOMqVXFciFiAMN5nfbT8qcWP0zDajFXl4Dv1cGL0axOFx-fnxARaNeTIXFGpad8aNV0uFcWKAGvZSKRnJv9WFiK5Ya57MjvUT217i4~1ZYnQ__\&Key-Pair-Id=K12PMWTCQBDMDT) [\[project\]](https://github.com/cuhk-seclab/SelectFuzz) ⭐ 72 | 🐛 10 | 🌐 C | 📅 2024-06-26
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzers specialize in testing specific target code. They have been applied to many security applications such as reproducing known crashes and detecting vulnerabilities caused by incomplete patches. However, existing directed fuzzers favor the inputs discovering new code regardless whether the newly uncovered code is relevant to the target code or not. As a result, the fuzzers would extensively explore irrelevant code and
+suffer from low efficiency. In this paper, we distinguish relevant code in the target program from the irrelevant one that does not help trigger the vulnerabilities in target code. We present SELECTFUZZ, a new directed fuzzer that selectively explores relevant program paths for efficient crash reproduction and vulnerability detection. It identifies two types of relevant code—path-divergent code and data-dependent code, that respectively captures the controland data-dependency with the target code. It then selectively instruments and explores only the relevant code blocks. We also propose a new distance metric that accurately measures the reaching probability of different program paths and inputs. We evaluated SELECTFUZZ with real-world vulnerabilities in sets of diverse programs. SELECTFUZZ significantly outperformed a baseline directed fuzzer by up to 46.31×, and performed the best in the Google Fuzzer Test Suite. Our experiments also demonstrated that SELECTFUZZ and the existing techniques such as path pruning are complementary. Finally, with SELECTFUZZ, we detected 14 previously unknown vulnerabilities—including 6 new CVE IDs—in well tested real-world software. Our report has led to the fix of 11 vulnerabilities.
+</details>
+
+***
+
+### \[TDSC'23] G-Fuzz: A Directed Fuzzing Framework for gVisor
+
+[\[paper\]](https://arxiv.org/pdf/2409.13139) [\[project\]](https://github.com/zjuchenyuan/gfuzz) ⭐ 26 | 🐛 3 | 🌐 C++ | 📅 2023-10-26
+
+<details>
+  <summary>Click to see the abstract!</summary>
+gVisor is a Google-published application-level kernel for containers. As gVisor is lightweight and has sound isolation, it has been widely used in many IT enterprises. When a new vulnerability of the upstream gVisor is found, it is important for the downstream developers to test the corresponding code to maintain the security. To achieve this aim, directed fuzzing is promising. Nevertheless, there are many challenges in applying existing directed fuzzing methods for gVisor. The core reason is that existing directed fuzzers are mainly for general C/C++ applications, while gVisor is an OS kernel written in the Go language. To address the above challenges, we propose G-Fuzz, a directed fuzzing framework for gVisor. There are three core methods in G-Fuzz, including lightweight and fine-grained distance calculation, target related syscall inference and utilization, and exploration and exploitation dynamic switch. Note that the methods of G-Fuzz are general and can be transferred to other OS kernels. We conduct extensive experiments to evaluate the performance of G-Fuzz. Compared to Syzkaller, the state-of-the-art kernel fuzzer, G-Fuzz outperforms it significantly. Furthermore, we have rigorously evaluated the importance for each core method of G-Fuzz. G-Fuzz has been deployed in industry and has detected multiple serious vulnerabilities.
+</details>
+
+***
+
+### \[arxiv'23] Directed Greybox Fuzzing with Stepwise Constraint Focusing
+
+[\[paper\]](https://arxiv.org/pdf/2303.14895.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Dynamic data flow analysis has been widely used to guide greybox fuzzing. However, traditional dynamic data flow analysis tends to go astray in the massive path tracking and requires to process a large volume of data, resulting in low efficiency in reaching the target location. In this paper, we propose a directed greybox fuzzer based on dynamic constraint filtering and focusing (CONFF). First, all path constraints are tracked, and those with high priority are filtered as the next solution targets. Next, focusing on a single path constraint to be satisfied, we obtain its data condition and probe the mapping relationship between it and the input bytes through multi-byte mapping and single-byte mapping. Finally, various mutation strategies are utilized to solve the path constraint currently focused on, and the target location of the program is gradually approached through path selection. The CONFF fuzzer can reach a specific location faster in the target program, thus efficiently triggering the crash.
+
+We designed and implemented a prototype of the CONFF fuzzer and evaluated it with the LAVA-1 dataset and some real-world vulnerabilities. The results show that the CONFF fuzzer can reproduce crashes on the LAVA-1 dataset and most of the real-world vulnerabilities. For most vulnerabilities, the CONFF fuzzer reproduced the crashes with significantly reduced time compared to state-of-the-art fuzzers. On average, the CONFF fuzzer was 23.7x faster than the state-of-the-art code coverage-based fuzzer Angora and 27.3x faster than the classical directed greybox fuzzer AFLGo.
+
+</details>
+
+***
+
+### \[S\&P'23] ODDFUZZ: Discovering Java Deserialization Vulnerabilities via Structure-Aware Directed Greybox Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2304.04233.pdf) [\[project\]](https://github.com/ODDFuzz/ODDFuzz) ⭐ 38 | 🐛 3 | 📅 2022-08-20
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Java deserialization vulnerability is a severe threat in practice. Researchers have proposed static analysis solutions to locate candidate vulnerabilities and fuzzing solutions to generate proof-of-concept (PoC) serialized objects to trigger them. However, existing solutions have limited effectiveness and efficiency. In this paper, we propose a novel hybrid solution ODDFUZZ to efficiently discover Java deserialization vulnerabilities. First, ODDFUZZ performs lightweight static taint analysis to identify candidate gadget chains that may cause deserialization vulnerabilities. In this step, ODDFUZZ tries to locate all candidates and avoid false negatives. Then, ODDFUZZ performs directed greybox fuzzing (DGF) to explore those candidates and generate PoC testcases to mitigate false positives. Specifically, ODDFUZZ applies a structure-aware seed generation method to guarantee the validity of the testcases, and adopts a novel hybrid feedback and a step-forward strategy to guide the directed fuzzing.
+
+We implemented a prototype of ODDFUZZ and evaluated it on the popular Java deserialization repository ysoserial. Results show that, ODDFUZZ could discover 16 out of 34 known gadget chains, while two state-of-the-art baselines only identify three of them. In addition, we evaluated ODDFUZZ on real-world applications including Oracle WebLogic Server, Apache Dubbo, Sonatype Nexus, and protostuff, and found six previously unreported exploitable gadget chains with five CVEs assigned.
+
+</details>
+
+***
+
+### \[IET Software'23] CIDFuzz: Fuzz testing for continuous integration
+
+[\[paper\]](https://ietresearch.onlinelibrary.wiley.com/doi/pdf/10.1049/sfw2.12125)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+As agile software development and extreme programing have become increasingly popular, continuous integration (CI) has become a widely used collaborative work method. However, it is common to make changes frequently to a project during CI. If existing testing methods are applied to CI directly, it will be difficult to make testing resources focus on changes generated by CI, which results in insufficient testing for changes. To solve this problem, we propose a fuzz testing method for CI. First, differential analysis is performed to determine the change points generated during CI, change points are added to the taint source set, and static analysis is conducted to calculate the distances between each basic block and the taint sources. Then, the project under test is instrumented according to the distances. During fuzz testing, testing resources are allocated based on seed coverage to test the change points effectively. Using the proposed methods, we implement CIDFuzz as a prototype tool, and experiments are conducted on four open‐source projects that use CI. Experimental results show that, compared with AFL and AFLGo, CIDFuzz can reduce the time costs of covering change points up to 39.59% and 41.64%, respectively. Also, CIDFuzz can reduce the time costs of reproducing vulnerabilities up to 34.78% and 25.55%.
+</details>
+
+***
+
+### \[EuroS\&P'23] Hunting for Truth: Analyzing Explanation Methods in Learning-based Vulnerability Discovery
+
+[\[paper\]](https://mlsec.org/docs/2023-eurosp.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Recent research has developed a series of methods for finding vulnerabilities in software using machine learning. While the proposed methods provide a remarkable performance in controlled experiments, their practical application is hampered by their black-box nature: A security practitioner cannot tell how these methods arrive at a decision and what code structures contribute to a reported security flaw. Explanation methods for machine learning may overcome this problem and guide the practitioner to relevant code. However, there exist a variety of competing explanation methods, each highlighting different code regions when given the same finding. So far, this inconsistency has made it impossible to select a suitable explanation method for practical use.
+
+In this paper, we address this problem and develop a method for analyzing and comparing explanations for learning-based vulnerability discovery. Given a predicted vulnerability, our approach uses directed fuzzing to create local ground-truth around code regions marked as relevant by an explanation method. This local ground-truth enables us to assess the veracity of the explanation. As a result, we can qualitatively compare different explanation methods and determine the most accurate one for a particular learning setup. In an empirical evaluation with different discovery and explanation methods, we demonstrate the utility of this approach and its capabilities in making learning-based vulnerability discovery more transparent.
+
+</details>
+
+***
+
+### \[ISSTA'23] 1dFuzz: Reproduce 1-day Vulnerabilities with Directed Differential Fuzzing
+
+[\[paper\]](https://dl.acm.org/doi/pdf/10.1145/3597926.3598102)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+1-day vulnerabilities are common in practice and have posed severe threats to end users, as adversaries could learn from released patches to find them and exploit them. Reproducing 1-day vulnerabilities is also crucial for defenders, e.g., to block attack traffic against 1-day vulnerabilities. A core question that affects the effectiveness of recognizing and triggering 1-day vulnerabilities is what is the unique feature of a security patch. After conducting a large-scale empirical study, we point out that a common and unique feature of patches is the trailing call sequence (TCS) and present a novel directed differential fuzzing solution 1dFuzz to efficiently reproduce 1-day vulnerabilities in this paper. Based on the TCS feature, we present a locator 1dLoc able to find candidate patch locations via static analysis, a novel TCS-based distance metric for directed fuzzing, and a novel sanitizer 1dSan able to catch PoCs for 1-day vulnerabilities during fuzzing. We have systematically evaluated 1dFuzz on a set of real-world software vulnerabilities in 11 different settings. Results show that 1dFuzz significantly outperforms state-of-the-art (SOTA) baselines and could find up to 2.26x more 1-day vulnerabilities with a 43% shorter time.
+</details>
+
+***
+
+### \[Usenix'23] FishFuzz: Catch Deeper Bugs by Throwing Larger Nets
+
+[\[paper\]](https://nebelwelt.net/files/23SEC5.pdf) [\[project\]](https://github.com/HexHive/FishFuzz) ⭐ 99 | 🐛 0 | 🌐 C | 📅 2025-03-11 [\[artifact\]](https://zenodo.org/record/6405418)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Fuzzers effectively explore programs to discover bugs. Greybox fuzzers mutate seed inputs and observe their execution. Whenever a seed reaches new behavior (e.g., new code or higher execution frequency), it is stored for further mutation. Greybox fuzzers directly measure exploration and, by repeating execution of the same targets with large amounts of mutated seeds, passively exploit any lingering bugs. Directed greybox fuzzers (DGFs) narrow the search to a few code locations but so far generalize distance to all targets into a single score and do not prioritize targets dynamically.
+
+FISHFUZZ introduces an input prioritization strategy that builds on three concepts: (i) a novel multi-distance metric whose precision is independent of the number of targets, (ii) a dynamic target ranking to automatically discard exhausted targets, and (iii) a smart queue culling algorithm, based on hyperparameters, that alternates between exploration and exploitation. FISHFUZZ enables fuzzers to seamlessly scale among thousands of targets and prioritize seeds toward interesting locations, thus achieving more comprehensive program testing. To demonstrate generality, we implement FISHFUZZ over two well-established greybox fuzzers (AFL and AFL++). We evaluate FISHFUZZ by leveraging all sanitizer labels as targets. In comparison to modern DGFs and state-of-the-art coverage guided fuzzers, FISHFUZZ reaches higher coverage compared to the direct competitors, finds up to 2.8x more
+bugs compared with the baseline and reproduces 68.3% existing bugs faster. FISHFUZZ also discovers 56 new bugs (38 CVEs) in 47 programs.
+
+</details>
+
+***
+
+### \[arxiv'23] FGo: A Directed Grey-box Fuzzer with Probabilistic Exponential cut-the-loss Strategies
+
+[\[paper\]](https://arxiv.org/pdf/2307.05961.pdf) [\[project\]](https://github.com/harvey-lau/fgo)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Traditional coverage grey-box fuzzers perform a breadth-first search of the state space of Program Under Test (PUT). This aimlessness wastes a lot of computing resources. Directed grey-box fuzzing focuses on the target of PUT and becomes one of the most popular topics of software testing. The early termination of unreachable test cases is a method to improve directed grey-box fuzzing. However, existing solutions have two problems: firstly, reachability analysis needs to introduce extra technologies (e.g., static analysis); secondly, the performance of reachability analysis and auxiliary technologies lack versatility.
+
+We propose FGo, a probabilistic exponential cutthe-loss directed grey-box fuzzer. FGo terminates unreachable test cases early with exponentially increasing probability. Compared to other technologies, FGo makes full use of the unreachable information contained in iCFG and doesn‘t generate any additional overhead caused by reachability analysis. Moreover, it is easy to generalize to all PUT. This strategy based on probability is perfectly adapted to the randomness of fuzzing.
+
+The experiment results show that FGo is 106% faster than AFLGo in reproducing crashes. We compare multiple parameters of probabilistic exponential cut-the-loss algorithm and analyze them in detail. In addition, for enhancing the interpretability of FGo, this paper discusses the difference between the theoretical performance and the practical performance of
+probabilistic exponential cut-the-loss algorithm.
+
+</details>
+
+***
+
+### \[Usenix'23] DAFL: Directed Grey-box Fuzzing Guided by Data Dependency
+
+[\[paper\]](https://prosys.kaist.ac.kr/publications/sec23.pdf) [\[project\]](https://github.com/prosyslab/DAFL-artifact) ⭐ 52 | 🐛 1 | 🌐 Python | 📅 2024-10-27 [\[artifact\]](https://zenodo.org/record/8031029) [\[slides\]](https://www.usenix.org/system/files/sec23_slides_kim-tae.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Despite growing research interest, existing directed greybox fuzzers do not scale well with program complexity. In this paper, we identify two major scalability challenges for
+current directed grey-box fuzzing. Particularly, we find that traditional coverage feedback does not always provide meaningful guidance for reaching the target program point(s), and
+the existing seed distance mechanism does not operate well with programs with complex control structures. To address these problems, we present a novel fuzzer, named DAFL. DAFL selects code parts that are relevant to the target location and obtains coverage feedback only from those parts. Furthermore, it computes precise seed distances considering the data-flow semantics of program executions. The results are promising. Out of 41 real-world bugs, DAFL was able to find 4, 6, 9, and 5 more bugs within the given time, compared to AFL, AFLGo, WindRanger, and Beacon, respectively. Furthermore, among the cases where all fuzzers produced a median TTE, DAFL was at least 4.99 times faster on average compared to 3 state-of-the-art directed fuzzers including AFLGo, WindRanger, and Beacon.
+</details>
+
+***
+
+### \[EuroS\&PW 2023'23] Guiding Directed Fuzzing with Feasibility
+
+[\[paper\]](https://www.computer.org/csdl/proceedings-article/eurospw/2023/272000a042/1OFtf6ngcTe)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing is a useful technique that can confirm bugs found by static analysis, reproduce existing bugs, and efficiently test code changes. A general mechanism in directed fuzzing is to calculate the distance between the current progress and the target, and use that as a feedback to guide the directed fuzzing. A fundamental problem with existing distance calculation is that it is feasibility-unaware. For instance, it always assumes that the two branches of an if statement have equal feasibility, which is likely not true in real-world programs and would inevitablly incur significant biases in the directed fuzzing. In this work, we propose feasibility-aware directed fuzzing, AFLGopher. Our new feasibility-aware distance calculation provides precise feedback to guide directed fuzzing to reach targets efficiently. We propose new techniques to address challenges of the feasibility prediction. Our new classification method allows to predict the feasibility of all branches based on limited traces, and our runtime feasibility-updating mechanism gradually improves the prediction precision. We implement AFLGopher, and the evaluation results show that AFLGopher uses less time to reach the bugs, compared to the state of the art.
+</details>
+
+***
+
+### \[arxiv'23] HyperGo: Probability-based Directed Hybrid Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2307.07815.pdf) [\[project\]](https://gitee.com/paynelin/hypergo)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzing (DGF) is a target-guided fuzzing intended for testing specific targets (e.g., the potential buggy code). Despite numerous techniques proposed to enhance directedness, the existing DGF techniques still face challenges, such as taking into account the difficulty of reaching different basic blocks when designing the fitness metric, and promoting the effectiveness of symbolic execution (SE) when solving the complex constraints in the path to the target. In this paper, we propose a directed hybrid fuzzer called
+HyperGo. To address the challenges, we introduce the concept of path probability and combine the probability with distance to form an adaptive fitness metric called probability-based distance. By combining the two factors, probability-based distance can adaptively guide DGF toward paths that are closer to the target and have more easy-to-satisfy path constraints. Then, we put forward an Optimized Symbolic Execution Complementary (OSEC) scheme to combine DGF and SE in a complementary manner. The OSEC would prune the unreachable branches and unsolvable branches, and prioritize symbolic execution of the seeds whose paths are closer to the target and have more branches that are difficult to be covered by DGF. We evaluated HyperGo on 2 benchmarks consisting of 21 programs with a total of 100 target sites. The experimental results show that HyperGo achieves 38.47×, 30.89×, 28.52×, 106.09× and 143.22× speedup compared to AFLGo, AFLGoSy, BEACON, WindRanger, and ParmeSan, respectively in reaching target sites, and 3.44×, 3.63×, 4.10×, 3.26×, and 3.00× speedup in exposing known
+vulnerabilities. Moreover, HyperGo discovered 37 undisclosed vulnerabilities from 7 real-world programs.
+</details>
+
+***
+
+### \[CCS'23] SyzDirect: Directed Greybox Fuzzing for Linux Kernel
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Bug reports and patch commits are dramatically increasing for OS kernels, incentivizing a critical need for kernel-level bug reproduction and patch testing. Directed greybox fuzzing (DGF), aiming to stress-test a specific part of code, is a promising approach for bug reproduction and patch testing. However, the existing DGF methods exclusively target user-space applications, presenting intrinsic limitations in handling OS kernels. In particular, these methods cannot pinpoint the appropriate system calls and the needed syscall parameter values to reach the target location, resulting in low efficiency and waste of resources.
+
+In this paper, we present SyzDirect, a DGF solution for the Linux kernel. With a novel, scalable static analysis of the Linux kernel, SyzDirect identifies valuable information such as correct system calls and conditions on their arguments to reach the target location. During fuzzing, SyzDirect utilizes the static analysis results to guide the generation and mutation of test cases, followed by leveraging distance-based feedback for seed prioritization and power scheduling. We evaluated SyzDirect on upstream Linux kernels for bug reproduction and patch testing. The results show that SyzDirect can reproduce 320% more bugs and reach 25.6% more target patches than generic kernel fuzzers. It also improves the speed of bug reproduction and patch reaching by a factor of 154.3 and 680.9, respectively.
+
+</details>
+
+***
+
+### \[MS Thesis'23] Hybrid Testing: Combining Static Analysis and Directed Fuzzing
+
+[\[paper\]](https://dspace.mit.edu/bitstream/handle/1721.1/151679/shields-pshields-meng-eecs-2023-thesis.pdf?sequence=1\&isAllowed=y)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+New CVEs are discovered each year and their underlying bugs leave applications vulnerable to exploitation. Software is still frequently written in bug prone languages, e.g. C and C++,
+and a single missed check during manual testing can result in vulnerabilities. Existing automated testing tools such as fuzzing are limited in scope or in the case of static analysis, have a high false positive rate. Without improved automated testing, it can be challenging for developers to debug large, complex codebases. In this paper, Hybrid Testing is presented
+as a solution. Hybrid Testing combines static and dynamic analyses, leveraging static analysis to perform complex reasoning about logic, memory management, and concurrency. It creates a novel orchestration system which allows us to automatically verify the output of static analysis tools using directed fuzzing. Hybrid Testing is the first vulnerability detection technique with full codebase coverage and no false positives. It can be seamlessly integrated into the development cycle and scales well to large codebases. This work details the design and implementation of Hybrid Testing and evaluates its performance across a corpus of open-source C and C++ applications in the Magma benchmark. Hybrid Testing aims to promote more secure software through rigorous testing, making it easier for developers to detect security issues. We demonstrate Hybrid Testing can find vulnerabilities up to 25% faster with 17% higher accuracy (when detecting additional bugs) than current automated testing strategies.
+</details>
+
+***
+
+### \[Usenix'23] DDRace: Finding Concurrency UAF Vulnerabilities in Linux Drivers with Directed Fuzzing
+
+[\[paper\]](https://www.usenix.org/system/files/usenixsecurity23-yuan-ming.pdf) [\[slides\]](https://www.usenix.org/system/files/sec23_slides_yuan.pdf) [\[project\]](https://github.com/vul337/DDRace) ⭐ 11 | 🐛 1 | 📅 2023-02-28
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Concurrency use-after-free (UAF) vulnerabilities account for a large portion of UAF vulnerabilities in Linux drivers. Many solutions have been proposed to find either concurrency bugs
+or UAF vulnerabilities, but few of them can be directly applied to efficiently find concurrency UAF vulnerabilities. In this paper, we propose the first concurrency directed greybox
+fuzzing solution DDRace to discover concurrency UAF vulnerabilities efficiently in Linux drivers. First, we identify candidate use-after-free locations as target sites and extract the relevant concurrency elements to reduce the exploration space of directed fuzzing. Second, we design a novel vulnerabilityrelated distance metric and an interleaving priority scheme
+to guide the fuzzer to better explore UAF vulnerabilities and thread interleavings. Lastly, to make test cases reproducible, we design an adaptive kernel state migration scheme to assist continuous fuzzing. We have implemented a prototype of DDRace, and evaluated it on upstream Linux drivers. Results show that DDRace is effective at discovering concurrency
+use-after-free vulnerabilities. It finds 4 unknown vulnerabilities and 8 known ones, which is more effective than other state-of-the-art solutions.
+</details>
+
+***
+
+### \[arxiv'23] TOPr: Enhanced Static Code Pruning for Fast and Precise Directed Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2309.09522.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing is a dynamic testing technique that focuses exploration on specific, pre-targeted program locations. Like other types of fuzzers, directed fuzzers are most effective when maximizing testing speed and precision. To this end, recent directed fuzzers have begun leveraging path pruning: preventing the wasteful testing of program paths deemed irrelevant to reaching a desired target location. Yet, despite code pruning’s substantial speedup, current approaches are imprecise—failing to capture indirect control flow—requiring additional dynamic analyses that diminish directed fuzzers’ speeds. Thus, without code pruning that is both fast and precise, directed fuzzers’
+effectiveness will continue to remain limited.
+
+This paper aims to tackle the challenge of upholding both speed and precision in pruning-based directed fuzzing. We show that existing pruning approaches fail to recover common-case indirect control flow; and identify opportunities to enhance them with lightweight heuristics—namely, function signature matching—enabling them to maximize precision without the burden of dynamic analysis. We implement our enhanced pruning as a prototype, TOPr (Target Oriented Pruning), and evaluate it against the leading pruning-based and pruning-agnostic directed fuzzers SieveFuzz and AFLGo. We show that TOPr’s enhanced pruning outperforms these fuzzers in (1) speed (achieving 222%
+and 73% higher test case throughput, respectively); (2) reachability (achieving 149% and 9% more target-relevant coverage, respectively); and (3) bug discovery time (triggering bugs faster 85% and 8%, respectively). Furthermore, TOPr’s balance of speed and precision enables it to find 24 new bugs in 5 opensource applications, with 18 confirmed by developers, 12 bugs labelled as “Priority - 1. High”, and 12 bugs fixed — underscoring the effectiveness of our framework.
+
+</details>
+
+***
+
+### \[S\&P'24] Titan : Efficient Multi-target Directed Greybox Fuzzing
+
+[\[paper\]](https://5hadowblad3.github.io/files/Oakland24-Titan.pdf) [\[project\]](https://github.com/5hadowblad3/Titan) ⭐ 56 | 🐛 4 | 🌐 Shell | 📅 2026-07-30
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Modern directed fuzzing often faces scalability issues when analyzing multiple targets in a program simultaneously. We observe that the root cause is that directed fuzzers are unaware of the correlations among the targets, thereby could degenerate into a target-undirected method. As a result, directed fuzzing suffers severely from efficiency when reproducing multiple targets. This paper presents Titan, which enables fuzzers to distinguish correlations among various targets in the program and, thus, optimizes the input generation to reproduce multiple targets effectively. Leveraging these correlations, Titan differentiates seeds’ potential of reaching each target for the scheduling and identifies bytes that can be changed simultaneously for the mutation. We compare our approach to eight state-of-the-art (directed) fuzzers. The evaluation demonstrates that Titan outperforms existing approaches by efficiently detecting multiple targets, achieving a 21.4x speedup and requiring 95.0% fewer number of executions. In addition, Titan detects ten incomplete fixes, which cannot be detected by other directed fuzzers, in the latest versions of the benchmark programs with two CVE IDs assigned.
+</details>
+
+***
+
+### \[arxiv'23] Toward Unbiased Multiple-Target Fuzzing with Path Diversity
+
+[\[paper\]](https://arxiv.org/pdf/2310.12419.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing is an advanced software testing approach that systematically guides the fuzzing campaign toward userdefined target sites, enabling efficient discovery of vulnerabilities related to these sites. However, we have observed that some complex vulnerabilities remain undetected by directed fuzzers even when the flawed target sites are frequently tested by the generated test cases, because triggering these bugs often requires the execution of additional code in related program locations. Furthermore, when fuzzing multiple targets, the existing energy assignment in directed fuzzing lacks precision and does not ensure the fairness across targets, which leads to insufficient fuzzing effort spent on some deeper targets.
+
+In this paper, we propose a novel directed fuzzing solution named AFLRUN, which features target path-diversity metric and unbiased energy assignment. Firstly, we develop a new coverage metric by maintaining extra virgin map for each covered target to track the coverage status of seeds that hit the target. This approach enables the storage of waypoints into the corpus that hit a target through interesting path, thus enriching the path diversity for each target. Additionally, we propose a corpus-level energy assignment strategy that guarantees fairness for each target. AFLRUN starts with uniform target weight and propagates this weight to seeds to get a desired seed weight distribution. By assigning energy to each seed in the corpus according to such desired distribution, a precise and unbiased energy assignment can be achieved. We built a prototype system and assessed its performance
+using a standard benchmark and several extensively fuzzed real-world applications. The evaluation results demonstrate that AFLRUN outperforms state-of-the-art fuzzers in terms of vulnerability detection, both in quantity and speed. Moreover, AFLRUN uncovers 29 previously unidentified vulnerabilities, including 8 CVEs, across four distinct programs.
+
+</details>
+
+***
+
+### \[S\&P'24] Predecessor-aware Directed Greybox Fuzzing
+
+[\[paper\]](https://csdl-downloads.ieeecomputer.org/proceedings/sp/2024/3130/00/313000a040.pdf?Expires=1697899812\&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jc2RsLWRvd25sb2Fkcy5pZWVlY29tcHV0ZXIub3JnL3Byb2NlZWRpbmdzL3NwLzIwMjQvMzEzMC8wMC8zMTMwMDBhMDQwLnBkZiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5Nzg5OTgxMn19fV19\&Signature=LEITvnw-OMz5UAvIPZXULOlWq3PUn1CfR0eAZnoiT7fdA5aGG4N-TPe7~2zND9a~9jmXqB4TpXI0xjwOH3628~39Gx6SthTI2T-7iRF1v439a8l9sJ9Qr~51R7rm1QjAPrsz-fuw0OKpSqKlUDQsezvzoSvm-~F3w~7skklcwPT5fKJjc6i85FeRYEBxgdrDGvJOqhdt~f~SLsFnXkj6xcTQOSOn6X8rKgiI6pmYh5jAcQUEHRprkqHXB8eg0fn-ZhWQ-~eGCzpUpgl4KHQ6-9cmUBY-tvX6JtL72H7QaFr7kciFs0G9T8pSG8sNZCd-5tJvW4LTWL35RlE5ZKhMCQ__\&Key-Pair-Id=K12PMWTCQBDMDT) [\[project\]](https://github.com/SEU-SSL/PDGF) ⭐ 13 | 🐛 0 | 🌐 C | 📅 2025-03-20
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed Greybox Fuzzing (DGF) is a target-oriented fuzzing technique that can reproduce or discover software vulnerabilities. The goal is commonly achieved through two phases: static analysis which obtains program structural information beforehand, and dynamic execution that guides fuzzing towards target sites. However, existing DGF methods still incur heavyweight and incomplete issues. The former comes from extra efforts on identifying and approaching the target sites, while the latter refers to the incompleteness of testing on the target sites due to indirect calls or insufficient paths that recent DGF can cover. In this paper, we propose a Predecessor-aware Directed Greybox Fuzzing (PDGF) method and regard DGF as a path-searching problem. PDGF divides a given program into predecessor and non-predecessor areas, and maintains a set of predecessors by lightweight program analysis initially and augmented during the dynamic execution thereafter. Meanwhile, PDGF introduces a novel fitness metric called regional maturity to indicate the coverage rate of predecessors, and contains a simulated annealing-based power scheduling technique together with seed selection and mutation, to cover the predecessor area efficiently and extensively. We evaluate the proposed PDGF on a benchmark that contains 30 real-world program target sites, and conduct extensive comparisons with state-of-the-art DGF tools. Experimental results reveal that PDGF outperforms competitors in terms of Time-To-Exposure, path diversity, and bug finding. Besides, PDGF discovered nine new vulnerabilities, six of which have been assigned CVEs.
+</details>
+
+***
+
+### \[OOPSLA'23] A Cocktail Approach to Practical Call Graph Construction
+
+[\[paper\]](https://dl.acm.org/doi/pdf/10.1145/3622833)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+After decades of research, constructing call graphs for modern C-based software remains either imprecise or inefficient when scaling up to the ever-growing complexity. The main culprit is the difficulty of resolving function pointers, as precise pointer analyses are cubic in nature and become exponential when considering calling contexts. This paper takes a practical stance by first conducting a comprehensive empirical study of function pointer manipulations in the wild. By investigating 5355 indirect calls in five popular open-source systems, we conclude that, instead of the past uniform treatments for function pointers, a cocktail approach can be more effective in “squeezing” the number of difficult pointers to a minimum using a potpourri of cheap methods. In particular, we decompose the costs of constructing highly precise call graphs of big code by tailoring several increasingly precise algorithms and synergizing them into a concerted workflow. As a result, many indirect calls can be precisely resolved in an efficient and principled fashion, thereby reducing the final, expensive refinements. This is, in spirit, similar to the well-known cocktail medical therapy.
+
+The results are encouraging — our implemented prototype called Coral can achieve similar precision versus the previous field-, flow-, and context-sensitive Andersen-style call graph construction, yet scale up to millions of lines of code for the first time, to the best of our knowledge. Moreover, by evaluating the produced call graphs through the lens of downstream clients (i.e., use-after-free detection, thin slicing, and directed grey-box fuzzing), the results show that Coral can dramatically improve their effectiveness for better vulnerability hunting, understanding, and reproduction. More excitingly, we found twelve confirmed bugs (six impacted by indirect calls) in popular systems (e.g., MariaDB), spreading across multiple historical versions.
+
+</details>
+
+***
+
+### \[ICCAD'23] SurgeFuzz: Surge-Aware Directed Fuzzing for CPU Designs
+
+[\[paper\]](https://www.rsg.ci.i.u-tokyo.ac.jp/members/shioya/pdfs/Sugiyama-ICCAD'23.pdf) [\[project\]](https://github.com/shioya-lab-public/surgefuzz) ⭐ 23 | 🐛 1 | 🌐 C++ | 📅 2024-12-05
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Various verification methods have been proposed for bug detection in central processing unit (CPU) designs, yet their effectiveness remains insufficient. We have observed that such CPU bugs often occur in exceptional handling, such as pipeline stalls and flushes. We found that corner cases in such exceptional handling can be effectively verified through situations we term a ’surge’. A surge refers to a situation where events leading to exceptional handling occur frequently over a short period of time. For instance, a surge caused by frequent queue insertions can eventually fill the capacity, triggering exceptional handling such as a pipeline stall. We propose a novel fuzzing method for CPU designs, named SurgeFuzz, that intentionally generates surges. SurgeFuzz mutates input instruction sequences based on annotations to increase the occurrence of surges. This results in a higher density of event occurrences, thereby enabling efficient verification of corner cases in exceptional handling. We evaluated SurgeFuzz on a large processor design and found several unknown hardware bugs that are difficult to find with existing methods.
+</details>
+
+***
+
+### \[APSEC'23] On the Effectiveness of Synthetic Benchmarks for Evaluating Directed Grey-box Fuzzers
+
+[\[paper\]](https://softsec.kaist.ac.kr/~sangkilc/papers/lee-apsec23.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzing is difficult to rigorously evaluate for several reasons. First, directed grey-box fuzzers are more prone to overfitting than undirected grey-box fuzzers as they are designed to explore specific paths in the program under test. Furthermore, existing benchmarks are mainly designed for evaluating undirected fuzzers. Hence, they do not provide any information about bug locations, and the difficulty of triggering bugs can substantially vary across different benchmarks. In this paper, we argue that one can address these challenges by automatically generating benchmarks with a bug synthesis technique. Notably, Fuzzle, a state-of-the-art bug synthesis tool, enables generation of arbitrarily many benchmarks, thereby preventing the overfitting problem. It is also well suited for evaluating directed grey-box fuzzers as it provides the exact location of the target bug in the generated benchmark with a guarantee that the bug is lurking deep in the program. With Fuzzle, we systematically evaluate existing state-of-theart directed fuzzers and study their strengths and weaknesses, which would be otherwise difficult to obtain with traditional benchmarks. To our knowledge, this is the first attempt to adopt a bug synthesis technique for evaluating directed fuzzers.
+</details>
+
+***
+
+### \[ICSE'24-SEIP] MicroFuzz: An Efficient Fuzzing Framework for Microservices
+
+[\[paper\]](https://arxiv.org/pdf/2401.05529.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Fuzzing is a widely adopted technique in the software industry to enhance security and software quality. However, most existing fuzzers are specifically designed for monolithic software architectures and face significant limitations when it comes to serving distributed Microservices applications (Apps). These limitations primarily revolve around issues of inconsistency, communication, and applicability which arise due to the differences in monolithic and distributed software architecture. This paper presents a novel fuzzing framework, called MicroFuzz, specifically designed for Microservices. Mocking-Assisted Seed Execution, Distributed Tracing, Seed Refresh and Pipeline Parallelism approaches are adopted to address the environmental complexities and dynamics of Microservices and improve the efficiency of fuzzing. MicroFuzz has been successfully implemented and
+deployed in AntGroup, a prominent FinTech company. Its performance has been evaluated in three distinct industrial scenarios: normalized fuzzing, iteration testing, and taint verification. Throughout five months of operation, MicroFuzz has diligently analyzed a substantial codebase, consisting of 261 Apps with over 74.6 million lines of code (LOC). The framework’s effectiveness is evident in its detection of 5,718 potential quality or security risks, with 1,764 of them confirmed and fixed as actual security threats by software specialists. Moreover, MicroFuzz significantly increased line coverage by 12.24% and detected new paths by 38.42% in the iteration testing.
+</details>
+
+***
+
+### \[S\&P'24] Everything is Good for Something: Counterexample-Guided Directed Fuzzing via Likely Invariant Inference
+
+[\[paper\]](https://5hadowblad3.github.io/files/Oakland24-Halo.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing demonstrates the potential to reproduce bug reports, verify patches, and debug vulnerabilities. State-of-the-art directed fuzzers prioritize inputs that are more likely to trigger the target vulnerability or filter irrelevant inputs unrelated to the targets. Despite these efforts, existing approaches struggle to reproduce specific vulnerabilities as most generated inputs are irrelevant. For instance, in the Magma benchmark, more than 94% of generated inputs miss the target vulnerability. We call this challenge the indirect input generation problem.
+We propose to increase the yield of inputs that reach the target location by restraining input generation. Our key insight is to infer likely invariants from both reachable and unreachable executed inputs to constrain the search space of the subsequent input generation and produce more reachable inputs. Moreover, we propose two selection strategies to minimize the fraction of unnecessary inputs for efficient invariant inference and deprioritize imprecise invariants for effective input generation. Halo, our prototype implementation, outperforms state-of-the-art directed fuzzers with a 15.3x speedup in reproducing target vulnerabilities by generating 6.2x more reachable inputs. During our evaluation, we also detected ten previously unknown bugs involving seven incomplete fixes in the latest versions of well-fuzzed targets.
+</details>
+
+***
+
+### \[S\&P'24] LABRADOR: Response Guided Directed Fuzzing for Black-box IoT Devices
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Fuzzing is a popular solution to finding vulnerabilities in software including IoT firmware. However, due to the challenges of emulating or rehosting firmware, some IoT devices (e.g., enterprise-level devices) can only be fuzzed in a black-box manner, which makes fuzzers blind and inefficient due to missing feedbacks (e.g., code coverage or distance). In this paper, we present a novel response guided directed fuzzing solution LABRADOR, able to test black-box IoT devices efficiently. Specifically, we leverage the network response to infer the execution trace of firmware and deduce the code coverage of testing. Second, we leverage the test case (i.e., request) and its response to estimate the distance to the target sensitive code (i.e., sink). Lastly, we further leverage the distance to guide test case mutation, which efficiently drives directed fuzzing toward candidate vulnerable code. We have implemented a prototype of LABRADOR and evaluated it on 14 different enterprise-level IoT devices. Results showed that LABRADOR significantly outperforms state-of-the-art (SOTA) solutions. It finds 44X more vulnerabilities than SNIPUZZ, BOOFUZZ and FIRM-AFL and 8.57X more vulnerabilities than SaTC. In total, it discovered 79 unknown vulnerabilities, of which 61 were assigned with CVEs.
+</details>
+
+***
+
+### \[Usenix'24] SDFUZZ: Target States Driven Directed Fuzzing
+
+[\[paper\]](https://peng-hui.github.io/data/paper/sec24_sdfuzz.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzers often unnecessarily explore program code and paths that cannot trigger the target vulnerabilities. We observe that the major application scenarios of directed fuzzing provide detailed vulnerability descriptions, from which highly-valuable program states (i.e., target states) can be derived, e.g., call traces when a vulnerability gets triggered. By driving to expose such target states, directed fuzzers can exclude massive unnecessary exploration. Inspired by the observation, we present SDFUZZ, an efficient directed fuzzing tool driven by target states. SDFUZZ first automatically extracts target states in vulnerability reports and static analysis results. SDFUZZ employs a selective instrumentation technique to reduce the fuzzing scope to the required code for reaching target states. SDFUZZ then early terminates the execution of a test case once SDFUZZ probes that the remaining execution cannot reach the target states. It further uses a new target state feedback and refines prior imprecise distance metric into a two-dimensional feedback mechanism to proactively drive the exploration towards the target states. We thoroughly evaluated SDFUZZ on known vulnerabilities and compared it to related works. The results show that SDFUZZ could improve vulnerability exposure capability with more vulnerability triggered and less time used, outperforming the state-of-the-art solutions. SDFUZZ could significantly improve the fuzzing throughput. Our application of SDFUZZ to automatically validate the static analysis results successfully discovered four new vulnerabilities in well-tested applications. Three of them have been acknowledged by developers.
+</details>
+
+***
+
+### \[Usenix'24] Critical Code Guided Directed Greybox Fuzzing for Commits
+
+[\[paper\]](https://www.usenix.org/system/files/usenixsecurity24-xiang-yi.pdf)[\[project\]](https://github.com/NESA-Lab/WAFLGo) ⭐ 20 | 🐛 2 | 🌐 C | 📅 2024-08-30 [\[slides\]](https://www.usenix.org/system/files/usenixsecurity24_slides-xiang-yi.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Newly submitted commits are prone to introducing vulnerabilities into programs. As a promising countermeasure, directed greybox fuzzers can be employed to test commit changes by designating the commit change sites as targets. However, existing directed fuzzers primarily focus on reaching a single target and neglect the diverse exploration of the additional affected code. As a result, they may overlook bugs that crash at a distant site from the change site and lack directness in multi-target scenarios, which are both very common in the context of commit testing. In this paper, we propose WAFLGO, a direct greybox fuzzer, to effectively discover vulnerabilities introduced by commits. WAFLGO employs a novel critical code guided input generation strategy to thoroughly explore the affected code. Specifically, we identify two types of critical code: pathprefix code and data-suffix code. The critical code first guides the input generation to gradually and incrementally reach the change sites. Then while maintaining the reachability of the critical code, the input generation strategy further encourages the diversity of the generated inputs in exploring the affected code. Additionally, WAFLGO introduces a lightweight multitarget distance metric for directness and thorough examination of all change sites. We implement WAFLGO and evaluate it with 30 real-world bugs introduced by commits. Compared to eight state-of-the-art tools, WAFLGO achieves an average speedup of 10.3×. Furthermore, WAFLGO discovers seven new vulnerabilities including four CVEs while testing the most recent 50 commits of real-world software, including libtiff, fig2dev, and libming, etc
+</details>
+
+***
+
+### \[NDSS'24] DeepGo: Predictive Directed Greybox Fuzzing
+
+[\[paper\]](https://www.ndss-symposium.org/wp-content/uploads/2024-514-paper.pdf) [\[project\]](https://gitee.com/paynelin/DeepGo)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed Greybox Fuzzing (DGF) is an effective approach designed to strengthen testing vulnerable code areas via predefined target sites. The state-of-the-art DGF techniques redefine and optimize the fitness metric to reach the target sites precisely and quickly. However, optimizations for fitness metrics are mainly based on heuristic algorithms, which usually rely on historical execution information and lack foresight on paths that have not been exercised yet. Thus, those hard-to-execute paths with complex constraints would hinder DGF from reaching the targets, making DGF less efficient.
+
+In this paper, we propose DeepGo, a predictive directed greybox fuzzer that can combine historical and predicted information to steer DGF to reach the target site via an optimal path. We first propose the path transition model, which models DGF as a process of reaching the target site through specific path transition sequences. The new seed generated by mutation would cause the path transition, and the path corresponding to the high-reward path transition sequence indicates a high likelihood of reaching the target site through it. Then, to predict the path transitions and the corresponding rewards, we use deep neural networks to construct a Virtual Ensemble Environment (VEE), which gradually imitates the path transition model and predicts the rewards of path transitions that have not been taken yet. To determine the optimal path, we develop a Reinforcement Learning for Fuzzing (RLF) model to generate the transition sequences with the highest sequence rewards. The RLF model can combine historical and predicted path transitions to generate the optimal path transition sequences, along with the policy to guide the mutation strategy of fuzzing. Finally, to exercise the high-reward path transition sequence, we propose the concept of an action group, which comprehensively optimizes the critical steps of fuzzing to realize the optimal path to reach the target efficiently. We evaluated DeepGo on 2 benchmarks consisting of 25 programs with a total of 100 target sites. The experimental results show that DeepGo achieves 3.23×, 1.72×, 1.81×, and 4.83× speedup compared to AFLGo, BEACON, WindRanger, and ParmeSan, respectively in reaching target sites, and 2.61×, 3.32×, 2.43× and 2.53× speedup in exposing known vulnerabilities.
+
+</details>
+
+***
+
+### \[FSE'24] Evaluating Directed Fuzzers: Are We Heading in the Right Direction?
+
+[\[paper\]](https://softsec.kaist.ac.kr/~sangkilc/papers/kim-fse24.pdf) [\[project\]](https://github.com/prosyslab/evaluating-directed-fuzzing-artifact) ⭐ 8 | 🐛 0 | 🌐 Python | 📅 2024-06-04 [\[artifact\]](https://zenodo.org/records/10669580) [\[slides\]](https://prosys.kaist.ac.kr/publications/fse24-slides.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing recently has gained significant attention due to its ability to reconstruct proof-of-concept (PoC) test cases for target code such as buggy lines or functions. Surprisingly, however, there has been no in-depth study on the way to properly evaluate directed fuzzers despite much progress in the field. In this paper, we present the first systematic study on the evaluation of directed fuzzers. In particular, we analyze common pitfalls in evaluating directed fuzzers with extensive experiments on five state-of-the-art tools, which amount to 30 CPU-years of computational effort, in order to confirm that different choices made at each step of the evaluation process can significantly impact the results. For example, we find that a small change in the crash triage logic can substantially affect the measured performance of a directed fuzzer, while the majority of the papers we studied do not fully disclose their crash triage scripts. We argue that disclosing the whole evaluation process is essential for reproducing research and facilitating future work in the field of directed fuzzing. In addition, our study reveals that several common evaluation practices in the current directed fuzzing literature can mislead the overall assessments. Thus, we identify such mistakes in previous papers and propose guidelines for evaluating directed fuzzers.
+</details>
+
+***
+
+### \[SBFT'24] TuneFuzz: adaptively exploring target programs
+
+[\[paper\]](https://hexhive.epfl.ch/publications/files/24SBFT.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+The trade-off between exploration and exploitation stages poses a major challenge to Greybox fuzzing. TUNEFUZZ addresses this challenge through a novel input prioritization algorithm that maximizes the reached and triggered sanitizer labels. Our multi-distance metric and dynamic target ranking improve both exploration and exploitation. TUNEFUZZ found 56 new bugs (38 CVEs) in well-tested open source software.
+</details>
+
+***
+
+### \[ASIACCS'24] SoK: Where to Fuzz? Assessing Target Selection Methods in Directed Fuzzing
+
+[\[paper\]](https://mlsec.org/docs/2024c-asiaccs.pdf)
+
+**Tags:** survey
+
+<details>
+  <summary>Click to see the abstract!</summary>
+A common paradigm for improving fuzzing performance is to focus on selected regions of a program rather than its entirety. While previous work has largely explored how these locations can be reached, their selection, that is, the where, has received little attention so far. In this paper, we fill this gap and present the first comprehensive analysis of target selection methods for fuzzing. To this end, we examine papers from leading security and software engineering conferences, identifying prevalent methods for choosing targets. By modeling these methods as general scoring functions, we are able to compare and measure their efficacy on a corpus of more than 1,600 crashes from the OSS-Fuzz project. Our analysis provides new insights for target selection in practice: First, we find that simple software metrics significantly outperform other methods, including common heuristics used in directed fuzzing, such as recently modified code or locations with sanitizer instrumentation. Next to this, we identify language models as a promising choice for target selection. In summary, our work offers a new perspective on directed fuzzing, emphasizing the role of target selection as an orthogonal dimension to improve performance.
+</details>
+
+***
+
+### \[ISSTA'24] DDGF: Dynamic Directed Greybox Fuzzing with Path Profiling
+
+[\[paper\]]()
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Coverage-Guided Fuzzing (CGF) has become the most popular and effective method for vulnerability detection. It is usually designed as an automated “black-box” tool. Security auditors start it and just wait for the results. However, CGF struggles to find new coverage gradually, thus making it inefficient. It is difficult for the user to explain reasons that prevent fuzzing from making further progress and to determine whether the existing coverage is sufficient. In addition, there is no way to interact and direct the fuzzing process.
+
+In this paper, we design the dynamic directed greybox fuzzing (DDGF) to facilitate collaboration between users and fuzzers. By leveraging Ball-Larus path profiling algorithm, we propose two new techniques: dynamic introspection and dynamic direction. Dynamic introspection reveals the significant imbalance in the distribution of path frequency through encoding and decoding. Based on the insight from introspection, users can dynamically direct the fuzzer to focus testing on the selected paths in real-time. We implement DDGF based on AFL++. Experiments on Magma show that DDGF is effective in helping the fuzzer to reproduce vulnerabilities faster, with up to 100x speedup in some programs and only 13% performance overhead. Moreover, DDGF detected 4 unknown vulnerabilities with one CVE ID assigned. DDGF shows the great potential of human-in-the-loop for fuzzing.
+
+</details>
+
+***
+
+### \[ISSTA'24] Prospector: Boosting Directed Greybox Fuzzing for Large-scale Target Sets with Iterative Prioritization
+
+[\[paper\]](https://dl.acm.org/doi/pdf/10.1145/3650212.3680365) [\[artifact\]](https://zenodo.org/records/12664230)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzing (DGF) is an advanced technique in security testing, specifically designed to guide fuzzing tools toward predefined target sites within a software program. To improve its scalability on multiple targets, recent DGFs prioritize seeds that close to targets based on a more precise distance metric, and dynamically discard well-explored targets, thus steering toward all targets simultaneously. However, not all targets hold equal importance, particularly when facing large-scale target sets. Therefore, current works that blindly tracking all targets diverts computing resources from critical targets, thereby reducing the overall efficiency of triggering targets.
+
+In this paper, we present Prospector, a novel DGF approach that can handle large-scale target sets scenarios. Prospector employs an iterative process to focus on a select group of \textit{focused targets}. To dynamically maintain these targets, Prospector present a more fine-grained strategy that considers the vulnerable patterns and test adequacy of targets. Subsequently, Prospector further sharpens its fuzzing approach toward \textit{focused targets} by refining strategies in explore-exploit scheduling, seed selection, and byte scheduling. We evaluate Prospector on 24 programs by setting all sanitizer labels as targets. The experimental results show that Prospector outperforms AFL++, WindRanger, ParmeSan and FishFuzz by finding bugs 176.3x, 1882.3x, 2846x and 1.5x faster, respectively. Among 64 unique bugs in the program group with largest target sets, Prospector reproduces 33 (51.56%) existing bugs faster than other fuzzers. Prospector also discovered 6 new bugs in 4 real-world programs with 2 CVE IDs assigned.
+
+</details>
+
+***
+
+### \[DIMVA'24] Modularizing Directed Greybox Fuzzing for Binaries over Multiple CPU Architectures
+
+[\[paper\]]()
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed Greybox Fuzzing has proven effective in vulnerability detection areas such as bug reproduction and patch testing. However, existing directed fuzzers are often difficult to customize, lack modularity and have limited binary support. This constrains their usability on complex software or when the source code is unavailable; a challenge encountered when fuzzing embedded systems. This article addresses these limitations by introducing the Directed Fuzzing Toolkit (DRIFT) as a platform for directed fuzzing within the modular framework LibAFL. DRIFT modularizes techniques from the state-of-the-art directed fuzzer AFLGo and adapts them for binary applications thereby augmenting LibAFL’s highly customizable fuzzers with directed fuzzing capabilities. Additionally, by leveraging Ghidra’s analysis, DRIFT achieves architecture agnostic static analysis, opening doors for DGF to tackle previously challenging scenarios. Our evaluation of DRIFT shows a 90% correlation in static analysis metrics over binary compared to its source-code counterpart. Fuzzing performance was also notable despite operating over emulation. In benchmarks, DRIFT’s performance exceeds the original fuzzer with up to doubled bug discovery rates and 9–40x faster exploitation times of target bugs. These results are attributed to the toolkit’s modular design and its integration with LibAFL. Additionally, DRIFT includes a profiling platform for DGF metrics and is incorporated with the Magma benchmark. Together, these features position DRIFT as a practical advancement in directed fuzzing within LibAFL.
+</details>
+
+***
+
+### \[Fuzzing'24] Effective Fuzzing within CI/CD Pipelines (Registered Report)
+
+[\[paper\]](https://srg.doc.ic.ac.uk/files/papers/pazzer-fuzzing-24.pdf) [\[artifact\]](https://figshare.com/articles/dataset/Artifact_for_Effective_Fuzzing_within_CI_CD_Pipelines_Registered_Report_/26075962/3)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Deploying fuzzing within CI/CD pipelines can help ensure safe and secure code evolution. Directed greybox fuzzing techniques such as AFLGo are a good match for the CI/CD context. These techniques prioritise inputs based on estimated distances to the changed code. Unfortunately, computing these distances is often expensive, making the techniques impractical for short CI/CD runs. In this paper, we propose an AFLGo-based technique called PaZZER, which optimises the distance calculation by dropping the expensive control-flow graph component and computing the callgraph component in an incremental fashion. Preliminary results are promising, showing that PaZZER can make CI/CD testing feasible for large applications: e.g., for Objdump the distance computation time is decreased from 34 min to just 2.5 min, with a further 2.3 min saved when an incremental algorithm is used. The significant time
+reduction in distance computation allows PaZZER to use most of the time on actual fuzzing, making it practical for short CI/CD runs of around 10 minutes. Our planned full evaluation will involve real-world commits from a diverse set of nine applications of different sizes. This will include coverage experiments and an ablation study to investigate the impact of PaZZER’s design decisions, and a bug-finding case study comparing it against AFLGo and Google’s CIFuzz. We will assess the benefits and effectiveness of our approach in terms of patch coverage, patch proximity, distance computation time, and time-to-exposure for bugs.
+</details>
+
+***
+
+### \[Fuzzing'24] Directed or Undirected: Investigating Fuzzing Strategies in a CI/CD Setup (Registered Report)
+
+[\[paper\]](https://dl.acm.org/doi/pdf/10.1145/3678722.3685532)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Fuzzing best practices suggest that fuzzing should be run for at least 24 hours, if not longer. This recommendation makes it hard to integrate fuzzing into CI/CD contexts, to rapidly check a commit for bugs. Existing studies on CI/CD fuzzing simulated a CI/CD environment by running undirected fuzzers on Magma benchmark programs, which have multiple bugs injected into a single version of the program. Directed fuzzers, such as AFLGo, aim to generate
+inputs that reach specific target locations in the program being fuzzed. Thus, they should be more effective at fuzzing in a CI/CD environment. In this study, we propose to evaluate both directed and undirected fuzzers in a simulated CI/CD environment. Like prior work, we will use Magma as a source of benchmarks, and run fuzzers for 10 minutes. Unlike prior work, we will start the fuzzing process from a saturated corpus, rather than Magma’s default corpus. Also unlike prior work, we will run the fuzzers on versions of Magma programs with a single bug injected. To deal with the threat that Magma patches give directed fuzzers access to too precise information as to the bug location, we will also conduct experiments where we add additional lines of target code, to evaluate the sensitivity of directed fuzzers. Our registered report gives preliminary results on a small subset of benchmarks.
+</details>
+
+***
+
+### \[arxiv'24] An Empirical Study on the Distance Metric in Guiding Directed Grey-box Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2409.12701)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzing (DGF) aims to discover vulnerabilities in specific code areas efficiently. Distance metric, which is used to measure the quality of seed in DGF, is a crucial factor in affecting the fuzzing performance. Despite distance metrics being widely applied in existing DGF frameworks, it remains opaque about how different distance metrics guide the fuzzing process and affect the fuzzing result in practice. In this paper, we conduct the first empirical study to explore how different distance metrics perform in guiding DGFs. Specifically, we systematically discuss different distance metrics in the aspect of calculation method and granularity. Then, we implement
+different distance metrics based on AFLGo. On this basis, we conduct comprehensive experiments to evaluate the performance of these distance metrics on the benchmarks widely used in existing DGF-related work. The experimental results demonstrate the following insights. First, the difference among different distance metrics with varying methods of calculation and granularities is not significant. Second, the distance metrics may not be effective
+in describing the difficulty of triggering the target vulnerability. In addition, by scrutinizing the quality of testcases, our research highlights the inherent limitation of existing mutation strategies in generating high-quality testcases, calling for designing effective mutation strategies for directed fuzzing. We open-source the implementation code and experiment dataset to facilitate future research in DGF.
+</details>
+
+***
+
+### \[arxiv'24] TransferFuzz: Fuzzing with Historical Trace for Verifying Propagated Vulnerability Code
+
+[\[paper\]](https://arxiv.org/pdf/2411.18347) [\[project\]](https://github.com/Siyuan-Li201/TransferFuzz) ⭐ 16 | 🐛 0 | 🌐 C | 📅 2025-03-27
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Code reuse in software development frequently facilitates the spread of vulnerabilities, making the scope of affected software in CVE reports imprecise. Traditional methods primarily focus on identifying reused vulnerability code within target software, yet they cannot verify if these vulnerabilities can be triggered in new software contexts. This limitation often results in false positives. In this paper, we introduce TransferFuzz, a novel vulnerability verification framework, to verify whether vulnerabilities propagated through code reuse can be triggered in new software. Innovatively, we collected runtime information during the execution or fuzzing of the basic binary (the vulnerable binary detailed in CVE reports). This process allowed us to extract historical traces, which proved instrumental in guiding the fuzzing process for the target binary (the new binary that reused the vulnerable function). TransferFuzz introduces a unique Key Bytes Guided Mutation strategy and a Nested Simulated Annealing algorithm, which transfers these historical traces to implement trace-guided fuzzing on the target binary, facilitating the accurate and efficient verification of the propagated vulnerability. Our evaluation, conducted on widely recognized datasets, shows that TransferFuzz can quickly validate vulnerabilities previously unverifiable with existing techniques. Its verification speed is 2.5 to 26.2 times faster than existing methods. Moreover, TransferFuzz has proven its effectiveness by expanding the impacted software scope for 15 vulnerabilities listed in CVE reports, increasing the number of affected binaries from 15 to 53. The datasets and source code used in this article are available at https://github.com/Siyuan-Li201/TransferFuzz.
+</details>
+
+***
+
+### \[arxiv'24] LibAFL-DiFuzz: Advanced Architecture Enabling Directed Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2412.19143)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing performs best for targeted program testing via estimating the impact of each input in reaching predefined program points. But due to insufficient analysis of the program structure and lack of flexibility and configurability it can lose efficiency. In this paper, we enhance directed fuzzing with context weights for graph nodes and resolve indirect edges during call graph construction. We construct flexible tool for directed fuzzing with components able to be easily combined with other techniques. We implement proposed method in three separate modules: DiFuzzLLVM library for graph construction and indirect calls resolving, DiFuzz static analysis tool for processing program graphs and computing proximity metrics, and LibAFL-DiFuzz directed fuzzer based on LibAFL fuzzing library. We create additional LibAFL modules for enabling custom power scheduling and static instrumentation. We evaluate indirect calls resolving and get increase in directed fuzzing efficiency for reaching deeper target points. We evaluate context weights contribution and get benefits in TTE and scheduling iterations number. We evaluate our fuzzer in comparison with AFLGo and BEACON, and reveal speedup in time to exposure on several benchmarks. Furthermore, our tool implements some important usability features that are not available in mentioned tools: target points detection, multiple target points support, etc.
+</details>
+
+***
+
+### \[ASIACCS'24] SoK: Where to Fuzz? Assessing Target Selection Methods in Directed Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2502.08341) [\[project\]](https://github.com/wsbrg/crashminer) ⭐ 10 | 🐛 1 | 🌐 Python | 📅 2025-12-14
+
+**Tags:** survey
+
+<details>
+  <summary>Click to see the abstract!</summary>
+A common paradigm for improving fuzzing performance is to focus on selected regions of a program rather than its entirety. While previous work has largely explored how these locations can be reached, their selection, that is, the where, has received little attention so far. In this paper, we fill this gap and present the first comprehensive analysis of target selection methods for fuzzing. To this end, we examine papers from leading security and software engineering conferences, identifying prevalent methods for choosing targets. By modeling these methods as general scoring functions, we are able to compare and measure their efficacy on a corpus of more than 1,600 crashes from the OSS-Fuzz project. Our analysis provides new insights for target selection in practice: First, we find that simple software metrics significantly outperform other methods, including common heuristics used in directed fuzzing, such as recently modified code or locations with sanitizer instrumentation. Next to this, we identify language models as a promising choice for target selection. In summary, our work offers a new perspective on directed fuzzing, emphasizing the role of target selection as an orthogonal dimension to improve performance.
+</details>
+
+***
+
+### \[arxiv'24] ISC4DGF: Enhancing Directed Grey-box Fuzzing with LLM-Driven Initial Seed Corpus Generation
+
+[\[paper\]](https://arxiv.org/pdf/2409.14329)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Fuzz testing is crucial for identifying software vulnerabilities, with coverage-guided grey-box fuzzers like AFL and Angora excelling in broad detection. However, as the need for targeted detection grows, directed grey-box fuzzing (DGF) has become essential, focusing on specific vulnerabilities. The initial seed corpus, which consists of carefully selected input samples that the fuzzer uses as a starting point, is fundamental in determining the paths that the fuzzer explores. A well-designed seed corpus can guide the fuzzer more effectively towards critical areas of the code, improving the efficiency and success of the fuzzing process. Even with its importance, many works concentrate on refining guidance mechanisms while paying less attention to optimizing the initial seed corpus. In this paper, we introduce ISC4DGF, a novel approach to generating optimized initial seed corpus for DGF using Large Language Models (LLMs). By leveraging LLMs’ deep software understanding and refined user inputs, ISC4DGF creates precise seed corpus that efficiently trigger specific vulnerabilities. Implemented on AFL and tested against state-of-the-art fuzzers like AFLGo, FairFuzz, and Entropic using the Magma benchmark, ISC4DGF achieved a 35.63x speedup and 616.10x fewer target reaches. Moreover, ISC4DGF focused on more effectively detecting target vulnerabilities, enhancing efficiency while operating with reduced code coverage.
+</details>
+
+***
+
+### \[Usenix'25] Effective Directed Fuzzing with Hierarchical Scheduling for Web Vulnerability Detection
+
+[\[paper\]](https://yuanxzhang.github.io/paper/WDFuzz-security25.pdf)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Java web applications play a pivotal role in the modern digital landscape. Due to their widespread use and significant importance, Java web applications have been one prime target for cyber attacks. In this work, we propose a novel directed fuzzing approach, called WDFUZZ, that can effectively vet the security of Java web applications. To achieve this, we address two main challenges: (1) efficiently exploring numerous web entries and parameters, and (2) generating structured and semantically constrained inputs. Our WDFUZZ approach is two-fold. First, we develop a semantic constraint extraction technique to accurately capture the expected input structures and constraints of web parameters. Second, we implement a hierarchical scheduling strategy that evaluates the potential of each seed to trigger vulnerabilities and prioritizes the most promising seeds. In our evaluation against 15 real-world Java web applications, WDFUZZ achieved a 92.6% recall rate in the known vulnerability dataset, finding 3.2 times more vulnerabilities and detecting them 7.1 times faster than the state-of-the-art web fuzzer. We also identified 92 previously unknown vulnerabilities, with 4 CVE IDs and 15 CNVD IDs assigned to date.
+</details>
+
+***
+
+### \[Usenix'25] From Alarms to Real Bugs: Multi-target Multi-step Directed Greybox Fuzzing for Static Analysis Result Verification
+
+[\[paper\]](https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-1022-bao.pdf) [\[project\]](https://github.com/xiaobaozidi/Lysofuzzing) ⭐ 23 | 🐛 0 | 🌐 C | 📅 2026-01-09 [\[artifact\]](https://zenodo.org/records/14714504)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Effective verification of the true positives from false positives is crucial for improving the usability of static analysis tools and bolstering software security. Directed greybox fuzzing (DGF), based on dynamic execution, can confirm real vulnerabilities and provide proof-of-concept exploits, offering a promising solution. However, existing DGF tools are ineffective in verifying static analysis results because they are unaware of the semantic information about individual alarms and the correlations among multiple alarms.
+
+In this paper, we fill this gap and present Lyso, the first multi-target, multi-step guided fuzzer that leverages semantic information (i.e., program flows) and correlations (i.e., shared root causes) derived from static analysis. By concurrently handling multiple alarms and prioritizing seeds that cover these root causes, Lyso efficiently explores multiple alarms. For each alarm, Lyso breaks down the goal of reaching an alarm into a sequence of manageable steps. By progressively following these steps, Lyso refines its search to reach the final step, significantly improving its ability to trigger challenging alarms.
+
+We compared Lyso to eight state-of-the-art (directed) fuzzers. Our evaluation demonstrates that Lyso outperforms existing approaches, achieving an average 12.17x speedup while finding the highest absolute number of bugs. Additionally, we applied Lyso to verify static analysis results for real-world programs, and it successfully discovered eighteen new vulnerabilities.
+
+</details>
+
+***
+
+### \[Usenix'25] IDFUZZ: Intelligent Directed Grey-box Fuzzing
+
+[\[paper\]](https://www.usenix.org/system/files/usenixsecurity25-chen-yiyang.pdf) [\[project\]](https://github.com/vul337/IDFuzz) ⭐ 92 | 🐛 0 | 🌐 C | 📅 2026-01-31 [\[artifact\]](https://zenodo.org/records/13753907)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzing aims to test target code in programs and is widely utilized in various scenarios, including patch testing, candidate vulnerability confirmation, and known vulnerability reproduction. However, we find that existing directed fuzzers generally lack effective input mutation strategies and resort to the randomness and empiricism inherent in AFL-based strategies, which prove to be inefficient in directed fuzzing contexts. This paper presents IDFUZZ, an intelligent input mutation solution for directed fuzzing. Our key insight is to leverage a neural network model to learn from historically mutated inputs and extract useful experience that can guide input mutation towards the target code. We introduce several novel techniques in model construction and model training, which help build a model that well captures experience on how to cover both explored and unexplored code relevant to the target. We further devise a refined model gradient-guided scheme that leverages the experience to locate critical input fields and develop a directed input mutation strategy. We implement IDFUZZ as an input mutation module that complements most open-source state-of-the-art directed fuzzers. In our evaluation, IDFUZZ significantly accelerates existing directed fuzzers by over 2.48x in reproducing target vulnerabilities on the Google Fuzzer Test Suite. Moreover, we demonstrate that IDFUZZ helps existing directed fuzzers reduce ineffective mutations by 91.86%. Lastly, we detected 6 previously unknown vulnerabilities with 4 CVE IDs assigned so far and 1 incomplete fix of a high-severity vulnerability in well-tested real-world software using IDFUZZ.
+</details>
+
+***
+
+### \[arxiv'25] Directed Greybox Fuzzing via Large Language Model
+
+[\[paper\]](https://arxiv.org/pdf/2505.03425)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed greybox fuzzing (DGF) focuses on efficiently reaching specific program locations or triggering particular behaviors, making it essential for tasks like vulnerability detection and crash reproduction. However, existing methods often suffer from path explosion and randomness in input mutation, leading to inefficiencies in exploring and exploiting target paths. In this paper, we propose HGFuzzer, an automatic framework that leverages the large language model (LLM) to address these challenges. HGFuzzer transforms path constraint problems into targeted code generation tasks, systematically generating test harnesses and reachable inputs to reduce unnecessary exploration paths significantly. Additionally, we implement custom mutators designed specifically for target functions, minimizing randomness and improving the precision of directed fuzzing. We evaluated HGFuzzer on 20 real-world vulnerabilities, successfully triggering 17, including 11 within the first minute, achieving a speedup of at least 24.8× compared to stateof-the-art directed fuzzers. Furthermore, HGFuzzer discovered 9 previously unknown vulnerabilities, all of which were assigned CVE IDs, demonstrating the effectiveness of our approach in identifying real-world vulnerabilities.
+</details>
+
+***
+
+### \[TOSEM'25] Not All Paths Are Equal: Multi-path Optimization for Directed Hybrid Fuzzing
+
+[\[paper\]](https://dl.acm.org/doi/pdf/10.1145/3735555) [\[artifact\]](https://anonymous.4open.science/r/multigo-C74C)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed grey-box fuzzing (DGF) can improve bug exposure efficiency by stressing bug-prone areas. Recent studies have modeled DGF as the problem of finding and optimizing paths to reach target sites. However, they still face the “multi-path” challenge. When a target site is reachable by multiple paths, it is crucial to comprehensively evaluate and effectively select these paths, as this affects the fuzzer’s choice between reaching target sites via optimal paths and enhancing path diversity toward targets to expose hidden bugs in non-optimal paths. In this paper, we propose MultiGo, a directed hybrid fuzzer designed for multi-path optimization. First, we propose a new fitness metric called path difficulty to comprehensively evaluate the promising paths. This metric uses the Poisson distribution to estimate the probability of exploring basic blocks along execution paths based on statistical block frequency, distinguishing between optimal and challenging paths. With path difficulty as a key factor, a customized Contextual Multi-Armed Bandit (CMAB) model is employed to efficiently optimize path scheduling by comprehensively considering the impact of testing conditions on path scheduling. We introduce the concept of the fuzzing context to represent and evaluate testing conditions, which encompass factors such as path characteristics (e.g., path difficulty), the testing agent (e.g., fuzzing or symbolic execution), and the testing goal (e.g., path exploitation or exploration). Then, the CMAB model predicts the expected rewards for scheduling paths under different testing agents and goals, thereby optimizing path scheduling. By leveraging the CMAB model, MultiGo enhances DGF’s capability to explore easier paths and symbolic execution’s capacity to handle more complex ones, enabling efficient target reaching through optimal paths while ensuring sufficient coverage of non-optimal paths. MultiGo is evaluated on 136 target sites of 41 real-world programs from 3 benchmarks. The experimental results show that MultiGo outperforms the state-of-the-art directed fuzzers (AFLGo, SelectFuzz, Beacon, WindRanger, and DAFL) and hybrid fuzzers (SymCC and SymGo) in reaching target sites and exposing known vulnerabilities. Moreover, MultiGo also discovered 14 undisclosed vulnerabilities.
+</details>
+
+***
+
+### \[arxiv'25] ColorGo: Directed Concolic Execution
+
+[\[paper\]](https://arxiv.org/pdf/2505.21130) [\[project\]](https://github.com/lijia73/ColorGo)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing is a critical technique in cybersecurity, targeting specific sections of a program. This approach is essential in various security-related domains such as crash reproduction, patch testing, and vulnerability detection. Despite its importance, current directed fuzzing methods exhibit a trade-off between efficiency and effectiveness. For instance, directed grey-box fuzzing, while efficient in generating fuzzing inputs, lacks sufficient precision. The low precision causes time wasted on executing code that cannot help reach the target site. Conversely, interpreter- or observer-based directed symbolic execution can produce high-quality inputs while incurring non-negligible runtime overhead. These limitations undermine the feasibility of directed fuzzers in real-world scenarios. To kill the birds of efficiency and effectiveness with one stone, in this paper, we involve compilation-based concolic execution into directed fuzzing and present ColorGo, achieving high scalability while preserving the high precision from symbolic execution. ColorGo is a new directed whitebox fuzzer that concretely executes the instrumented program with constraint-solving capability on generated input. It guides the exploration by incremental coloration including static reachability analysis and dynamic feasibility analysis. We evaluated ColorGo on diverse real-world programs and demonstrated that ColorGo outperforms AFLGo by up to 100× in reaching target sites and reproducing target crashes.
+</details>
+
+***
+
+### \[EuroS\&P'25] LibAFLGO: Evaluating and Advancing Directed Greybox Fuzzing
+
+[\[paper\]](https://download.vusec.net/papers/libaflgo_eurosp25.pdf) [\[project\]](https://github.com/vusec/libaflgo) ⭐ 26 | 🐛 3 | 🌐 Rust | 📅 2026-03-04
+
+<details>
+  <summary>Click to see the abstract!</summary>
+While greybox fuzzing is routinely applied in production environments with great success, directed greybox fuzzing has struggled to gain real-world adoption—despite the great (intuitive) promise and the many optimizations proposed in literature. In practice, directed fuzzers struggle for three critical issues. First, popular implementations build on and compare to ancient baselines, often derived from AFLGo. Unfortunately, none of the optimizations that are essential for performance in modern greybox fuzzers are available in these baselines. As a result, we find reported improvements in directed fuzzing are often only “imaginary” and do not lead to better performance on a modern baseline. Second, directed fuzzing evaluations commonly ignore or misinterpret important factors affecting fuzzing overhead—such as build times and timeouts. As design decisions now build on unreliable data, we find the directed fuzzers perform worse than expected in practice. Third, while almost all directed fuzzers rely on (expensive) analysis stacks, such as pointsto and reachability analysis components, they often opt for very different implementations. Since these implementations have their own unique benefits and drawbacks, we find performance differences of directed fuzzers are frequently due to these components rather than the proposed directed fuzzing optimization.
+In this paper, we investigate the practical impact of these issues by means of an analysis and evaluation of a representative set of popular directed greybox fuzzers. As a way forward, we then present LIBAFLGO, a modular directed fuzzing framework that addresses all three issues and allows one to directly compare different directed fuzzing policies on top of a modern fuzzing stack. Our experimental results on state-of-the-art directed fuzzing policies provide two main insights. First, the original AFLGo policies outperform more recent directed fuzzing policies when testing on a modern fuzzing stack. Second, none of the directed fuzzing policies can favorably compete with (nondirected) LibAFL, which scored better overall performance across benchmarks. As such, the quest for efficient directed fuzzing policies must continue.
+</details>
+
+***
+
+### \[MS Thesis'25] CGFuzzerArt: A Directed Graybox Fuzzer for Vulnerability Discovery
+
+[\[paper\]](https://scholar.dsu.edu/cgi/viewcontent.cgi?article=1492\&context=theses)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Fuzzing is an effective approach to mitigating vulnerabilities in software applications. It encompasses various types of fuzzing, including black-box, white-box, and gray-box, each with advantages and limitations. This research presents a novel method to improve the efficiency of coverage-guided directed gray-box fuzzers by improving the understanding of indirect function calls in the call graph and leveraging ThinLTO when generating an instrumented binary. A more comprehensive call graph enables fuzzers to navigate more effectively toward their targets, particularly when the target resides within a method invoked through a function pointer. This research addresses four research questions: 1) Can we improve the efficiency of the directed gray-box fuzzer by improving its ability to understand indirect function calls better? 2) Can we use a call graph to direct our gray-box fuzzer to fuzz where libraries are used in the code? 3) Can we export information from the fuzzing engine to inform us if all areas of interest have been covered? 4) How effective is our directed gray-box fuzzer compared to other fuzzers such as AFL++ and AFLGo? The methodology follows Wieringa’s design-science research approach, which consists of four phases: problem investigation, treatment design, validation, and implementation. The evaluation results demonstrated that CGFuzzerArt improved efficiency by incorporating a call graph with a better understanding of indirect function calls. It successfully identified libraries and expanded its target list, effectively exporting information on whether a target was reached. It outperformed existing fuzzers, such as AFL++ and AFLGo, by reaching targets more frequently and in less time.
+</details>
+
+***
+
+### \[arxiv'25] HF-DGF: Hybrid Feedback Guided Directed Grey-box Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2506.23063) [\[project\]](https://github.com/HF-DGF/HF-DGF) ⭐ 1 | 🐛 0 | 📅 2025-07-25
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed Grey-box Fuzzing (DGF) has emerged as a widely adopted technique for crash reproduction and patch testing, leveraging its capability to precisely navigate toward target locations and exploit vulnerabilities. However, current DGF tools are constrained by insufficient runtime feedback, limiting their efficiency in reaching targets and exploring state spaces. This study presents HF-DGF, a novel directed grey-box fuzzing framework. Its seed scheduling is guided by a hybrid feedback mechanism integrating control-flow distance, value-flow influence score, and slice coverage. To enable precise control-flow distance feedback, we propose a backward-stepping algorithm to calculate basic block-level seed distances on a virtual interprocedural control-flow graph (ICFG). For effective state space exploration, we introduce value-flow influence and a corresponding metric, the value-flow influence score. Additionally, to mitigate runtime overhead from hybrid feedback, we adopt a novel selective instrumentation strategy. Evaluations on 41 real-world vulnerabilities show HF-DGF outperforms existing tools: it achieves crash reproduction 5.05× faster than AFL, 5.79× faster than AFLGo, 73.75× faster than WindRanger, 2.56× faster than DAFL, and 8.45 × faster than Beacon on average. Notably, when all fuzzers triggered crashes, HF-DGF exhibited the lowest code coverage, demonstrating superior directionality and efficiency. It also surpasses AFLGo, WindRanger, DAFL, and Beacon in static analysis efficiency.
+</details>
+
+***
+
+### \[arxiv'25] Fuzzing: Randomness? Reasoning! Efficient Directed Fuzzing via Large Language Models
+
+[\[paper\]](https://arxiv.org/pdf/2507.22065)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Fuzzing is highly effective in detecting bugs due to the key contribution of randomness. However, randomness significantly reduces the efficiency of fuzzing, causing it to cost days or weeks to expose bugs. Even though directed
+fuzzing reduces randomness by guiding fuzzing towards target buggy locations, the dilemma of randomness still challenges directed fuzzers. Two critical components, which are seeds and mutators, contain randomness and are closely tied to the conditions required for triggering bugs. Therefore, to address the challenge of randomness, we propose to use large language models (LLMs) to remove the randomness in seeds and reduce the randomness in mutators. With their strong reasoning and code generation capabilities, LLMs can be used to generate reachable seeds that target pre-determined locations and to construct bug-specific mutators tailored for specific bugs. We propose RANDLUZZ, which integrates LLMs and directed fuzzing, to improve the quality of seeds and mutators, resulting in efficient bug exposure. RANDLUZZ analyzes function call chain or functionality to guide LLMs in generating reachable seeds. To construct bug-specific mutators, RANDLUZZ uses LLMs to perform bug analysis, obtaining information such as bug causes and mutation suggestions, which further help generate code that performs bug-specific mutations. We evaluate RANDLUZZ by comparing it with four state-of-the-art directed fuzzers, AFLGo, Beacon, WindRanger, and SelectFuzz. With RANDLUZZ-generated seeds, the fuzzers achieve an average speedup ranging from 2.1× to 4.8× compared to using widelyused initial seeds. Additionally, when evaluated on individual bugs, RANDLUZZ achieves up to a 2.7× speedup compared to the second-fastest exposure. On 8 bugs, RANDLUZZ can even expose them within 60 seconds.
+</details>
+
+***
+
+### \[arxiv'25] Locus: Agentic Predicate Synthesis for Directed Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2508.21302)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing aims to find program inputs that lead to specified target program states. It has broad applications, such as debugging system crashes, confirming reported bugs, and generating exploits for potential vulnerabilities. This task is inherently challenging because target states are often deeply nested in the program, while the search space manifested by numerous possible program inputs is prohibitively large. Existing approaches rely on branch distances or manually-specified constraints to guide the search; however, the branches alone are often insufficient to precisely characterize progress toward reaching the target states, while the manually
+specified constraints are often tailored for specific bug types and thus difficult to generalize to diverse target states and programs. We present Locus, a novel framework to improve the efficiency of directed fuzzing. Our key insight is to synthesize predicates to capture fuzzing progress as semantically meaningful intermediate states, serving as milestones towards reaching the target states. When used to instrument the program under fuzzing, they can reject executions unlikely to reach the target states, while providing additional coverage guidance. To automate this task and generalize to diverse programs, Locus features an agentic framework with program analysis tools to synthesize and iteratively refine the candidate predicates, while ensuring the predicates strictly relax the target states to prevent false rejections via symbolic execution. Our evaluation shows that Locus substantially improves the efficiency of eight state-of-the-art fuzzers in discovering real-world vulnerabilities, achieving an average speedup of 41.6×. So far, Locus has found eight previously unpatched bugs, with one already acknowledged with a draft patch.
+</details>
+
+***
+
+### \[arxiv'25] Beyond Imprecise Distance Metrics: LLM-Predicted Target Call Stacks for Directed Greybox Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2510.23101)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed greybox fuzzing (DGF) aims to efficiently trigger bugs at specific target locations by prioritizing seeds whose execution paths are more likely to mutate into triggering target bugs. However, existing DGF approaches suffer from imprecise probability calculations due to their reliance on complex distance metrics derived from static analysis. The over-approximations inherent in static analysis cause a large number of irrelevant execution paths to be mistakenly considered to potentially mutate into triggering target bugs, significantly reducing fuzzing efficiency. We propose to replace static analysis-based distance metrics with precise call stack representations. Call stacks represent precise control flows, thereby avoiding false information in static analysis. We leverage large language models (LLMs) to predict vulnerability-triggering call stacks for guiding seed prioritization. Our approach constructs call graphs through static analysis to identify methods that can potentially reach target locations, then utilizes LLMs to predict the most likely call stack sequence that triggers the vulnerability. Seeds whose execution paths have higher overlap with the predicted call stack are prioritized for mutation. This is the first work to integrate LLMs into the core seed prioritization mechanism of DGF. We implement our approach and evaluate it against several state-of-the-art fuzzers. On a suite of real-world programs, our approach triggers vulnerabilities 1.86× to 3.09× faster compared to baselines. In addition, our approach identifies 10 new vulnerabilities and 2 incomplete fixes in the latest versions of programs used in our controlled experiments through directed patch testing, with 10 assigned CVE IDs.
+</details>
+
+***
+
+### \[ICSE'25] Critical Variable State-Aware Directed Greybox Fuzzing
+
+[\[paper\]]()
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing is an effective software testing method that guides the fuzzing campaign towards user-defined target sites of interest, enabling the discovery of vulnerabilities relevant to those sites. However, even though the generated test cases cover the code near the target sites, complex vulnerabilities remain untriggered. By focusing only on test cases that cover new edges, the program states related to the targets are overlooked, resulting in insufficient testing of the targets and failure to capture complex vulnerabilities.
+
+In this paper, we propose a novel directed fuzzing solution named CSFuzz, which considers program states associated with the targets. First, CSFuzz extracts critical variables related to the target sites from the program using static analysis. Then, CSFuzz monitors the runtime values of these critical variables and infers the program states associated with the targets by adaptively partitioning the range of variable values. This allows CSFuzz to store interesting seeds in the state corpus that trigger new states near the target sites. Lastly, CSFuzz employs dynamic scheduling techniques to guide the fuzzing campaign in selecting different corpora and prioritizing seeds. This ensures more adequate testing of the target sites. We have implemented a prototype of CSFuzz and evaluated it on 2 benchmarks and widely fuzzed real-world software. Evaluation results show that CSFuzz outperforms state-of-the-art fuzzers in terms of vulnerability detection capability, achieving a maximum speedup of 219%. Moreover, CSFuzz has discovered 4 new bugs, including 2 CVE IDs assigned.
+
+</details>
+
+***
+
+### \[arxiv'25] AFLGopher: Accelerating Directed Fuzzing via Feasibility-Aware Guidance
+
+[\[paper\]](https://arxiv.org/pdf/2511.10828)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing is a useful testing technique that aims to efficiently reach target code sites in a program. It has a wide range of applications, such as assessing the severity of vulnerabilities, confirming bugs found by static analysis, reproducing existing bugs, and testing code changes. The core of directed fuzzing is the guiding mechanism that directs the fuzzing to the specified target. A general guiding mechanism adopted in existing directed fuzzers is to calculate the control-flow distance between the current progress and the target, and use that as feedback to guide the directed fuzzing. A fundamental problem with the existing guiding mechanism is
+that the distance calculation is feasibility-unaware. For instance, it always assumes that the two branches of an if statement have equal feasibility, which is likely not true in real-world programs and would inevitably incur significant biases that mislead directed fuzzing.
+In this work, we propose feasibility-aware directed fuzzing named AFLGopher. Our new feasibility-aware distance calculation provides pragmatic feedback to guide directed fuzzing to reach targets efficiently. We propose new techniques to address the challenges of feasibility prediction. Our new classification method allows us to predict the feasibility of all branches based on limited traces, and our runtime feasibility-updating mechanism gradually and efficiently improves the prediction precision. We implemented AFLGopher and compared AFLGopher with state-of-the-art directed fuzzers including AFLGo, enhanced AFLGo, WindRanger, BEACON and SelectFuzz. AFLGopher is 3.76×, 2.57×, 3.30×, 2.52× and 2.86× faster than AFLGo, BEACON, WindRanger, SelectFuzz and enhanced AFLGo, respectively, in reaching targets. AFLGopher is 5.60×, 5.20×, 4.98×, 4.52×, and 5.07× faster than AFLGo, BEACON, WindRanger, SelectFuzz and enhanced AFLGo, respectively, in triggering known vulnerabilities.
+</details>
+
+***
+
+### \[arxiv'25] PBFuzz: Agentic Directed Fuzzing for PoV Generation
+
+[\[paper\]](https://arxiv.org/pdf/2512.04611)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Proof-of-Vulnerability (PoV) input generation is a critical task in software security, and has numerous downstream applications such as path generation and validation. Fundamentally, generating a PoV input must solve two sets of constraints: (1) reachability constraints for reaching the vulnerable code location(s), and (2) triggering constraints for triggering the target vulnerability. Unfortunately, existing approaches, including directed greybox fuzzing and LLMassisted fuzzing, struggle to effectively and efficiently solve these constraints. This paper presents an agentic approach that mimics human experts for PoV input generation. Human experts iteratively
+analyze code to extract semantic-level reachability and triggering constraints, hypothesize PoV triggering plans, encode them as test inputs, and leverage debugging feedback to refine their understanding when plans fail. We automate this process with PBFuzz, an agentic directed fuzzing framework. PBFuzz addresses four critical challenges in agentic PoV generation. First, autonomous code reasoning enables dynamic hypothesis validation through semantic constraint extraction. Second, custom MCP tools provide ondemand program analysis for targeted constraint inference. Third, persistent memory prevents hypothesis drift across long-horizon reasoning tasks. Fourth, property-based testing enables efficient constraint solving while preserving structural validity. Experimental evaluation on the Magma benchmark demonstrates decisive superiority. PBFuzz triggered 57 vulnerabilities, outperforming all baselines. Critically, PBFuzz exclusively triggered 17 vulnerabilities compared to existing fuzzers. PBFuzz achieved this within a 30-minute budget per target, compared to 24-hour allocations for
+conventional approaches. Median time-to-exposure: 339 seconds for PBFuzz versus 8680 seconds for AFL++ with CmpLog, representing a 25.6× efficiency gain with API cost of $1.83 per vulnerability.
+</details>
+
+***
+
+### \[arxiv'25] Attention Distance: A Novel Metric for Directed Fuzzing with Large Language Models
+
+[\[paper\]](https://arxiv.org/pdf/2512.19758) [\[artifact\]](https://anonymous.4open.science/r/Attention_Distance-4650)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+In the domain of software security testing, Directed Grey-Box Fuzzing (DGF) has garnered widespread attention for its efficient target localization and excellent detection performance. However, existing approaches measure only the physical distance between seed execution paths and target locations, overlooking logical relationships among code segments. This omission can yield redundant or misleading guidance in complex binaries, weakening DGF’s
+real-world effectiveness. To address this, we introduce attention distance, a novel metric that leverages a large language model’s contextual analysis to compute attention scores between code elements and reveal their intrinsic connections. Under the same AFLGo configuration—without altering any fuzzing components other than the distance metric—replacing physical distances with attention distances across 38 real vulnerability reproduction experiments delivers a 3.43× average increase in testing efficiency over the traditional method. Compared to state-of-the-art directed fuzzers DAFL and WindRanger, our approach achieves 2.89× and 7.13× improvements, respectively. To further validate the generalizability of attention distance, we integrate it into DAFL and WindRanger, where it also consistently enhances their original performance. All related code and datasets are publicly available at https://anonymous.4open.science/r/Attention_Distance-4650.
+</details>
+
+***
+
+### \[arxiv'25] Triggering and Detecting Exploitable Library Vulnerability from the Client by Directed Greybox Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2604.04102)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Developers utilize third-party libraries to improve productivity, which also introduces potential security risks. Existing approaches generate tests for public functions to trigger library vulnerabilities from client programs, yet they depend on proof-of-concepts (PoCs), which are often unavailable. In this paper, we propose a new approach, LiveFuzz, based on directed greybox fuzzing (DGF) to detect the exploitability of library vulnerabilities from client programs without PoCs. LiveFuzz exploits a target tuple to extend existing DGF techniques to cross-program scenarios. Based on the target tuple, LiveFuzz introduces a novel Abstract Path Mapping mechanism to project execution paths, mitigating the preference
+for shorter paths. LiveFuzz also proposes a risk-based adaptive mutation to mitigate excessive mutation. To evaluate LiveFuzz, we construct a new dataset including 61 cases of library vulnerabilities exploited from client programs. Results show that LiveFuzz increases the number of target-reachable paths compared with all baselines and improves the average speed of vulnerability exposure. Three vulnerabilities are triggered exclusively by LiveFuzz.
+</details>
+
+***
+
+### \[OOPSLA'26] Efficient Directed Hybrid Fuzzing via Target-Centric Seed Selection and Generation
+
+[\[paper\]](https://dl.acm.org/doi/pdf/10.1145/3798233) [\[artifact\]](https://zenodo.org/records/18768003)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Software vulnerabilities pose severe security threats, highlighting the need for effective automated detection. Directed hybrid fuzzing, which combines the rapid exploration of fuzz testing with the precise constraint solving of symbolic execution, has made notable advancements in vulnerability discovery. However, existing directed hybrid fuzzing approaches still face two key challenges: (1) inefficient seed selection, leading to inadequate prioritization of optimal inputs for symbolic execution, and (2) inefficient seed generation, resulting in suboptimal seed generation. To address these issues, we propose TACO-Fuzz, TArget-Centric cOncolic Fuzzing, which introduces a two-phase target-centric seed selection strategy to prioritize under-explored paths and a target-centric seed generation approach based on constructing extended path conditions, thereby improving seed quality. Our evaluation on a selected set of public benchmarks shows that TACO-Fuzz can outperform several representative state-of-the-art directed fuzzing tools, achieving up to an average speedup of nearly 10x in reaching target locations, along with comparable improvements in reproducing real-world vulnerabilities. Moreover, TACO-Fuzz contributed to the discovery of 17 previously unknown vulnerabilities, each assigned a CVE, and demonstrated faster vulnerability discovery and reproduction in most cases.
+</details>
+
+***
+
+### \[arxiv'26] DIG: Oracle-Guided Directed Input Generation for One-Day Vulnerabilities
+
+[\[paper\]](https://arxiv.org/pdf/2606.13037)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+One-day vulnerabilities pose significant risks due to delayed or incomplete patch adoption. Generating proof-of-concept (PoC) inputs is therefore essential for assessing real-world impact. The key challenge is identifying necessary constraints for triggering the vulnerability and solving them effectively. Existing directed fuzzing approaches prioritize inputs toward target locations, but neither explicitly identify necessary constraints nor solve them effectively, relying instead on target-distance feedback and random mutation. Agentic approaches show strong potential through code reasoning and structured input generation, but goal drift in long-horizon reasoning limits their effectiveness. DIG addresses this challenge by exploiting a key property of one-day vulnerabilities: patches often reveal necessary preconditions for triggering. DIG uses an LLM to analyze the patch and synthesize an oracle making these conditions explicit. The oracle supports effective PoC generation at two levels. At the high level, DIG performs oracle-guided generator evolution, where an agent infers and solves constraints to satisfy the oracle. At the low level, DIG instruments the oracle into the target program and uses branch-distance feedback to guide random mutation in directed fuzzing. Evaluation shows DIG outperforms 2 state-of-the-art agents and 10 fuzzers across 138 real-world CVEs. DIG triggers 80 vulnerabilities, surpassing prior results and outperforming the best baseline by 40% (57 vs. 80 CVEs). Notably, DIG exclusively triggers 9 vulnerabilities no existing technique can trigger. Compared to the average of other tools, DIG triggers vulnerabilities faster in 92.9% of cases, achieving over 100× speedup in 48.8% of cases, with a maximum speedup of 3,664×. Beyond one-day PoC generation, DIG uncovers 6 previously unknown vulnerabilities in widely deployed libraries, enabling zero-day discovery.
+</details>
+
+***
+
+### \[S\&P'26] TrigFuzz: Triggering Conditions Guided Directed Fuzzing
+
+[\[paper\]](https://vul337.github.io/TrigFuzz/trigfuzz.pdf) [\[project\]](https://github.com/vul337/TrigFuzz) ⭐ 10 | 🐛 2 | 🌐 C | 📅 2026-07-08
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing aims to trigger specific vulnerabilities by steering execution towards predefined target code. However, state-of-the-art directed fuzzers predominantly focus on reaching the target code quickly, often lacking effective follow-up strategies to satisfy the vulnerability constraints required to trigger them. We find that this can be a key factor limiting their performance in directed fuzzing tasks such as crash reproduction. The main challenge is that existing directed fuzzers cannot accurately identify the triggering conditions of target vulnerabilities and effectively exploit them to guide fuzzing. To address this challenge, we propose TrigFuzz, a directed fuzzing solution guided by triggering conditions. Our approach leverages pre-trained large language models (LLMs) to automatically generate the triggering conditions of target vulnerabilities. We design a formalized representation for generated triggering conditions, along with a novel dynamic triggering validation technique to verify their correctness. The verified conditions are further transformed into triggering distance'' metrics that serve as fuzzing runtime feedback to guide seed scheduling and mutation strategies, enabling directed fuzzing to effectively generate vulnerability-triggering test cases. Our evaluations demonstrate that TrigFuzz can generate high-quality triggering conditions for 96.67% of target vulnerabilities and outperform state-of-the-art directed fuzzers with over a 1.72x speedup in reproducing target vulnerabilities on the benchmark Magma. Lastly, we detected 7 previously unknown vulnerabilities with 2 CVE IDs assigned in well-tested real-world software using TrigFuzz.
+</details>
+
+***
+
+### \[FSE'26] It Takes Two: Option-Aware Directed Greybox Fuzzing forVulnerability PoC Generation
+
+[\[paper\]](https://dl.acm.org/doi/epdf/10.1145/3808105) [\[project\]](https://github.com/optionGo/CoupleFuzz)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Static analysis tools can identify potential vulnerabilities, but they often fall short in providing concrete proofs-of-concept (PoCs) to validate their findings. Directed greybox fuzzing (DGF) has emerged as a promising solu-tion by systematically guiding execution toward suspicious code locations and generating reproducible PoCsthat can trigger the target vulnerabilities. However, DGF tools often overlook the influence of configurable op-tions on reaching target locations. Besides, option-aware greybox fuzzing (GF) tools suffer from ineffectiveoption extraction to target locations, and inefficient coordination between options and file fuzzing.To address these limitations, we present CoupleFuzz, a novel option-aware DGF tool that redefines PoC in-puts as the combination of option input (OI) and file input (FI). CoupleFuzz adopts a two-phase workflow. Thestatic analysis phase extracts option knowledge for guiding the fuzzing. The option-aware fuzzing phase em-ploys taint analysis to dynamically prioritize effective option combinations and file bytes to target locations,and introduces a novel cross-guided fuzzing strategy that coordinates OI and FI fuzzing modules and enableseach module to adapt to and benefit from its counterpart’s advances, iteratively driving execution toward thetarget locations efficiently. Our evaluation has demonstrated that CoupleFuzz significantly outperformsthe state-of-the-art DGF tools in generating PoCs for 22 real-world vulnerabilities, generating 15 (a 3.1×improvement) more PoCs than the best traditional DGF baseline, with 6 0-day vulnerabilities confirmed bydevelopers and 1 CVE identifier assigned.
+</details>
+
+***
+
+### \[arxiv'26] SeedSmith: LLM-Driven Seed Synthesis for Directed Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2607.08949) [\[artifact\]](https://anonymous.4open.science/r/SeedSmith-47CF/README.md)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed fuzzing steers fuzzers toward user-defined sink functions to identify vulnerabilities, but it frequently fails to trigger crashes even after long campaigns. We identify two challenges that prevent directed fuzzers from exposing crashes: incomplete static analysis of indirect calls, which leaves reachable paths invisible to distancebased guidance, and lack of semantic guidance for crash preconditions, which blind mutation cannot satisfy within practical time budgets. A natural intervention point is the initial seed corpus: seeds that encode the right control-flow path and satisfy key crash preconditions shift fuzzing from blind exploration to local refinement. Existing seed generation approaches address neither: grammarbased and format-driven methods produce structurally valid inputs with no sink awareness, while LLM-based methods either lack sink targeting or inherit static analysis limitations through oneshot prompting. We present SeedSmith, an agentic LLM pipeline that replicates a security analyst’s workflow: starting from a sink, SeedSmith iteratively explores the codebase, resolves indirect calls, identifies crash preconditions, and synthesizes concrete inputs that satisfy them. Because SeedSmith operates as a seed generation front-end, its seeds are fuzzer-agnostic and improve any downstream mutation-based fuzzer without modification. On Magma, fuzzers using SeedSmith seeds achieve geometric mean crash-time speedups of 11.51× (AFL++) to 14.66× (AFLGo) over default seeds. On ARVO, SeedSmith enables fuzzers to trigger 16 previously unreachable bugs spanning 10 projects with diverse input formats.
+</details>
+
+***
+
+### \[DSN'26] RomeFuzz: Path-aware Directed Greybox Fuzzing via Dyna-Static Indirect Call Analysis
+
+[\[paper\]](https://ieeexplore.ieee.org/abstract/document/11593467)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed greybox fuzzing (DGF) often exhibits incompleteness in scenarios requiring comprehensive target-related path coverage, such as patch testing. This deficiency primarily arises from the imprecise resolution of indirect calls and the insufficient exploration of diverse target-related paths. To address this limitation, we introduce RomeFuzz, a path-aware DGF technique designed to achieve completeness efficiently. RomeFuzz combines collaborative fuzzing with static analysis to accurately resolve more indirect calls. Additionally, it implements selective instrumentation on path-aware basic blocks, which balances path diversity and performance. This facilitates path-diversity coverage-guided exploration and distance-based exploitation. Moreover, it dynamically switches between exploration and exploitation stages. Our evaluation demonstrates that RomeFuzz efficiently reproduces 21 real-world bugs through diverse paths. Specifically, RomeFuzz triggers all target bugs. Compared to baselines, RomeFuzz increases bug hit count by 24×, expands bug-triggering paths by 8×, and accelerates reproduction time by 69%. Furthermore, RomeFuzz discovers 7 new bugs with 2 assigned CVEs.
+</details>
+
+***
+
+### \[CCS'26] RustGo: Fairly Directed Greybox Fuzzing for Enforcing Rust Memory Safety
+
+[\[paper\]](https://arxiv.org/pdf/2608.05870)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Rust is a popular systems programming language that provides strong memory safety and introduces low-performance overhead. While Rust guarantees memory safety through strict security policies, such as ownership, memory bugs can still occur in unsaferelated Rust codes where these policies are not fully enforced. Although such unsafe Rust code accounts for only a small portion of the entire code (e.g., 10%), existing approaches fuzz the entire code—including safe Rust, whose memory safety is already enforced by the Rust compiler—resulting in inefficient use of fuzzing resources. In this paper, we propose RustGo, the new Rust-directed greybox fuzzer that effectively and fairly focuses on code regions potentially containing memory bugs. For this, RustGo automatically identifies potential memory bug targets and accurately prunes the paths irrelevant to each target by leveraging Rust-specific static analysis. For each identified target, RustGo includes a new fuzzing approach that maintains an independent state and applies dynamic pruning to maximize balanced and focused fuzzing. We evaluate RustGo on various real-world Rust applications. On average, RustGo prunes 78.49% of irrelevant paths, reaches targets × 2.09 to × 5.08 faster than existing fuzzers, and identifies 13 unknown bugs (six assigned RUSTSEC IDs and one assigned CVE ID).
+</details>
+
+***
+
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-13._
