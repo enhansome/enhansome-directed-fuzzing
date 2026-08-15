@@ -446,11 +446,6 @@
       "title": "[arxiv'25] AFLGopher: Accelerating Directed Fuzzing via Feasibility-Aware Guidance"
     },
     {
-      "description": "[paper]",
-      "items": [],
-      "title": "[arxiv'25] PBFuzz: Agentic Directed Fuzzing for PoV Generation"
-    },
-    {
       "description": "[paper] [artifact]",
       "items": [],
       "title": "[arxiv'25] Attention Distance: A Novel Metric for Directed Fuzzing with Large Language Models"
@@ -494,12 +489,17 @@
       "description": "[paper]",
       "items": [],
       "title": "[CCS'26] RustGo: Fairly Directed Greybox Fuzzing for Enforcing Rust Memory Safety"
+    },
+    {
+      "description": "[paper] [project] [artifact]",
+      "items": [],
+      "title": "[CCS'26] PBFuzz: Agentic Directed Fuzzing for PoV Generation"
     }
   ],
   "metadata": {
-    "last_updated": "2026-08-14T07:54:45.342Z",
+    "last_updated": "2026-08-15T07:02:18.303Z",
     "original_repository": "strongcourage/awesome-directed-fuzzing",
-    "original_repository_sha": "2384b6ec08ec7043f517519f9329b846163661f4",
+    "original_repository_sha": "794148360bf66edfdc2730107d25a75d1f691629",
     "enhanced_repository": "enhansome/enhansome-directed-fuzzing",
     "enhanced_repository_description": null,
     "title": "awesome-directed-fuzzing with stars"

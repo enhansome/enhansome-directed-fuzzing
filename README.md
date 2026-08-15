@@ -1106,19 +1106,6 @@ In this work, we propose feasibility-aware directed fuzzing named AFLGopher. Our
 
 ***
 
-### \[arxiv'25] PBFuzz: Agentic Directed Fuzzing for PoV Generation
-
-[\[paper\]](https://arxiv.org/pdf/2512.04611)
-
-<details>
-  <summary>Click to see the abstract!</summary>
-Proof-of-Vulnerability (PoV) input generation is a critical task in software security, and has numerous downstream applications such as path generation and validation. Fundamentally, generating a PoV input must solve two sets of constraints: (1) reachability constraints for reaching the vulnerable code location(s), and (2) triggering constraints for triggering the target vulnerability. Unfortunately, existing approaches, including directed greybox fuzzing and LLMassisted fuzzing, struggle to effectively and efficiently solve these constraints. This paper presents an agentic approach that mimics human experts for PoV input generation. Human experts iteratively
-analyze code to extract semantic-level reachability and triggering constraints, hypothesize PoV triggering plans, encode them as test inputs, and leverage debugging feedback to refine their understanding when plans fail. We automate this process with PBFuzz, an agentic directed fuzzing framework. PBFuzz addresses four critical challenges in agentic PoV generation. First, autonomous code reasoning enables dynamic hypothesis validation through semantic constraint extraction. Second, custom MCP tools provide ondemand program analysis for targeted constraint inference. Third, persistent memory prevents hypothesis drift across long-horizon reasoning tasks. Fourth, property-based testing enables efficient constraint solving while preserving structural validity. Experimental evaluation on the Magma benchmark demonstrates decisive superiority. PBFuzz triggered 57 vulnerabilities, outperforming all baselines. Critically, PBFuzz exclusively triggered 17 vulnerabilities compared to existing fuzzers. PBFuzz achieved this within a 30-minute budget per target, compared to 24-hour allocations for
-conventional approaches. Median time-to-exposure: 339 seconds for PBFuzz versus 8680 seconds for AFL++ with CmpLog, representing a 25.6× efficiency gain with API cost of $1.83 per vulnerability.
-</details>
-
-***
-
 ### \[arxiv'25] Attention Distance: A Novel Metric for Directed Fuzzing with Large Language Models
 
 [\[paper\]](https://arxiv.org/pdf/2512.19758) [\[artifact\]](https://anonymous.4open.science/r/Attention_Distance-4650)
@@ -1220,4 +1207,15 @@ Rust is a popular systems programming language that provides strong memory safet
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-14._
+### \[CCS'26] PBFuzz: Agentic Directed Fuzzing for PoV Generation
+
+[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 12 | 🐛 1 | 🌐 Python | 📅 2026-06-20 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-06-20
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Proof-of-Vulnerability (PoV) input generation is a critical task in software security and supports downstream applications such as path generation and validation. Generating a PoV input requires solving two sets of constraints: (1) reachability constraints for reaching vulnerable code locations, and (2) triggering constraints for activating the target vulnerability. Existing approaches, including directed greybox fuzzing and LLM-assisted fuzzing, struggle to efficiently satisfy these constraints. This work presents an agentic method that mimics human experts. Human analysts iteratively study code to extract semantic reachability and triggering constraints, form hypotheses about PoV triggering strategies, encode them as test inputs, and refine their understanding using debugging feedback. We automate this process with an agentic directed fuzzing framework called PBFuzz. PBFuzz tackles four challenges in agentic PoV generation: autonomous code reasoning for semantic constraint extraction, custom program-analysis tools for targeted inference, persistent memory to avoid hypothesis drift, and property-based testing for efficient constraint solving while preserving input structure. Experiments on the Magma benchmark show strong results. PBFuzz triggered 57 vulnerabilities, surpassing all baselines, and uniquely triggered 17 vulnerabilities not exposed by existing fuzzers. PBFuzz achieved this within a 30-minute budget per target, while conventional approaches use 24 hours. Median time-to-exposure was 339 seconds for PBFuzz versus 8680 seconds for AFL++ with CmpLog, giving a 25.6× efficiency improvement with an API cost of $1.83 per vulnerability. In real-world application, PBFuzz reproduced three FFmpeg 1-day CVEs that had no public PoVs.
+</details>
+
+***
+
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-15._
