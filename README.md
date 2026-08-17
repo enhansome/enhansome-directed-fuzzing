@@ -1154,7 +1154,7 @@ One-day vulnerabilities pose significant risks due to delayed or incomplete patc
 
 ### \[S\&P'26] TrigFuzz: Triggering Conditions Guided Directed Fuzzing
 
-[\[paper\]](https://vul337.github.io/TrigFuzz/trigfuzz.pdf) [\[project\]](https://github.com/vul337/TrigFuzz) ⭐ 11 | 🐛 2 | 🌐 C | 📅 2026-07-08
+[\[paper\]](https://vul337.github.io/TrigFuzz/trigfuzz.pdf) [\[project\]](https://github.com/vul337/TrigFuzz) ⭐ 11 | 🐛 1 | 🌐 C | 📅 2026-08-16
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1218,4 +1218,4 @@ Proof-of-Vulnerability (PoV) input generation is a critical task in software sec
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-16._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-17._
