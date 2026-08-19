@@ -1,8 +1,9 @@
 {
   "items": [],
   "metadata": {
-    "last_updated": "2026-08-19T07:10:34.779Z",
+    "last_updated": "2026-08-19T12:30:32.523Z",
     "original_repository": "strongcourage/awesome-directed-fuzzing",
+    "original_repository_id": 246256763,
     "original_repository_sha": "794148360bf66edfdc2730107d25a75d1f691629",
     "enhanced_repository": "enhansome/enhansome-directed-fuzzing",
     "enhanced_repository_description": null,
