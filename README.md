@@ -1209,7 +1209,7 @@ Rust is a popular systems programming language that provides strong memory safet
 
 ### \[CCS'26] PBFuzz: Agentic Directed Fuzzing for PoV Generation
 
-[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 12 | 🐛 1 | 🌐 Python | 📅 2026-06-20 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-08-16
+[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 13 | 🐛 1 | 🌐 Python | 📅 2026-06-20 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-08-16
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1218,4 +1218,15 @@ Proof-of-Vulnerability (PoV) input generation is a critical task in software sec
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-20._
+### \[arxiv'26] BullsEye: Directed Firmware Fuzzing
+
+[\[paper\]](https://arxiv.org/pdf/2608.17729)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+The widespread adoption of Internet of Things (IoT) devices has expanded the digital attack surface, making firmware analysis critical for modern software security. A key security concern stems from the frequent reuse of third-party software components, a practice that often introduces known vulnerabilities into firmware images. Whether a given image actually exposes such a flaw is an open question, and public proof-of concept exploits make answering it urgent. Directed Greybox Fuzzing (DGF), a technique that enables targeted exploration of specific binary locations, offers a promising solution for detecting such vulnerabilities. However, DGF has reached firmware only at function granularity, too coarse to aim at the vulnerable block itself. This article presents BULLSEYE, the first DGF framework to schedule closed-source Linuxbased firmware fuzzing by basic-block-level distance to user-specified targets. Our methodology combines static and dynamic analysis to enable DGF in the constrained firmware domain, focusing on vulnerabilities in reused third-party components. We introduce novel DGF heuristics that address limitations of traditional approaches. We compare BULLSEYE against four greybox-fuzzing baselines sharing its execution back-end, including reimplementations of AFLGO and WINDRANGER, and against GREENHOUSE, a state-of-the-art firmware re-hosting framework. On 40 vulnerability sites across 32 firmware images, BULLSEYE reproduces every target within budget, against 35 for the strongest of the four baselines, and reduces Time-to-Exposure by a geometric mean of 9.5× to 72.5× over them; against GREENHOUSE, on the 18 targets its pipeline supports, BULLSEYE is faster by a geometric mean of 9.8×.
+</details>
+
+***
+
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-21._
