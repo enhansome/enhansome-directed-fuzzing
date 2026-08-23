@@ -365,7 +365,7 @@ Computer systems are deeply integrated into our daily routines such as online sh
 
 ### \[Usenix'22] BRAKTOOTH: Causing Havoc on Bluetooth Link Manager via Directed Fuzzing
 
-[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 579 | 🐛 32 | 📅 2024-08-31
+[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 580 | 🐛 32 | 📅 2024-08-31
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -759,7 +759,7 @@ Directed fuzzers often unnecessarily explore program code and paths that cannot 
 
 ### \[Usenix'24] Critical Code Guided Directed Greybox Fuzzing for Commits
 
-[\[paper\]](https://www.usenix.org/system/files/usenixsecurity24-xiang-yi.pdf)[\[project\]](https://github.com/NESA-Lab/WAFLGo) ⭐ 20 | 🐛 2 | 🌐 C | 📅 2024-08-30 [\[slides\]](https://www.usenix.org/system/files/usenixsecurity24_slides-xiang-yi.pdf)
+[\[paper\]](https://www.usenix.org/system/files/usenixsecurity24-xiang-yi.pdf)[\[project\]](https://github.com/NESA-Lab/WAFLGo) ⭐ 19 | 🐛 2 | 🌐 C | 📅 2024-08-30 [\[slides\]](https://www.usenix.org/system/files/usenixsecurity24_slides-xiang-yi.pdf)
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1229,4 +1229,4 @@ The widespread adoption of Internet of Things (IoT) devices has expanded the dig
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-22._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-23._
