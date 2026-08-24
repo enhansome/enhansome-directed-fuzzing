@@ -1,7 +1,617 @@
 {
-  "items": [],
+  "items": [
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project] [slides] [talk]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 217483767,
+            "language": null,
+            "last_commit": "2020-02-28T12:18:49Z",
+            "owner": "zongpy",
+            "repo": "FuzzGuard",
+            "stars": 32
+          }
+        }
+      ],
+      "title": "[Usenix'20] FuzzGuard: Filtering out Unreachable Inputs in Directed Grey-box Fuzzing through Deep Learning"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project] [slides] [talk]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 249709758,
+            "language": "C++",
+            "last_commit": "2024-04-19T21:17:30Z",
+            "owner": "vusec",
+            "repo": "parmesan",
+            "stars": 177
+          }
+        }
+      ],
+      "title": "[Usenix'20] ParmeSan: Sanitizer-guided Greybox Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 285553491,
+            "language": "C",
+            "last_commit": "2023-09-25T07:53:07Z",
+            "owner": "strongcourage",
+            "repo": "uafuzz",
+            "stars": 351
+          }
+        }
+      ],
+      "title": "[RAID'20] Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project] [dataset]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 331460993,
+            "language": "Jupyter Notebook",
+            "last_commit": "2022-05-19T14:28:20Z",
+            "owner": "aflchurn",
+            "repo": "aflchurn",
+            "stars": 67
+          }
+        }
+      ],
+      "title": "[CCS'21] Regression Greybox Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 397022381,
+            "language": "Python",
+            "last_commit": "2022-09-05T05:44:06Z",
+            "owner": "MelbourneFuzzingHub",
+            "repo": "aflteam",
+            "stars": 75
+          }
+        }
+      ],
+      "title": "[ASE'21 NIER] Towards Systematic and Dynamic Task Allocation for Collaborative Parallel Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 394878915,
+            "language": "Java",
+            "last_commit": "2021-08-11T06:25:16Z",
+            "owner": "LianKee",
+            "repo": "StrawFuzzer",
+            "stars": 65
+          }
+        }
+      ],
+      "title": "[S&P'22] Exploit the Last Straw That Breaks Android Systems"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project] [talk]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 450796606,
+            "language": "C",
+            "last_commit": "2024-04-01T02:29:20Z",
+            "owner": "ltlfuzzer",
+            "repo": "LTL-Fuzzer",
+            "stars": 59
+          }
+        }
+      ],
+      "title": "[ICSE'22] Linear-time Temporal Logic guided Greybox Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 374769765,
+            "language": null,
+            "last_commit": "2024-08-31T14:54:50Z",
+            "owner": "Matheus-Garbelini",
+            "repo": "braktooth_esp32_bluetooth_classic_attacks",
+            "stars": 580
+          }
+        }
+      ],
+      "title": "[Usenix'22] BRAKTOOTH: Causing Havoc on Bluetooth Link Manager via Directed Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 377080669,
+            "language": "C",
+            "last_commit": "2023-04-07T13:00:45Z",
+            "owner": "HongliangLiang",
+            "repo": "leofuzz",
+            "stars": 18
+          }
+        }
+      ],
+      "title": "[arxiv'22] Multiple Targets Directed Greybox Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 554341899,
+            "language": "C",
+            "last_commit": "2023-05-16T04:45:30Z",
+            "owner": "HexHive",
+            "repo": "SieveFuzz",
+            "stars": 31
+          }
+        }
+      ],
+      "title": "[ACSAC'22] One Fuzz Doesn’t Fit All: Optimizing Directed Fuzzing via Target-tailored Program State Restriction"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 576540814,
+            "language": "C",
+            "last_commit": "2024-06-26T04:48:10Z",
+            "owner": "cuhk-seclab",
+            "repo": "SelectFuzz",
+            "stars": 72
+          }
+        }
+      ],
+      "title": "[S&P'23] SELECTFUZZ: Efficient Directed Fuzzing with Selective Path Exploration"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 410480007,
+            "language": "C++",
+            "last_commit": "2023-10-26T06:43:11Z",
+            "owner": "zjuchenyuan",
+            "repo": "gfuzz",
+            "stars": 26
+          }
+        }
+      ],
+      "title": "[TDSC'23] G-Fuzz: A Directed Fuzzing Framework for gVisor"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 526812752,
+            "language": null,
+            "last_commit": "2022-08-20T03:14:45Z",
+            "owner": "ODDFuzz",
+            "repo": "ODDFuzz",
+            "stars": 38
+          }
+        }
+      ],
+      "title": "[S&P'23] ODDFUZZ: Discovering Java Deserialization Vulnerabilities via Structure-Aware Directed Greybox Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project] [artifact]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 621123492,
+            "language": "C",
+            "last_commit": "2025-03-11T08:25:50Z",
+            "owner": "HexHive",
+            "repo": "FishFuzz",
+            "stars": 99
+          }
+        }
+      ],
+      "title": "[Usenix'23] FishFuzz: Catch Deeper Bugs by Throwing Larger Nets"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project] [artifact] [slides]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 651592701,
+            "language": "Python",
+            "last_commit": "2024-10-27T23:58:31Z",
+            "owner": "prosyslab",
+            "repo": "DAFL-artifact",
+            "stars": 52
+          }
+        }
+      ],
+      "title": "[Usenix'23] DAFL: Directed Grey-box Fuzzing Guided by Data Dependency"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[slides] [project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 607566783,
+            "language": null,
+            "last_commit": "2023-02-28T08:28:06Z",
+            "owner": "vul337",
+            "repo": "DDRace",
+            "stars": 11
+          }
+        }
+      ],
+      "title": "[Usenix'23] DDRace: Finding Concurrency UAF Vulnerabilities in Linux Drivers with Directed Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 670092258,
+            "language": "Shell",
+            "last_commit": "2026-07-30T06:07:16Z",
+            "owner": "5hadowblad3",
+            "repo": "Titan",
+            "stars": 56
+          }
+        }
+      ],
+      "title": "[S&P'24] Titan : Efficient Multi-target Directed Greybox Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 668544765,
+            "language": "C",
+            "last_commit": "2025-03-20T09:09:14Z",
+            "owner": "SEU-SSL",
+            "repo": "PDGF",
+            "stars": 13
+          }
+        }
+      ],
+      "title": "[S&P'24] Predecessor-aware Directed Greybox Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 678208130,
+            "language": "C++",
+            "last_commit": "2024-12-05T15:57:37Z",
+            "owner": "shioya-lab-public",
+            "repo": "surgefuzz",
+            "stars": 23
+          }
+        }
+      ],
+      "title": "[ICCAD'23] SurgeFuzz: Surge-Aware Directed Fuzzing for CPU Designs"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project] [slides]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 849943600,
+            "language": "C",
+            "last_commit": "2024-08-30T15:07:55Z",
+            "owner": "NESA-Lab",
+            "repo": "WAFLGo",
+            "stars": 19
+          }
+        }
+      ],
+      "title": "[Usenix'24] Critical Code Guided Directed Greybox Fuzzing for Commits"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project] [artifact] [slides]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 692979327,
+            "language": "Python",
+            "last_commit": "2024-06-04T06:27:29Z",
+            "owner": "prosyslab",
+            "repo": "evaluating-directed-fuzzing-artifact",
+            "stars": 8
+          }
+        }
+      ],
+      "title": "[FSE'24] Evaluating Directed Fuzzers: Are We Heading in the Right Direction?"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 770751693,
+            "language": "C",
+            "last_commit": "2025-03-27T08:43:07Z",
+            "owner": "Siyuan-Li201",
+            "repo": "TransferFuzz",
+            "stars": 16
+          }
+        }
+      ],
+      "title": "[arxiv'24] TransferFuzz: Fuzzing with Historical Trace for Verifying Propagated Vulnerability Code"
+    },
+    {
+      "description": "Tags: survey",
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 790623346,
+            "language": "Python",
+            "last_commit": "2025-12-14T14:42:33Z",
+            "owner": "wsbrg",
+            "repo": "crashminer",
+            "stars": 10
+          }
+        }
+      ],
+      "title": "[ASIACCS'24] SoK: Where to Fuzz? Assessing Target Selection Methods in Directed Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project] [artifact]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 1029336970,
+            "language": "C",
+            "last_commit": "2026-01-09T05:11:38Z",
+            "owner": "xiaobaozidi",
+            "repo": "Lysofuzzing",
+            "stars": 23
+          }
+        }
+      ],
+      "title": "[Usenix'25] From Alarms to Real Bugs: Multi-target Multi-step Directed Greybox Fuzzing for Static Analysis Result Verification"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project] [artifact]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 994250163,
+            "language": "C",
+            "last_commit": "2026-01-31T08:31:41Z",
+            "owner": "vul337",
+            "repo": "IDFuzz",
+            "stars": 92
+          }
+        }
+      ],
+      "title": "[Usenix'25] IDFUZZ: Intelligent Directed Grey-box Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 624782463,
+            "language": "Rust",
+            "last_commit": "2026-03-04T09:47:21Z",
+            "owner": "vusec",
+            "repo": "libaflgo",
+            "stars": 26
+          }
+        }
+      ],
+      "title": "[EuroS&P'25] LibAFLGO: Evaluating and Advancing Directed Greybox Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 884351635,
+            "language": null,
+            "last_commit": "2025-07-25T04:28:00Z",
+            "owner": "HF-DGF",
+            "repo": "HF-DGF",
+            "stars": 1
+          }
+        }
+      ],
+      "title": "[arxiv'25] HF-DGF: Hybrid Feedback Guided Directed Grey-box Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 1198394594,
+            "language": "C",
+            "last_commit": "2026-08-16T17:08:34Z",
+            "owner": "vul337",
+            "repo": "TrigFuzz",
+            "stars": 11
+          }
+        }
+      ],
+      "title": "[S&P'26] TrigFuzz: Triggering Conditions Guided Directed Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "[paper]",
+          "description": "[project] [artifact]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "id": 1227673478,
+            "language": "Python",
+            "last_commit": "2026-06-20T05:23:23Z",
+            "owner": "sgzeng",
+            "repo": "pbfuzz",
+            "stars": 13
+          }
+        }
+      ],
+      "title": "[CCS'26] PBFuzz: Agentic Directed Fuzzing for PoV Generation"
+    }
+  ],
   "metadata": {
-    "last_updated": "2026-08-24T07:33:01.697Z",
+    "last_updated": "2026-08-24T14:20:03.627Z",
     "original_repository": "strongcourage/awesome-directed-fuzzing",
     "original_repository_id": 246256763,
     "original_repository_sha": "517f5cd07d478dc6583c8aa99498bc69dd742a65",
