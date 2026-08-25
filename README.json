@@ -5,7 +5,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "zongpy/FuzzGuard",
           "description": "[project] [slides] [talk]",
           "children": [],
           "repo_info": {
@@ -26,7 +26,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "vusec/parmesan",
           "description": "[project] [slides] [talk]",
           "children": [],
           "repo_info": {
@@ -47,7 +47,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "strongcourage/uafuzz",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -68,7 +68,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "aflchurn/aflchurn",
           "description": "[project] [dataset]",
           "children": [],
           "repo_info": {
@@ -89,7 +89,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "MelbourneFuzzingHub/aflteam",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -110,7 +110,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "LianKee/StrawFuzzer",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -131,7 +131,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "ltlfuzzer/LTL-Fuzzer",
           "description": "[project] [talk]",
           "children": [],
           "repo_info": {
@@ -152,7 +152,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -173,7 +173,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "HongliangLiang/leofuzz",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -194,7 +194,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "HexHive/SieveFuzz",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -215,7 +215,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "cuhk-seclab/SelectFuzz",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -236,7 +236,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "zjuchenyuan/gfuzz",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -257,7 +257,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "ODDFuzz/ODDFuzz",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -278,7 +278,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "HexHive/FishFuzz",
           "description": "[project] [artifact]",
           "children": [],
           "repo_info": {
@@ -299,7 +299,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "prosyslab/DAFL-artifact",
           "description": "[project] [artifact] [slides]",
           "children": [],
           "repo_info": {
@@ -320,7 +320,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "vul337/DDRace",
           "description": "[slides] [project]",
           "children": [],
           "repo_info": {
@@ -341,7 +341,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "5hadowblad3/Titan",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -362,7 +362,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "SEU-SSL/PDGF",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -383,7 +383,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "shioya-lab-public/surgefuzz",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -404,7 +404,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "NESA-Lab/WAFLGo",
           "description": "[project] [slides]",
           "children": [],
           "repo_info": {
@@ -425,7 +425,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "prosyslab/evaluating-directed-fuzzing-artifact",
           "description": "[project] [artifact] [slides]",
           "children": [],
           "repo_info": {
@@ -446,7 +446,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "Siyuan-Li201/TransferFuzz",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -467,7 +467,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "wsbrg/crashminer",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -488,7 +488,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "xiaobaozidi/Lysofuzzing",
           "description": "[project] [artifact]",
           "children": [],
           "repo_info": {
@@ -509,7 +509,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "vul337/IDFuzz",
           "description": "[project] [artifact]",
           "children": [],
           "repo_info": {
@@ -530,7 +530,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "vusec/libaflgo",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -551,7 +551,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "HF-DGF/HF-DGF",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -572,7 +572,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "vul337/TrigFuzz",
           "description": "[project]",
           "children": [],
           "repo_info": {
@@ -593,7 +593,7 @@
       "items": [
         {
           "node_type": "item",
-          "title": "[paper]",
+          "title": "sgzeng/pbfuzz",
           "description": "[project] [artifact]",
           "children": [],
           "repo_info": {
@@ -611,7 +611,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-08-24T14:20:03.627Z",
+    "last_updated": "2026-08-25T06:13:18.649Z",
     "original_repository": "strongcourage/awesome-directed-fuzzing",
     "original_repository_id": 246256763,
     "original_repository_sha": "517f5cd07d478dc6583c8aa99498bc69dd742a65",
