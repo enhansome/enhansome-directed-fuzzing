@@ -1229,4 +1229,16 @@ The widespread adoption of Internet of Things (IoT) devices has expanded the dig
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-25._
+### \[TSE'26] Effective Fuzzing within CI/CD Pipelines
+
+[\[paper\]](https://dl.acm.org/doi/pdf/10.1145/3841630) [\[artifact\]](https://srg.doc.ic.ac.uk/projects/pazzer/)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Deploying fuzzing within CI/CD pipelines can help ensure safe and secure code evolution. Directed greybox fuzzing techniques such as AFLGo are a good match for the CI/CD context. These techniques prioritise inputs based on estimated distances to the changed code. Unfortunately, computing these distances is often expensive, making the techniques impractical for short
+CI/CD runs. In this paper, we propose an AFLGo-based technique called PaZZer, which optimises the distance calculation by dropping the expensive control-flow graph (CFG) component and computing the call-graph (CG) component in an incremental fashion. We have evaluated PaZZer on six popular applications ranging from tens of thousands to hundreds of thousands of lines of code, using real-world patches (commits) that have various sizes and span different numbers of files. We have used short fuzzing budgets of 10 min for medium-sized applications and respectively 30 min for large-sized applications. Our evaluation shows that dropping the expensive CFG distance computation leads to significantly improved results, by allowing PaZZer to use most of the time on actual fuzzing. Compared to AFLGo, which reaches only 14 out of the 162 patches evaluated, PaZZer reaches 85. On the negative side, the time savings achieved by the incremental distance computation are too small to make a difference in practice. Furthermore, on a selection of 20 real-world bugs, PaZZer could not find any of them within a short CI/CD fuzzing budget.
+</details>
+
+***
+
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-26._

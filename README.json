@@ -611,10 +611,10 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-08-25T07:13:35.014Z",
+    "last_updated": "2026-08-26T07:13:32.810Z",
     "original_repository": "strongcourage/awesome-directed-fuzzing",
     "original_repository_id": 246256763,
-    "original_repository_sha": "517f5cd07d478dc6583c8aa99498bc69dd742a65",
+    "original_repository_sha": "9f0261aa8f2116ace08746bb4e1e3e3e71fcd9d5",
     "enhanced_repository": "enhansome/enhansome-directed-fuzzing",
     "enhanced_repository_description": null,
     "title": "awesome-directed-fuzzing with stars"
