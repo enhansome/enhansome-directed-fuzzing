@@ -351,7 +351,7 @@
             "last_commit": "2026-07-30T06:07:16Z",
             "owner": "5hadowblad3",
             "repo": "Titan",
-            "stars": 56
+            "stars": 57
           }
         }
       ],
@@ -611,9 +611,16 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-08-26T07:13:32.810Z",
-    "original_repository": "strongcourage/awesome-directed-fuzzing",
-    "original_repository_id": 246256763,
+    "last_updated": "2026-08-27T11:38:02.180Z",
+    "original_repository_info": {
+      "archived": false,
+      "id": 246256763,
+      "language": null,
+      "last_commit": "2026-08-26T06:09:10Z",
+      "owner": "strongcourage",
+      "repo": "awesome-directed-fuzzing",
+      "stars": 594
+    },
     "original_repository_sha": "9f0261aa8f2116ace08746bb4e1e3e3e71fcd9d5",
     "enhanced_repository": "enhansome/enhansome-directed-fuzzing",
     "enhanced_repository_description": null,
