@@ -16,7 +16,8 @@
             "owner": "zongpy",
             "repo": "FuzzGuard",
             "stars": 32
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[Usenix'20] FuzzGuard: Filtering out Unreachable Inputs in Directed Grey-box Fuzzing through Deep Learning"
@@ -37,7 +38,8 @@
             "owner": "vusec",
             "repo": "parmesan",
             "stars": 177
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[Usenix'20] ParmeSan: Sanitizer-guided Greybox Fuzzing"
@@ -58,7 +60,8 @@
             "owner": "strongcourage",
             "repo": "uafuzz",
             "stars": 351
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[RAID'20] Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities"
@@ -79,7 +82,8 @@
             "owner": "aflchurn",
             "repo": "aflchurn",
             "stars": 67
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[CCS'21] Regression Greybox Fuzzing"
@@ -100,7 +104,8 @@
             "owner": "MelbourneFuzzingHub",
             "repo": "aflteam",
             "stars": 75
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[ASE'21 NIER] Towards Systematic and Dynamic Task Allocation for Collaborative Parallel Fuzzing"
@@ -121,7 +126,8 @@
             "owner": "LianKee",
             "repo": "StrawFuzzer",
             "stars": 65
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[S&P'22] Exploit the Last Straw That Breaks Android Systems"
@@ -142,7 +148,8 @@
             "owner": "ltlfuzzer",
             "repo": "LTL-Fuzzer",
             "stars": 59
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[ICSE'22] Linear-time Temporal Logic guided Greybox Fuzzing"
@@ -163,7 +170,8 @@
             "owner": "Matheus-Garbelini",
             "repo": "braktooth_esp32_bluetooth_classic_attacks",
             "stars": 580
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[Usenix'22] BRAKTOOTH: Causing Havoc on Bluetooth Link Manager via Directed Fuzzing"
@@ -184,7 +192,8 @@
             "owner": "HongliangLiang",
             "repo": "leofuzz",
             "stars": 18
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[arxiv'22] Multiple Targets Directed Greybox Fuzzing"
@@ -205,7 +214,8 @@
             "owner": "HexHive",
             "repo": "SieveFuzz",
             "stars": 31
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[ACSAC'22] One Fuzz Doesn’t Fit All: Optimizing Directed Fuzzing via Target-tailored Program State Restriction"
@@ -226,7 +236,8 @@
             "owner": "cuhk-seclab",
             "repo": "SelectFuzz",
             "stars": 72
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[S&P'23] SELECTFUZZ: Efficient Directed Fuzzing with Selective Path Exploration"
@@ -247,7 +258,8 @@
             "owner": "zjuchenyuan",
             "repo": "gfuzz",
             "stars": 26
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[TDSC'23] G-Fuzz: A Directed Fuzzing Framework for gVisor"
@@ -268,7 +280,8 @@
             "owner": "ODDFuzz",
             "repo": "ODDFuzz",
             "stars": 38
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[S&P'23] ODDFUZZ: Discovering Java Deserialization Vulnerabilities via Structure-Aware Directed Greybox Fuzzing"
@@ -289,7 +302,8 @@
             "owner": "HexHive",
             "repo": "FishFuzz",
             "stars": 99
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[Usenix'23] FishFuzz: Catch Deeper Bugs by Throwing Larger Nets"
@@ -310,7 +324,8 @@
             "owner": "prosyslab",
             "repo": "DAFL-artifact",
             "stars": 52
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[Usenix'23] DAFL: Directed Grey-box Fuzzing Guided by Data Dependency"
@@ -331,7 +346,8 @@
             "owner": "vul337",
             "repo": "DDRace",
             "stars": 11
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[Usenix'23] DDRace: Finding Concurrency UAF Vulnerabilities in Linux Drivers with Directed Fuzzing"
@@ -352,7 +368,8 @@
             "owner": "5hadowblad3",
             "repo": "Titan",
             "stars": 57
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[S&P'24] Titan : Efficient Multi-target Directed Greybox Fuzzing"
@@ -373,7 +390,8 @@
             "owner": "SEU-SSL",
             "repo": "PDGF",
             "stars": 13
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[S&P'24] Predecessor-aware Directed Greybox Fuzzing"
@@ -394,7 +412,8 @@
             "owner": "shioya-lab-public",
             "repo": "surgefuzz",
             "stars": 23
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[ICCAD'23] SurgeFuzz: Surge-Aware Directed Fuzzing for CPU Designs"
@@ -415,7 +434,8 @@
             "owner": "NESA-Lab",
             "repo": "WAFLGo",
             "stars": 19
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[Usenix'24] Critical Code Guided Directed Greybox Fuzzing for Commits"
@@ -436,7 +456,8 @@
             "owner": "prosyslab",
             "repo": "evaluating-directed-fuzzing-artifact",
             "stars": 8
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[FSE'24] Evaluating Directed Fuzzers: Are We Heading in the Right Direction?"
@@ -457,7 +478,8 @@
             "owner": "Siyuan-Li201",
             "repo": "TransferFuzz",
             "stars": 16
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[arxiv'24] TransferFuzz: Fuzzing with Historical Trace for Verifying Propagated Vulnerability Code"
@@ -478,7 +500,8 @@
             "owner": "wsbrg",
             "repo": "crashminer",
             "stars": 10
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[ASIACCS'24] SoK: Where to Fuzz? Assessing Target Selection Methods in Directed Fuzzing"
@@ -499,7 +522,8 @@
             "owner": "xiaobaozidi",
             "repo": "Lysofuzzing",
             "stars": 23
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[Usenix'25] From Alarms to Real Bugs: Multi-target Multi-step Directed Greybox Fuzzing for Static Analysis Result Verification"
@@ -520,7 +544,8 @@
             "owner": "vul337",
             "repo": "IDFuzz",
             "stars": 92
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[Usenix'25] IDFUZZ: Intelligent Directed Grey-box Fuzzing"
@@ -541,7 +566,8 @@
             "owner": "vusec",
             "repo": "libaflgo",
             "stars": 26
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[EuroS&P'25] LibAFLGO: Evaluating and Advancing Directed Greybox Fuzzing"
@@ -562,7 +588,8 @@
             "owner": "HF-DGF",
             "repo": "HF-DGF",
             "stars": 1
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[arxiv'25] HF-DGF: Hybrid Feedback Guided Directed Grey-box Fuzzing"
@@ -583,7 +610,8 @@
             "owner": "vul337",
             "repo": "TrigFuzz",
             "stars": 11
-          }
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[S&P'26] TrigFuzz: Triggering Conditions Guided Directed Fuzzing"
@@ -603,25 +631,26 @@
             "last_commit": "2026-06-20T05:23:23Z",
             "owner": "sgzeng",
             "repo": "pbfuzz",
-            "stars": 13
-          }
+            "stars": 14
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
         }
       ],
       "title": "[CCS'26] PBFuzz: Agentic Directed Fuzzing for PoV Generation"
     }
   ],
   "metadata": {
-    "last_updated": "2026-08-27T17:41:49.282Z",
+    "last_updated": "2026-08-28T18:50:02.983Z",
     "original_repository_info": {
       "archived": false,
       "id": 246256763,
       "language": null,
-      "last_commit": "2026-08-26T06:09:10Z",
+      "last_commit": "2026-08-28T06:39:01Z",
       "owner": "strongcourage",
       "repo": "awesome-directed-fuzzing",
       "stars": 594
     },
-    "original_repository_sha": "9f0261aa8f2116ace08746bb4e1e3e3e71fcd9d5",
+    "original_repository_sha": "93f3f28f2e15f11f4bc943d1e71f44cbd0441a17",
     "enhanced_repository": "enhansome/enhansome-directed-fuzzing",
     "enhanced_repository_description": null,
     "title": "awesome-directed-fuzzing with stars"

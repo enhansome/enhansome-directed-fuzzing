@@ -1209,7 +1209,7 @@ Rust is a popular systems programming language that provides strong memory safet
 
 ### \[CCS'26] PBFuzz: Agentic Directed Fuzzing for PoV Generation
 
-[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 13 | 🐛 1 | 🌐 Python | 📅 2026-06-20 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-08-16
+[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 14 | 🐛 1 | 🌐 Python | 📅 2026-06-20 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-08-16
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1241,4 +1241,16 @@ CI/CD runs. In this paper, we propose an AFLGo-based technique called PaZZer, wh
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-27._
+### \[Usenix'26] Bond: Constraint-Directed Fuzzing for Automated Validation of Taint Analysis Results in Linux-based IoT Firmware
+
+[\[paper\]](https://www.usenix.org/system/files/usenixsecurity26-peng-jiaqian.pdf) [\[artifact\]](https://zenodo.org/records/17921159)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Firmware vulnerabilities in IoT devices pose serious security threats, yet state-of-the-art taint analysis tools often generate large numbers of reports with limited validation. We present Bond, a directed fuzzing framework that bridges static taint analysis and dynamic vulnerability validation. Bond introduces constraint-guided input mutation by integrating three
+categories of constraints with six semantic types, enabling efficient exploration of paths associated with taint reports. We evaluate Bond on 19 IoT devices from 8 vendors, covering 2,776 taint reports produced by four state-of-the-art taint analyzers. Bond successfully validated 1,349 reports as real vulnerabilities, including 155 previously unknown vulnerabilities, of which 108 have been assigned CVE/PSV identifiers. On 60 known vulnerabilities, Bond achieved a 91.67% recall rate. Compared with four leading IoT fuzzers, Bond improves vulnerability validation by up to 5.5X. Ablation studies further demonstrate the effectiveness of Bond’s key components and constraint extraction. These results establish Bond as a practical and effective framework for validating firmware taint analysis results.
+</details>
+
+***
+
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-28._
