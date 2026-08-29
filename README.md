@@ -968,7 +968,7 @@ We compared Lyso to eight state-of-the-art (directed) fuzzers. Our evaluation de
 
 ### \[Usenix'25] IDFUZZ: Intelligent Directed Grey-box Fuzzing
 
-[\[paper\]](https://www.usenix.org/system/files/usenixsecurity25-chen-yiyang.pdf) [\[project\]](https://github.com/vul337/IDFuzz) ⭐ 92 | 🐛 0 | 🌐 C | 📅 2026-01-31 [\[artifact\]](https://zenodo.org/records/13753907)
+[\[paper\]](https://www.usenix.org/system/files/usenixsecurity25-chen-yiyang.pdf) [\[project\]](https://github.com/vul337/IDFuzz) ⭐ 92 | 🐛 0 | 🌐 C | 📅 2026-08-29 [\[artifact\]](https://zenodo.org/records/13753907)
 
 <details>
   <summary>Click to see the abstract!</summary>

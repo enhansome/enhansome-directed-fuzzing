@@ -678,7 +678,7 @@
             "id": 994250163,
             "language": "C",
             "license": "Apache-2.0",
-            "last_commit": "2026-01-31T08:31:41Z",
+            "last_commit": "2026-08-29T07:54:20Z",
             "open_issues": 0,
             "owner": "vul337",
             "repo": "IDFuzz",
@@ -805,7 +805,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-08-29T04:39:47.568Z",
+    "last_updated": "2026-08-29T12:44:42.425Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
