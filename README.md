@@ -365,7 +365,7 @@ Computer systems are deeply integrated into our daily routines such as online sh
 
 ### \[Usenix'22] BRAKTOOTH: Causing Havoc on Bluetooth Link Manager via Directed Fuzzing
 
-[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 580 | 🐛 32 | 📅 2024-08-31
+[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 581 | 🐛 32 | 📅 2024-08-31
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1253,4 +1253,4 @@ categories of constraints with six semantic types, enabling efficient exploratio
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-30._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-08-31._
