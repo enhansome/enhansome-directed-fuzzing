@@ -442,7 +442,7 @@ suffer from low efficiency. In this paper, we distinguish relevant code in the t
 
 ### \[TDSC'23] G-Fuzz: A Directed Fuzzing Framework for gVisor
 
-[\[paper\]](https://arxiv.org/pdf/2409.13139) [\[project\]](https://github.com/zjuchenyuan/gfuzz) ⭐ 26 | 🐛 2 | 🌐 C++ | 📅 2023-10-26
+[\[paper\]](https://arxiv.org/pdf/2409.13139) [\[project\]](https://github.com/zjuchenyuan/gfuzz) ⭐ 26 | 🐛 3 | 🌐 C++ | 📅 2023-10-26
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -952,7 +952,7 @@ Java web applications play a pivotal role in the modern digital landscape. Due t
 
 ### \[Usenix'25] From Alarms to Real Bugs: Multi-target Multi-step Directed Greybox Fuzzing for Static Analysis Result Verification
 
-[\[paper\]](https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-1022-bao.pdf) [\[project\]](https://github.com/xiaobaozidi/Lysofuzzing) ⭐ 23 | 🐛 0 | 🌐 C | 📅 2026-01-09 [\[artifact\]](https://zenodo.org/records/14714504)
+[\[paper\]](https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-1022-bao.pdf) [\[project\]](https://github.com/xiaobaozidi/Lysofuzzing) ⭐ 24 | 🐛 0 | 🌐 C | 📅 2026-01-09 [\[artifact\]](https://zenodo.org/records/14714504)
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1154,7 +1154,7 @@ One-day vulnerabilities pose significant risks due to delayed or incomplete patc
 
 ### \[S\&P'26] TrigFuzz: Triggering Conditions Guided Directed Fuzzing
 
-[\[paper\]](https://vul337.github.io/TrigFuzz/trigfuzz.pdf) [\[project\]](https://github.com/vul337/TrigFuzz) ⭐ 28 | 🐛 1 | 🌐 C | 📅 2026-08-16
+[\[paper\]](https://vul337.github.io/TrigFuzz/trigfuzz.pdf) [\[project\]](https://github.com/vul337/TrigFuzz) ⭐ 35 | 🐛 1 | 🌐 C | 📅 2026-08-16
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1253,4 +1253,4 @@ categories of constraints with six semantic types, enabling efficient exploratio
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-09-02._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-09-03._
