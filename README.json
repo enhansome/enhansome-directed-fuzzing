@@ -369,7 +369,7 @@
         {
           "node_type": "item",
           "title": "HexHive/FishFuzz",
-          "description": "[project] [artifact]",
+          "description": "[preprint] [project] [artifact]",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -583,6 +583,33 @@
       "title": "[FSE'24] Evaluating Directed Fuzzers: Are We Heading in the Right Direction?"
     },
     {
+      "description": "Tags: survey",
+      "items": [
+        {
+          "node_type": "item",
+          "title": "wsbrg/crashminer",
+          "description": "[preprint] [project]",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "description": "Target selection methods for directed fuzzing.",
+            "homepage": null,
+            "id": 790623346,
+            "language": "Python",
+            "license": null,
+            "last_commit": "2025-12-14T14:42:33Z",
+            "open_issues": 1,
+            "owner": "wsbrg",
+            "repo": "crashminer",
+            "stars": 10,
+            "topics": []
+          },
+          "first_seen": "2026-08-28T18:50:02.983Z"
+        }
+      ],
+      "title": "[ASIACCS'24] SoK: Where to Fuzz? Assessing Target Selection Methods in Directed Fuzzing"
+    },
+    {
       "description": null,
       "items": [
         {
@@ -608,33 +635,6 @@
         }
       ],
       "title": "[arxiv'24] TransferFuzz: Fuzzing with Historical Trace for Verifying Propagated Vulnerability Code"
-    },
-    {
-      "description": "Tags: survey",
-      "items": [
-        {
-          "node_type": "item",
-          "title": "wsbrg/crashminer",
-          "description": "[project]",
-          "children": [],
-          "repo_info": {
-            "archived": false,
-            "description": "Target selection methods for directed fuzzing.",
-            "homepage": null,
-            "id": 790623346,
-            "language": "Python",
-            "license": null,
-            "last_commit": "2025-12-14T14:42:33Z",
-            "open_issues": 1,
-            "owner": "wsbrg",
-            "repo": "crashminer",
-            "stars": 10,
-            "topics": []
-          },
-          "first_seen": "2026-08-28T18:50:02.983Z"
-        }
-      ],
-      "title": "[ASIACCS'24] SoK: Where to Fuzz? Assessing Target Selection Methods in Directed Fuzzing"
     },
     {
       "description": null,
@@ -768,7 +768,7 @@
             "open_issues": 1,
             "owner": "vul337",
             "repo": "TrigFuzz",
-            "stars": 35,
+            "stars": 42,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -805,7 +805,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-09-03T11:25:54.728Z",
+    "last_updated": "2026-09-04T11:28:16.567Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
@@ -813,11 +813,11 @@
       "id": 246256763,
       "language": null,
       "license": null,
-      "last_commit": "2026-08-28T06:39:01Z",
+      "last_commit": "2026-09-04T06:45:50Z",
       "open_issues": 0,
       "owner": "strongcourage",
       "repo": "awesome-directed-fuzzing",
-      "stars": 596,
+      "stars": 598,
       "topics": [
         "awesome",
         "awesome-list",
@@ -828,7 +828,7 @@
         "testing"
       ]
     },
-    "original_repository_sha": "93f3f28f2e15f11f4bc943d1e71f44cbd0441a17",
+    "original_repository_sha": "404822c0a3c789d448668988dd9dbdb6e90fb7c0",
     "enhanced_repository": "enhansome/enhansome-directed-fuzzing",
     "enhanced_repository_description": null,
     "title": "awesome-directed-fuzzing with stars"
