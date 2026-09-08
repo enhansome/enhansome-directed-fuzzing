@@ -298,7 +298,7 @@
             "language": "C",
             "license": "Apache-2.0",
             "last_commit": "2024-06-26T04:48:10Z",
-            "open_issues": 10,
+            "open_issues": 11,
             "owner": "cuhk-seclab",
             "repo": "SelectFuzz",
             "stars": 72,
@@ -805,7 +805,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-09-07T12:45:56.203Z",
+    "last_updated": "2026-09-08T11:28:20.375Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
