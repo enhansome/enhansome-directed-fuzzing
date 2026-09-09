@@ -655,7 +655,7 @@
             "open_issues": 0,
             "owner": "xiaobaozidi",
             "repo": "Lysofuzzing",
-            "stars": 24,
+            "stars": 25,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -805,7 +805,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-09-08T11:28:20.375Z",
+    "last_updated": "2026-09-09T11:34:00.039Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",

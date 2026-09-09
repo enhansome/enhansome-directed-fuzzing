@@ -912,7 +912,7 @@ Java web applications play a pivotal role in the modern digital landscape. Due t
 
 ### \[Usenix'25] From Alarms to Real Bugs: Multi-target Multi-step Directed Greybox Fuzzing for Static Analysis Result Verification
 
-[\[paper\]](https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-1022-bao.pdf) [\[project\]](https://github.com/xiaobaozidi/Lysofuzzing) ⭐ 24 | 🐛 0 | 🌐 C | 📅 2026-01-09 [\[artifact\]](https://zenodo.org/records/14714504)
+[\[paper\]](https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-1022-bao.pdf) [\[project\]](https://github.com/xiaobaozidi/Lysofuzzing) ⭐ 25 | 🐛 0 | 🌐 C | 📅 2026-01-09 [\[artifact\]](https://zenodo.org/records/14714504)
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1213,4 +1213,4 @@ categories of constraints with six semantic types, enabling efficient exploratio
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-09-08._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-09-09._
