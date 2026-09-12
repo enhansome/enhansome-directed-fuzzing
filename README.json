@@ -792,7 +792,7 @@
             "language": "Python",
             "license": "NOASSERTION",
             "last_commit": "2026-06-20T05:23:23Z",
-            "open_issues": 1,
+            "open_issues": 0,
             "owner": "sgzeng",
             "repo": "pbfuzz",
             "stars": 14,
@@ -805,7 +805,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-09-11T11:32:32.594Z",
+    "last_updated": "2026-09-12T10:57:14.255Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
