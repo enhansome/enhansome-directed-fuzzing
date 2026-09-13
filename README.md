@@ -144,7 +144,7 @@ ParmeSan, a new sanitizer-guided fuzzer that builds on this observation. We show
 
 ### \[RAID'20] Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities
 
-[\[paper\]](https://arxiv.org/pdf/2002.10751.pdf) [\[project\]](https://github.com/strongcourage/uafuzz) ⭐ 351 | 🐛 3 | 🌐 C | 📅 2023-09-25
+[\[paper\]](https://arxiv.org/pdf/2002.10751.pdf) [\[project\]](https://github.com/strongcourage/uafuzz) ⭐ 352 | 🐛 3 | 🌐 C | 📅 2023-09-25
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1213,4 +1213,4 @@ categories of constraints with six semantic types, enabling efficient exploratio
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-09-12._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-09-13._
