@@ -144,7 +144,7 @@ ParmeSan, a new sanitizer-guided fuzzer that builds on this observation. We show
 
 ### \[RAID'20] Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities
 
-[\[paper\]](https://arxiv.org/pdf/2002.10751.pdf) [\[project\]](https://github.com/strongcourage/uafuzz) ⭐ 352 | 🐛 3 | 🌐 C | 📅 2023-09-25
+[\[paper\]](https://arxiv.org/pdf/2002.10751.pdf) [\[project\]](https://github.com/strongcourage/uafuzz) ⭐ 353 | 🐛 3 | 🌐 C | 📅 2023-09-25
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -365,7 +365,7 @@ Computer systems are deeply integrated into our daily routines such as online sh
 
 ### \[Usenix'22] BRAKTOOTH: Causing Havoc on Bluetooth Link Manager via Directed Fuzzing
 
-[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 582 | 🐛 32 | 📅 2024-08-31
+[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 584 | 🐛 32 | 📅 2024-08-31
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -928,7 +928,7 @@ We compared Lyso to eight state-of-the-art (directed) fuzzers. Our evaluation de
 
 ### \[Usenix'25] IDFUZZ: Intelligent Directed Grey-box Fuzzing
 
-[\[paper\]](https://www.usenix.org/system/files/usenixsecurity25-chen-yiyang.pdf) [\[project\]](https://github.com/vul337/IDFuzz) ⭐ 93 | 🐛 0 | 🌐 C | 📅 2026-08-29 [\[artifact\]](https://zenodo.org/records/13753907)
+[\[paper\]](https://www.usenix.org/system/files/usenixsecurity25-chen-yiyang.pdf) [\[project\]](https://github.com/vul337/IDFuzz) ⭐ 94 | 🐛 0 | 🌐 C | 📅 2026-08-29 [\[artifact\]](https://zenodo.org/records/13753907)
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1213,4 +1213,4 @@ categories of constraints with six semantic types, enabling efficient exploratio
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-09-14._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-09-15._
