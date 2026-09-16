@@ -534,7 +534,7 @@ probabilistic exponential cut-the-loss algorithm.
 
 ### \[Usenix'23] DAFL: Directed Grey-box Fuzzing Guided by Data Dependency
 
-[\[paper\]](https://prosys.kaist.ac.kr/publications/sec23.pdf) [\[project\]](https://github.com/prosyslab/DAFL-artifact) ⭐ 52 | 🐛 1 | 🌐 Python | 📅 2024-10-27 [\[artifact\]](https://zenodo.org/record/8031029) [\[slides\]](https://www.usenix.org/system/files/sec23_slides_kim-tae.pdf)
+[\[paper\]](https://prosys.kaist.ac.kr/publications/sec23.pdf) [\[project\]](https://github.com/prosyslab/DAFL-artifact) ⭐ 51 | 🐛 1 | 🌐 Python | 📅 2024-10-27 [\[artifact\]](https://zenodo.org/record/8031029) [\[slides\]](https://www.usenix.org/system/files/sec23_slides_kim-tae.pdf)
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -769,7 +769,7 @@ In this paper, we propose DeepGo, a predictive directed greybox fuzzer that can 
 
 ### \[FSE'24] Evaluating Directed Fuzzers: Are We Heading in the Right Direction?
 
-[\[paper\]](https://softsec.kaist.ac.kr/~sangkilc/papers/kim-fse24.pdf) [\[project\]](https://github.com/prosyslab/evaluating-directed-fuzzing-artifact) ⭐ 8 | 🐛 0 | 🌐 Python | 📅 2024-06-04 [\[artifact\]](https://zenodo.org/records/10669580) [\[slides\]](https://prosys.kaist.ac.kr/publications/fse24-slides.pdf)
+[\[paper\]](https://softsec.kaist.ac.kr/~sangkilc/papers/kim-fse24.pdf) [\[project\]](https://github.com/prosyslab/evaluating-directed-fuzzing-artifact) ⭐ 7 | 🐛 0 | 🌐 Python | 📅 2024-06-04 [\[artifact\]](https://zenodo.org/records/10669580) [\[slides\]](https://prosys.kaist.ac.kr/publications/fse24-slides.pdf)
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1114,7 +1114,7 @@ One-day vulnerabilities pose significant risks due to delayed or incomplete patc
 
 ### \[S\&P'26] TrigFuzz: Triggering Conditions Guided Directed Fuzzing
 
-[\[paper\]](https://vul337.github.io/TrigFuzz/trigfuzz.pdf) [\[project\]](https://github.com/vul337/TrigFuzz) ⭐ 43 | 🐛 1 | 🌐 C | 📅 2026-08-16
+[\[paper\]](https://vul337.github.io/TrigFuzz/trigfuzz.pdf) [\[project\]](https://github.com/vul337/TrigFuzz) ⭐ 42 | 🐛 1 | 🌐 C | 📅 2026-08-16
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1213,4 +1213,4 @@ categories of constraints with six semantic types, enabling efficient exploratio
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-09-15._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-09-16._

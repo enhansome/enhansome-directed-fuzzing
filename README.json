@@ -409,7 +409,7 @@
             "open_issues": 1,
             "owner": "prosyslab",
             "repo": "DAFL-artifact",
-            "stars": 52,
+            "stars": 51,
             "topics": [
               "dafl",
               "sec23"
@@ -574,7 +574,7 @@
             "open_issues": 0,
             "owner": "prosyslab",
             "repo": "evaluating-directed-fuzzing-artifact",
-            "stars": 8,
+            "stars": 7,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -768,7 +768,7 @@
             "open_issues": 1,
             "owner": "vul337",
             "repo": "TrigFuzz",
-            "stars": 43,
+            "stars": 42,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -805,7 +805,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-09-15T11:53:44.721Z",
+    "last_updated": "2026-09-16T11:48:21.686Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
