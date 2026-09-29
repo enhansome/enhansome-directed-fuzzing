@@ -1114,7 +1114,7 @@ One-day vulnerabilities pose significant risks due to delayed or incomplete patc
 
 ### \[S\&P'26] TrigFuzz: Triggering Conditions Guided Directed Fuzzing
 
-[\[paper\]](https://vul337.github.io/TrigFuzz/trigfuzz.pdf) [\[project\]](https://github.com/vul337/TrigFuzz) ⭐ 42 | 🐛 1 | 🌐 C | 📅 2026-08-16
+[\[paper\]](https://vul337.github.io/TrigFuzz/trigfuzz.pdf) [\[project\]](https://github.com/vul337/TrigFuzz) ⭐ 41 | 🐛 1 | 🌐 C | 📅 2026-08-16
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1213,4 +1213,4 @@ categories of constraints with six semantic types, enabling efficient exploratio
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-09-28._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-09-29._
