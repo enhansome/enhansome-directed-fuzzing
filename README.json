@@ -220,7 +220,7 @@
             "open_issues": 32,
             "owner": "Matheus-Garbelini",
             "repo": "braktooth_esp32_bluetooth_classic_attacks",
-            "stars": 589,
+            "stars": 590,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -805,7 +805,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-09-29T13:06:25.502Z",
+    "last_updated": "2026-09-30T12:46:38.256Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
@@ -817,7 +817,7 @@
       "open_issues": 0,
       "owner": "strongcourage",
       "repo": "awesome-directed-fuzzing",
-      "stars": 599,
+      "stars": 600,
       "topics": [
         "awesome",
         "awesome-list",
