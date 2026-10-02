@@ -789,14 +789,16 @@
             "description": "Agentic Directed Fuzzing for PoV Generation",
             "homepage": null,
             "id": 1227673478,
-            "language": "Python",
+            "language": "TypeScript",
             "license": "NOASSERTION",
-            "last_commit": "2026-06-20T05:23:23Z",
+            "last_commit": "2026-10-02T08:27:20Z",
             "open_issues": 0,
             "owner": "sgzeng",
             "repo": "pbfuzz",
             "stars": 14,
-            "topics": []
+            "topics": [
+              "dsh-plugin"
+            ]
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
         }
@@ -805,7 +807,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-10-01T13:31:31.856Z",
+    "last_updated": "2026-10-02T12:50:28.796Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
