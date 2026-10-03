@@ -60,7 +60,7 @@
         {
           "node_type": "item",
           "title": "strongcourage/uafuzz",
-          "description": "[project]",
+          "description": "strongcourage/uafuzz",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -116,7 +116,7 @@
         {
           "node_type": "item",
           "title": "MelbourneFuzzingHub/aflteam",
-          "description": "[project]",
+          "description": "MelbourneFuzzingHub/aflteam",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -143,7 +143,7 @@
         {
           "node_type": "item",
           "title": "LianKee/StrawFuzzer",
-          "description": "[project]",
+          "description": "LianKee/StrawFuzzer",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -207,7 +207,7 @@
         {
           "node_type": "item",
           "title": "Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks",
-          "description": "[project]",
+          "description": "Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -234,7 +234,7 @@
         {
           "node_type": "item",
           "title": "HongliangLiang/leofuzz",
-          "description": "[project]",
+          "description": "HongliangLiang/leofuzz",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -261,7 +261,7 @@
         {
           "node_type": "item",
           "title": "HexHive/SieveFuzz",
-          "description": "[project]",
+          "description": "HexHive/SieveFuzz",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -288,7 +288,7 @@
         {
           "node_type": "item",
           "title": "cuhk-seclab/SelectFuzz",
-          "description": "[project]",
+          "description": "cuhk-seclab/SelectFuzz",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -315,7 +315,7 @@
         {
           "node_type": "item",
           "title": "zjuchenyuan/gfuzz",
-          "description": "[project]",
+          "description": "zjuchenyuan/gfuzz",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -342,7 +342,7 @@
         {
           "node_type": "item",
           "title": "ODDFuzz/ODDFuzz",
-          "description": "[project]",
+          "description": "ODDFuzz/ODDFuzz",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -453,7 +453,7 @@
         {
           "node_type": "item",
           "title": "5hadowblad3/Titan",
-          "description": "[project]",
+          "description": "5hadowblad3/Titan",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -480,7 +480,7 @@
         {
           "node_type": "item",
           "title": "SEU-SSL/PDGF",
-          "description": "[project]",
+          "description": "SEU-SSL/PDGF",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -507,7 +507,7 @@
         {
           "node_type": "item",
           "title": "shioya-lab-public/surgefuzz",
-          "description": "[project]",
+          "description": "shioya-lab-public/surgefuzz",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -615,7 +615,7 @@
         {
           "node_type": "item",
           "title": "Siyuan-Li201/TransferFuzz",
-          "description": "[project]",
+          "description": "Siyuan-Li201/TransferFuzz",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -696,7 +696,7 @@
         {
           "node_type": "item",
           "title": "vusec/libaflgo",
-          "description": "[project]",
+          "description": "vusec/libaflgo",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -728,7 +728,7 @@
         {
           "node_type": "item",
           "title": "HF-DGF/HF-DGF",
-          "description": "[project]",
+          "description": "HF-DGF/HF-DGF",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -755,7 +755,7 @@
         {
           "node_type": "item",
           "title": "vul337/TrigFuzz",
-          "description": "[project]",
+          "description": "vul337/TrigFuzz",
           "children": [],
           "repo_info": {
             "archived": false,
@@ -807,7 +807,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-10-02T12:50:28.796Z",
+    "last_updated": "2026-10-03T04:43:17.496Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
