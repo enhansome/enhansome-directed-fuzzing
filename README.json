@@ -73,7 +73,7 @@
             "open_issues": 3,
             "owner": "strongcourage",
             "repo": "uafuzz",
-            "stars": 353,
+            "stars": 352,
             "topics": [
               "fuzzing"
             ]
@@ -183,7 +183,7 @@
             "open_issues": 5,
             "owner": "ltlfuzzer",
             "repo": "LTL-Fuzzer",
-            "stars": 59,
+            "stars": 61,
             "topics": [
               "fuzzing",
               "model-checker",
@@ -792,7 +792,7 @@
             "language": "TypeScript",
             "license": "NOASSERTION",
             "last_commit": "2026-10-02T08:27:20Z",
-            "open_issues": 0,
+            "open_issues": 1,
             "owner": "sgzeng",
             "repo": "pbfuzz",
             "stars": 14,
@@ -807,7 +807,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-10-04T12:32:25.553Z",
+    "last_updated": "2026-10-05T14:57:33.111Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
@@ -819,7 +819,7 @@
       "open_issues": 0,
       "owner": "strongcourage",
       "repo": "awesome-directed-fuzzing",
-      "stars": 600,
+      "stars": 601,
       "topics": [
         "awesome",
         "awesome-list",

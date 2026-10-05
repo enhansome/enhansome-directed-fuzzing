@@ -144,7 +144,7 @@ ParmeSan, a new sanitizer-guided fuzzer that builds on this observation. We show
 
 ### \[RAID'20] Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities
 
-[\[paper\]](https://arxiv.org/pdf/2002.10751.pdf) [\[project\]](https://github.com/strongcourage/uafuzz) ⭐ 353 | 🐛 3 | 🌐 C | 📅 2023-09-25
+[\[paper\]](https://arxiv.org/pdf/2002.10751.pdf) [\[project\]](https://github.com/strongcourage/uafuzz) ⭐ 352 | 🐛 3 | 🌐 C | 📅 2023-09-25
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -336,7 +336,7 @@ The Android system services usually play a critical role in running multiple imp
 
 ### \[ICSE'22] Linear-time Temporal Logic guided Greybox Fuzzing
 
-[\[paper\]](https://abhikrc.com/pdf/ICSE22-LTLFuzz.pdf) [\[project\]](https://github.com/ltlfuzzer/LTL-Fuzzer/) ⭐ 59 | 🐛 5 | 🌐 C | 📅 2024-04-01 [\[talk\]](https://www.youtube.com/watch?v=zwAN4uNPs8M)
+[\[paper\]](https://abhikrc.com/pdf/ICSE22-LTLFuzz.pdf) [\[project\]](https://github.com/ltlfuzzer/LTL-Fuzzer/) ⭐ 61 | 🐛 5 | 🌐 C | 📅 2024-04-01 [\[talk\]](https://www.youtube.com/watch?v=zwAN4uNPs8M)
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1169,7 +1169,7 @@ Rust is a popular systems programming language that provides strong memory safet
 
 ### \[CCS'26] PBFuzz: Agentic Directed Fuzzing for PoV Generation
 
-[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 14 | 🐛 0 | 🌐 TypeScript | 📅 2026-10-02 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-08-16
+[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 14 | 🐛 1 | 🌐 TypeScript | 📅 2026-10-02 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-08-16
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1213,4 +1213,4 @@ categories of constraints with six semantic types, enabling efficient exploratio
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-04._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-05._
