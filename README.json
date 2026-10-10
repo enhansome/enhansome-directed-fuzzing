@@ -795,7 +795,7 @@
             "open_issues": 1,
             "owner": "sgzeng",
             "repo": "pbfuzz",
-            "stars": 14,
+            "stars": 15,
             "topics": [
               "dsh-plugin"
             ]
@@ -807,7 +807,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-10-09T13:27:43.751Z",
+    "last_updated": "2026-10-10T12:43:24.474Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",

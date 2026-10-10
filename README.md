@@ -1169,7 +1169,7 @@ Rust is a popular systems programming language that provides strong memory safet
 
 ### \[CCS'26] PBFuzz: Agentic Directed Fuzzing for PoV Generation
 
-[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 14 | 🐛 1 | 🌐 TypeScript | 📅 2026-10-02 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-08-16
+[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 15 | 🐛 1 | 🌐 TypeScript | 📅 2026-10-02 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-08-16
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1213,4 +1213,4 @@ categories of constraints with six semantic types, enabling efficient exploratio
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-09._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-10._
