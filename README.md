@@ -1213,4 +1213,27 @@ categories of constraints with six semantic types, enabling efficient exploratio
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-11._
+### \[ASE'26] CtxFuzz: Context-Aware Directed Fuzzing via Runtime Fuzzer-Agent Cooperation
+
+[\[paper\]](https://dl.acm.org/doi/pdf/10.1145/3832783.3834365) [\[artifact\]](https://zenodo.org/records/19248087)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Automated tools produce vulnerability reports at unprecedented scale, but turning a report into a confirmed proof-of-vulnerability remains challenging. Directed grey-box fuzzers are widely used for validation but lack the ability to consume the rich context these reports carry, reducing each target to a bare location. In contrast, LLM-based approaches can consume this context but are often unable to identify the true triggering mechanism or to synthesize a working proof-of-vulnerability. We present CtxFuzz, a context-aware directed fuzzer that enables an LLM agent and a coverage-guided fuzzer to iteratively exchange and refine bug-triggering context throughout the campaign. The fuzzer contributes execution context, such as what inputs were tried and how the program behaved, grounding the agent’s reasoning in concrete evidence. The agent contributes semantic context, including hypotheses about the triggering conditions, explanations of failed attempts, and targeted mutations to overcome them, guiding the fuzzer toward relevant regions of the input space. Failed attempts are not discarded but decomposed into mutation scripts that translate each identified blocker into a fuzzer-executable strategy. This iterative exchange enables CtxFuzz to trigger vulnerabilities
+that neither directed fuzzers nor LLM agents reach independently. On 62 vulnerabilities across 16 open-source projects from the AIxCC Final competition (39 C, 23 Java), CtxFuzz exposes 61 of 62 targets, including 29 that no state-of-the-art directed fuzzer reaches, and exposes two zero-day vulnerabilities through a realworld vulnerability report validation pipeline.
+</details>
+
+***
+
+### \[ASE'26] ExcavatorFuzz: LLM-Guided Path-Difficulty-Driven Directed Greybox Fuzzing
+
+[\[paper\]](https://dl.acm.org/doi/10.1145/3832783.3837497)
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Directed greybox fuzzing (DGF) is effective at steering mutations toward vulnerable code regions, but its efficiency is often limited by two bottlenecks: misprioritized target-reaching paths and hard-to-satisfy blocking predicates. We present ExcavatorFuzz, an LLM-assisted DGF framework that addresses both challenges in a unified workflow. ExcavatorFuzz first performs CLI-aware feasibility filtering to prune configuration-infeasible paths, and then ranks the remaining candidate paths using a lightweight difficulty metric that approximates their relative tractability based on explicit predicate complexity and implicit data-dependency complexity. During fuzzing, ExcavatorFuzz monitors line-level progress to detect blocked paths and invokes the LLM to synthesize or refine seeds for unsatisfied predicates using structured feedback. We evaluate ExcavatorFuzz on 30 real-world C/C++ benchmarks. ExcavatorFuzz triggers 29 out of 30 known vulnerabilities within 24 hours and achieves an average 4.34x speedup in time-to-exposure over seven state-of-the-art fuzzers. It also discovered three previously unknown vulnerabilities in open-source projects, two of which have been assigned CVE IDs.
+</details>
+
+***
+
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-12._
