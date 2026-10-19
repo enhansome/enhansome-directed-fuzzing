@@ -336,7 +336,7 @@ The Android system services usually play a critical role in running multiple imp
 
 ### \[ICSE'22] Linear-time Temporal Logic guided Greybox Fuzzing
 
-[\[paper\]](https://abhikrc.com/pdf/ICSE22-LTLFuzz.pdf) [\[project\]](https://github.com/ltlfuzzer/LTL-Fuzzer/) ⭐ 61 | 🐛 5 | 🌐 C | 📅 2024-04-01 [\[talk\]](https://www.youtube.com/watch?v=zwAN4uNPs8M)
+[\[paper\]](https://abhikrc.com/pdf/ICSE22-LTLFuzz.pdf) [\[project\]](https://github.com/ltlfuzzer/LTL-Fuzzer/) ⭐ 62 | 🐛 5 | 🌐 C | 📅 2024-04-01 [\[talk\]](https://www.youtube.com/watch?v=zwAN4uNPs8M)
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1236,4 +1236,4 @@ Directed greybox fuzzing (DGF) is effective at steering mutations toward vulnera
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-18._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-19._

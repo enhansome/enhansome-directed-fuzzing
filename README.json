@@ -183,7 +183,7 @@
             "open_issues": 5,
             "owner": "ltlfuzzer",
             "repo": "LTL-Fuzzer",
-            "stars": 61,
+            "stars": 62,
             "topics": [
               "fuzzing",
               "model-checker",
@@ -807,7 +807,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-10-18T11:22:25.522Z",
+    "last_updated": "2026-10-19T13:36:47.491Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
