@@ -427,7 +427,7 @@ suffer from low efficiency. In this paper, we distinguish relevant code in the t
 
 ### \[TDSC'23] G-Fuzz: A Directed Fuzzing Framework for gVisor
 
-[\[paper\]](https://arxiv.org/pdf/2409.13139) [\[project\]](https://github.com/zjuchenyuan/gfuzz) ⭐ 26 | 🐛 3 | 🌐 C++ | 📅 2023-10-26
+[\[paper\]](https://arxiv.org/pdf/2409.13139) [\[project\]](https://github.com/zjuchenyuan/gfuzz) ⭐ 27 | 🐛 3 | 🌐 C++ | 📅 2023-10-26
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -995,7 +995,7 @@ Fuzzing is an effective approach to mitigating vulnerabilities in software appli
 
 ### \[arxiv'25] HF-DGF: Hybrid Feedback Guided Directed Grey-box Fuzzing
 
-[\[paper\]](https://arxiv.org/pdf/2506.23063) [\[project\]](https://github.com/HF-DGF/HF-DGF) ⭐ 1 | 🐛 0 | 📅 2025-07-25
+[\[paper\]](https://arxiv.org/pdf/2506.23063) [\[project\]](https://github.com/HF-DGF/HF-DGF) ⭐ 1 | 🐛 0 | 📅 2026-10-20
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1236,4 +1236,4 @@ Directed greybox fuzzing (DGF) is effective at steering mutations toward vulnera
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-20._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-21._
