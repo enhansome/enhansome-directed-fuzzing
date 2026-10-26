@@ -807,7 +807,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-10-25T11:45:42.876Z",
+    "last_updated": "2026-10-26T13:18:30.878Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
@@ -819,7 +819,7 @@
       "open_issues": 0,
       "owner": "strongcourage",
       "repo": "awesome-directed-fuzzing",
-      "stars": 602,
+      "stars": 604,
       "topics": [
         "awesome",
         "awesome-list",
