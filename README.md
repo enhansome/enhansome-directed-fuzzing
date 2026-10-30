@@ -1236,4 +1236,18 @@ Directed greybox fuzzing (DGF) is effective at steering mutations toward vulnera
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-29._
+### \[Thesis'26] MIST: A Hybrid Software Vulnerability Analysis Framework Combining SAST and DGF
+
+[\[paper\]](https://github.com/alessandroPalazzolo/mist/blob/main/docs.pdf) ⭐ 6 | 🐛 0 | 🌐 Python | 📅 2026-10-29 [\[project\]](https://github.com/alessandroPalazzolo/mist.git) ⭐ 6 | 🐛 0 | 🌐 Python | 📅 2026-10-29
+
+<details>
+  <summary>Click to see the abstract!</summary>
+The proposed system automates the execution of static analysis using Semgrep, extracts the source locations associated with the detected findings, and converts them into AFLGo targets. It then guides the analyst through the configuration of a complete fuzzing campaign, abstracting much of its complexity while generating the required artifacts. It simultaneously stores scripts and configuration files to ensure that the campaign can be executed, replicated, and reproduced with minimal effort. Finally, once the campaign starts, it offers the analyst useful insights on the fuzzing runtime and performs preliminary triage of generated inputs and eventual crashes.
+MIST is designed to enable analysts to focus on security-relevant decisions while still allowing full control over the underlying technical aspects whenever required, exposing scripts and configuration files that can be edited at will.
+By combining SAST and DAST within a unified workflow, the proposed approach aims to improve the efficiency of vulnerability assessment, while simplifying and abstracting its underlying complexities to the end user. Instead of fuzzing the application without guidance, the generated campaigns focus on execution toward code regions that have already been identified as potentially vulnerable, increasing the likelihood of confirming or disproving the reported findings through dynamic execution.
+The evaluation of MIST on open-source projects led to the identification of four previously undocumented vulnerabilities, which were independently reproduced and submitted through the CVE Program. The requests are currently under review. More importantly, the results highlighted the value of the proposed workflow in combining complementary analysis techniques: some vulnerabilities were found near, rather than exactly at, the original static analysis locations, while others were uncovered only through MIST's subsequent runtime verification phase.
+</details>
+
+***
+
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-30._

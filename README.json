@@ -804,10 +804,56 @@
         }
       ],
       "title": "[CCS'26] PBFuzz: Agentic Directed Fuzzing for PoV Generation"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
+          "title": "alessandroPalazzolo/mist",
+          "description": "alessandroPalazzolo/mist",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "description": "Mist Instruments Sast Targets",
+            "homepage": null,
+            "id": 1339701878,
+            "language": "Python",
+            "license": "Apache-2.0",
+            "last_commit": "2026-10-29T09:11:31Z",
+            "open_issues": 0,
+            "owner": "alessandroPalazzolo",
+            "repo": "mist",
+            "stars": 6,
+            "topics": [
+              "afl",
+              "application-security",
+              "automated-testing",
+              "bugbounty",
+              "c",
+              "cpp",
+              "cybersecurity",
+              "dynamic-analysis",
+              "fuzzing",
+              "opens-source",
+              "program-analysis",
+              "python",
+              "sast",
+              "security-testing",
+              "software-security",
+              "static-analysis",
+              "vulnerability-discovery",
+              "vulnerability-research"
+            ]
+          },
+          "first_seen": "2026-10-30T13:11:05.612Z"
+        }
+      ],
+      "title": "[Thesis'26] MIST: A Hybrid Software Vulnerability Analysis Framework Combining SAST and DGF"
     }
   ],
   "metadata": {
-    "last_updated": "2026-10-29T13:19:43.295Z",
+    "last_updated": "2026-10-30T13:11:05.612Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
@@ -815,7 +861,7 @@
       "id": 246256763,
       "language": null,
       "license": null,
-      "last_commit": "2026-10-12T12:41:59Z",
+      "last_commit": "2026-10-30T06:27:00Z",
       "open_issues": 0,
       "owner": "strongcourage",
       "repo": "awesome-directed-fuzzing",
@@ -830,7 +876,7 @@
         "testing"
       ]
     },
-    "original_repository_sha": "d4b6264abf38e0d98c5e725ebf2664c8d0748f61",
+    "original_repository_sha": "319f6c69b0411e4e5b7de51f29f5a772fbfbb49b",
     "enhanced_repository": "enhansome/enhansome-directed-fuzzing",
     "enhanced_repository_description": null,
     "title": "awesome-directed-fuzzing with stars"
