@@ -1238,7 +1238,7 @@ Directed greybox fuzzing (DGF) is effective at steering mutations toward vulnera
 
 ### \[Thesis'26] MIST: A Hybrid Software Vulnerability Analysis Framework Combining SAST and DGF
 
-[\[paper\]](https://github.com/alessandroPalazzolo/mist/blob/main/docs.pdf) ⭐ 6 | 🐛 0 | 🌐 Python | 📅 2026-10-29 [\[project\]](https://github.com/alessandroPalazzolo/mist.git) ⭐ 6 | 🐛 0 | 🌐 Python | 📅 2026-10-29
+[\[paper\]](https://github.com/alessandroPalazzolo/mist/blob/main/docs.pdf) ⭐ 8 | 🐛 0 | 🌐 Python | 📅 2026-10-29 [\[project\]](https://github.com/alessandroPalazzolo/mist.git) ⭐ 8 | 🐛 0 | 🌐 Python | 📅 2026-10-29
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1250,4 +1250,4 @@ The evaluation of MIST on open-source projects led to the identification of four
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-30._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-10-31._
