@@ -824,7 +824,7 @@
             "open_issues": 0,
             "owner": "alessandroPalazzolo",
             "repo": "mist",
-            "stars": 8,
+            "stars": 9,
             "topics": [
               "afl",
               "application-security",
@@ -853,7 +853,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-02T16:16:32.759Z",
+    "last_updated": "2026-11-03T14:27:52.153Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
