@@ -365,7 +365,7 @@ Computer systems are deeply integrated into our daily routines such as online sh
 
 ### \[Usenix'22] BRAKTOOTH: Causing Havoc on Bluetooth Link Manager via Directed Fuzzing
 
-[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 596 | 🐛 32 | 📅 2024-08-31
+[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 597 | 🐛 32 | 📅 2024-08-31
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1169,7 +1169,7 @@ Rust is a popular systems programming language that provides strong memory safet
 
 ### \[CCS'26] PBFuzz: Agentic Directed Fuzzing for PoV Generation
 
-[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 18 | 🐛 1 | 🌐 TypeScript | 📅 2026-10-02 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-08-16
+[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 18 | 🐛 0 | 🌐 TypeScript | 📅 2026-11-04 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-08-16
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1250,4 +1250,4 @@ The evaluation of MIST on open-source projects led to the identification of four
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-03._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-04._
