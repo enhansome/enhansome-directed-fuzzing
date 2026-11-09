@@ -220,7 +220,7 @@
             "open_issues": 32,
             "owner": "Matheus-Garbelini",
             "repo": "braktooth_esp32_bluetooth_classic_attacks",
-            "stars": 597,
+            "stars": 596,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -301,7 +301,7 @@
             "open_issues": 11,
             "owner": "cuhk-seclab",
             "repo": "SelectFuzz",
-            "stars": 73,
+            "stars": 74,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -792,7 +792,7 @@
             "language": "TypeScript",
             "license": "NOASSERTION",
             "last_commit": "2026-11-05T01:29:35Z",
-            "open_issues": 0,
+            "open_issues": 1,
             "owner": "sgzeng",
             "repo": "pbfuzz",
             "stars": 19,
@@ -853,7 +853,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-08T13:38:23.931Z",
+    "last_updated": "2026-11-09T16:38:29.966Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
@@ -865,7 +865,7 @@
       "open_issues": 0,
       "owner": "strongcourage",
       "repo": "awesome-directed-fuzzing",
-      "stars": 606,
+      "stars": 607,
       "topics": [
         "awesome",
         "awesome-list",

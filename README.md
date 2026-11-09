@@ -365,7 +365,7 @@ Computer systems are deeply integrated into our daily routines such as online sh
 
 ### \[Usenix'22] BRAKTOOTH: Causing Havoc on Bluetooth Link Manager via Directed Fuzzing
 
-[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 597 | 🐛 32 | 📅 2024-08-31
+[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 596 | 🐛 32 | 📅 2024-08-31
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -415,7 +415,7 @@ directed fuzzers to obtain up to 99× higher test case throughput. We implement 
 
 ### \[S\&P'23] SELECTFUZZ: Efficient Directed Fuzzing with Selective Path Exploration
 
-[\[paper\]](https://csdl-downloads.ieeecomputer.org/proceedings/sp/2023/9336/00/933600b050.pdf?Expires=1672859666\&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jc2RsLWRvd25sb2Fkcy5pZWVlY29tcHV0ZXIub3JnL3Byb2NlZWRpbmdzL3NwLzIwMjMvOTMzNi8wMC85MzM2MDBiMDUwLnBkZiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY3Mjg1OTY2Nn19fV19\&Signature=IHxAaMfG4NH8KIS~~p~jcceRLTaa2g~ycPozrqmd32BjBgMJubIjijrHoqnFJajhk0yEQgQXsf8z4PzsWXSV4XpI1m6AbpVYDib-YC6nr3DHheezNDdWFkwv8vI2jcMuxBsRU7mgZ7hT89YtD1OM1USnlaEXmzfPVJ~o0AJKD44isdnfnIPNLo2u~pIme04mFmR-xP~k8TMv-44jQ6O~ktmABwsR2TEY9dPL7BZI8BgOMqVXFciFiAMN5nfbT8qcWP0zDajFXl4Dv1cGL0axOFx-fnxARaNeTIXFGpad8aNV0uFcWKAGvZSKRnJv9WFiK5Ya57MjvUT217i4~1ZYnQ__\&Key-Pair-Id=K12PMWTCQBDMDT) [\[project\]](https://github.com/cuhk-seclab/SelectFuzz) ⭐ 73 | 🐛 11 | 🌐 C | 📅 2024-06-26
+[\[paper\]](https://csdl-downloads.ieeecomputer.org/proceedings/sp/2023/9336/00/933600b050.pdf?Expires=1672859666\&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jc2RsLWRvd25sb2Fkcy5pZWVlY29tcHV0ZXIub3JnL3Byb2NlZWRpbmdzL3NwLzIwMjMvOTMzNi8wMC85MzM2MDBiMDUwLnBkZiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY3Mjg1OTY2Nn19fV19\&Signature=IHxAaMfG4NH8KIS~~p~jcceRLTaa2g~ycPozrqmd32BjBgMJubIjijrHoqnFJajhk0yEQgQXsf8z4PzsWXSV4XpI1m6AbpVYDib-YC6nr3DHheezNDdWFkwv8vI2jcMuxBsRU7mgZ7hT89YtD1OM1USnlaEXmzfPVJ~o0AJKD44isdnfnIPNLo2u~pIme04mFmR-xP~k8TMv-44jQ6O~ktmABwsR2TEY9dPL7BZI8BgOMqVXFciFiAMN5nfbT8qcWP0zDajFXl4Dv1cGL0axOFx-fnxARaNeTIXFGpad8aNV0uFcWKAGvZSKRnJv9WFiK5Ya57MjvUT217i4~1ZYnQ__\&Key-Pair-Id=K12PMWTCQBDMDT) [\[project\]](https://github.com/cuhk-seclab/SelectFuzz) ⭐ 74 | 🐛 11 | 🌐 C | 📅 2024-06-26
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1169,7 +1169,7 @@ Rust is a popular systems programming language that provides strong memory safet
 
 ### \[CCS'26] PBFuzz: Agentic Directed Fuzzing for PoV Generation
 
-[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 19 | 🐛 0 | 🌐 TypeScript | 📅 2026-11-05 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-08-16
+[\[paper\]](https://arxiv.org/pdf/2512.04611) [\[project\]](https://github.com/sgzeng/pbfuzz) ⭐ 19 | 🐛 1 | 🌐 TypeScript | 📅 2026-11-05 [\[artifact\]](https://github.com/R-Fuzz/magma/tree/pbfuzz) ⭐ 2 | 🐛 0 | 🌐 PHP | 📅 2026-08-16
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1250,4 +1250,4 @@ The evaluation of MIST on open-source projects led to the identification of four
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-08._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-09._
