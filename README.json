@@ -73,7 +73,7 @@
             "open_issues": 3,
             "owner": "strongcourage",
             "repo": "uafuzz",
-            "stars": 353,
+            "stars": 354,
             "topics": [
               "fuzzing"
             ]
@@ -853,7 +853,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-09T16:38:29.966Z",
+    "last_updated": "2026-11-10T15:01:45.919Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
@@ -865,7 +865,7 @@
       "open_issues": 0,
       "owner": "strongcourage",
       "repo": "awesome-directed-fuzzing",
-      "stars": 607,
+      "stars": 608,
       "topics": [
         "awesome",
         "awesome-list",
