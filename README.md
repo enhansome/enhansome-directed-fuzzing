@@ -596,7 +596,7 @@ as a solution. Hybrid Testing combines static and dynamic analyses, leveraging s
 
 ### \[Usenix'23] DDRace: Finding Concurrency UAF Vulnerabilities in Linux Drivers with Directed Fuzzing
 
-[\[paper\]](https://www.usenix.org/system/files/usenixsecurity23-yuan-ming.pdf) [\[slides\]](https://www.usenix.org/system/files/sec23_slides_yuan.pdf) [\[project\]](https://github.com/vul337/DDRace) ⭐ 11 | 🐛 1 | 📅 2023-02-28
+[\[paper\]](https://www.usenix.org/system/files/usenixsecurity23-yuan-ming.pdf) [\[slides\]](https://www.usenix.org/system/files/sec23_slides_yuan.pdf) [\[project\]](https://github.com/vul337/DDRace) ⭐ 10 | 🐛 1 | 📅 2023-02-28
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1250,4 +1250,4 @@ The evaluation of MIST on open-source projects led to the identification of four
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-10._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-11._

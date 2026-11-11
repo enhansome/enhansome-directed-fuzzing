@@ -439,7 +439,7 @@
             "open_issues": 1,
             "owner": "vul337",
             "repo": "DDRace",
-            "stars": 11,
+            "stars": 10,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -853,7 +853,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-10T15:01:45.919Z",
+    "last_updated": "2026-11-11T14:33:23.708Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
