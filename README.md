@@ -336,7 +336,7 @@ The Android system services usually play a critical role in running multiple imp
 
 ### \[ICSE'22] Linear-time Temporal Logic guided Greybox Fuzzing
 
-[\[paper\]](https://abhikrc.com/pdf/ICSE22-LTLFuzz.pdf) [\[project\]](https://github.com/ltlfuzzer/LTL-Fuzzer/) ⭐ 62 | 🐛 5 | 🌐 C | 📅 2024-04-01 [\[talk\]](https://www.youtube.com/watch?v=zwAN4uNPs8M)
+[\[paper\]](https://abhikrc.com/pdf/ICSE22-LTLFuzz.pdf) [\[project\]](https://github.com/ltlfuzzer/LTL-Fuzzer/) ⭐ 63 | 🐛 5 | 🌐 C | 📅 2024-04-01 [\[talk\]](https://www.youtube.com/watch?v=zwAN4uNPs8M)
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1250,4 +1250,4 @@ The evaluation of MIST on open-source projects led to the identification of four
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-15._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-16._
