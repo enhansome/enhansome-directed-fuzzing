@@ -220,7 +220,7 @@
             "open_issues": 32,
             "owner": "Matheus-Garbelini",
             "repo": "braktooth_esp32_bluetooth_classic_attacks",
-            "stars": 598,
+            "stars": 599,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -810,6 +810,33 @@
       "items": [
         {
           "node_type": "item",
+          "title": "spfuzz-pusher/spfuzz",
+          "description": "spfuzz-pusher/spfuzz",
+          "children": [],
+          "repo_info": {
+            "archived": false,
+            "description": "The cleaned-up version of SPFuzz",
+            "homepage": null,
+            "id": 1363696698,
+            "language": "C",
+            "license": null,
+            "last_commit": "2026-11-16T00:14:01Z",
+            "open_issues": 0,
+            "owner": "spfuzz-pusher",
+            "repo": "spfuzz",
+            "stars": 0,
+            "topics": []
+          },
+          "first_seen": "2026-11-17T16:14:57.774Z"
+        }
+      ],
+      "title": "[CCS'26] SPFUZZ: Validating Secretly Patched Vulnerabilities by Patch Guided Fuzzing"
+    },
+    {
+      "description": null,
+      "items": [
+        {
+          "node_type": "item",
           "title": "alessandroPalazzolo/mist",
           "description": "alessandroPalazzolo/mist",
           "children": [],
@@ -853,7 +880,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-16T16:05:33.928Z",
+    "last_updated": "2026-11-17T16:14:57.774Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
@@ -861,7 +888,7 @@
       "id": 246256763,
       "language": null,
       "license": null,
-      "last_commit": "2026-10-30T06:27:00Z",
+      "last_commit": "2026-11-17T08:50:07Z",
       "open_issues": 0,
       "owner": "strongcourage",
       "repo": "awesome-directed-fuzzing",
@@ -876,7 +903,7 @@
         "testing"
       ]
     },
-    "original_repository_sha": "319f6c69b0411e4e5b7de51f29f5a772fbfbb49b",
+    "original_repository_sha": "9465b9f2e0eadef25540cc26ccbdfafa933ddbf0",
     "enhanced_repository": "enhansome/enhansome-directed-fuzzing",
     "enhanced_repository_description": null,
     "title": "awesome-directed-fuzzing with stars"

@@ -365,7 +365,7 @@ Computer systems are deeply integrated into our daily routines such as online sh
 
 ### \[Usenix'22] BRAKTOOTH: Causing Havoc on Bluetooth Link Manager via Directed Fuzzing
 
-[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 598 | 🐛 32 | 📅 2024-08-31
+[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 599 | 🐛 32 | 📅 2024-08-31
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1178,6 +1178,19 @@ Proof-of-Vulnerability (PoV) input generation is a critical task in software sec
 
 ***
 
+### \[CCS'26] SPFUZZ: Validating Secretly Patched Vulnerabilities by Patch Guided Fuzzing
+
+[\[paper\]](https://dl.acm.org/doi/epdf/10.1145/3830454.3846746) [\[project\]](https://github.com/spfuzz-pusher/spfuzz) ⭐ 0 | 🐛 0 | 🌐 C | 📅 2026-11-16
+
+<details>
+  <summary>Click to see the abstract!</summary>
+Secretly patched vulnerabilities (i.e., vulnerabilities fixed without public disclosure) are common in open-source software and can be easily overlooked during downstream security maintenance. Existing approaches mainly rely on static analysis or machine learning to identify candidate security patches. However, they do not directly determine whether such patch candidates actually correspond to reachable vulnerability-triggering executions in the pre-patch program.
+This paper presents SPFuzz, a patch-guided directed fuzzing framework for detecting secretly patched vulnerabilities through proof-of-concept (PoC) generation. Rather than classifying or validating patches themselves, SPFuzz takes a candidate security patch as input and uses it to attempt to trigger the underlying pre-patch vulnerability, thereby providing direct runtime evidence of the hidden risk. SPFuzz derives Vulnerability Triggering States (VTS), a patch-derived guidance signal that steers fuzzing toward vulnerability-triggering executions. SPFuzz further supports coordinated two-dimensional fuzzing across user inputs and command-line options, enhancing the effectiveness of PoC generation and enabling a more direct assessment of secretly patched vulnerabilities from candidate security patches.
+We evaluate SPFuzz on two datasets. On 34 recent CVE patches, SPFuzz successfully generated 18 PoCs, drastically outperforming option-aware fuzzers (18 vs. 7 cases). SPFuzz also outperforms state-of-the-art directed fuzzers when only the correct options and patch sites are provided. Furthermore, in a vulnerability discovery experiment on 110 candidate security patches, SPFuzz detected 17 latent vulnerabilities across seven well-tested open-source projects, yielding 4 new CVEs.
+</details>
+
+***
+
 ### \[arxiv'26] BullsEye: Directed Firmware Fuzzing
 
 [\[paper\]](https://arxiv.org/pdf/2608.17729)
@@ -1250,4 +1263,4 @@ The evaluation of MIST on open-source projects led to the identification of four
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-16._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-17._
