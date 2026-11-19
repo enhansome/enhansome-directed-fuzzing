@@ -972,7 +972,7 @@ Directed fuzzing is a critical technique in cybersecurity, targeting specific se
 
 ### \[EuroS\&P'25] LibAFLGO: Evaluating and Advancing Directed Greybox Fuzzing
 
-[\[paper\]](https://download.vusec.net/papers/libaflgo_eurosp25.pdf) [\[project\]](https://github.com/vusec/libaflgo) ⭐ 26 | 🐛 3 | 🌐 Rust | 📅 2026-03-04
+[\[paper\]](https://download.vusec.net/papers/libaflgo_eurosp25.pdf) [\[project\]](https://github.com/vusec/libaflgo) ⭐ 27 | 🐛 3 | 🌐 Rust | 📅 2026-03-04
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1263,4 +1263,4 @@ The evaluation of MIST on open-source projects led to the identification of four
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-18._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-19._

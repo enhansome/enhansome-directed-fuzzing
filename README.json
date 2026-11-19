@@ -709,7 +709,7 @@
             "open_issues": 3,
             "owner": "vusec",
             "repo": "libaflgo",
-            "stars": 26,
+            "stars": 27,
             "topics": [
               "directed-fuzzing",
               "fuzzing",
@@ -880,7 +880,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-18T15:49:24.535Z",
+    "last_updated": "2026-11-19T15:53:55.148Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
