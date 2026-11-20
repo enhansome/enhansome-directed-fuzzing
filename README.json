@@ -73,7 +73,7 @@
             "open_issues": 3,
             "owner": "strongcourage",
             "repo": "uafuzz",
-            "stars": 354,
+            "stars": 353,
             "topics": [
               "fuzzing"
             ]
@@ -220,7 +220,7 @@
             "open_issues": 32,
             "owner": "Matheus-Garbelini",
             "repo": "braktooth_esp32_bluetooth_classic_attacks",
-            "stars": 599,
+            "stars": 598,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -880,7 +880,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-19T15:53:55.148Z",
+    "last_updated": "2026-11-20T15:37:22.811Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
@@ -892,7 +892,7 @@
       "open_issues": 0,
       "owner": "strongcourage",
       "repo": "awesome-directed-fuzzing",
-      "stars": 608,
+      "stars": 607,
       "topics": [
         "awesome",
         "awesome-list",

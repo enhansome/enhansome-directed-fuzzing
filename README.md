@@ -144,7 +144,7 @@ ParmeSan, a new sanitizer-guided fuzzer that builds on this observation. We show
 
 ### \[RAID'20] Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities
 
-[\[paper\]](https://arxiv.org/pdf/2002.10751.pdf) [\[project\]](https://github.com/strongcourage/uafuzz) ⭐ 354 | 🐛 3 | 🌐 C | 📅 2023-09-25
+[\[paper\]](https://arxiv.org/pdf/2002.10751.pdf) [\[project\]](https://github.com/strongcourage/uafuzz) ⭐ 353 | 🐛 3 | 🌐 C | 📅 2023-09-25
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -365,7 +365,7 @@ Computer systems are deeply integrated into our daily routines such as online sh
 
 ### \[Usenix'22] BRAKTOOTH: Causing Havoc on Bluetooth Link Manager via Directed Fuzzing
 
-[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 599 | 🐛 32 | 📅 2024-08-31
+[\[paper\]](https://asset-group.github.io/papers/BrakTooth.pdf) [\[project\]](https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks) ⭐ 598 | 🐛 32 | 📅 2024-08-31
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1263,4 +1263,4 @@ The evaluation of MIST on open-source projects led to the identification of four
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-19._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-20._
