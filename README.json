@@ -810,33 +810,6 @@
       "items": [
         {
           "node_type": "item",
-          "title": "spfuzz-pusher/spfuzz",
-          "description": "spfuzz-pusher/spfuzz",
-          "children": [],
-          "repo_info": {
-            "archived": false,
-            "description": "The cleaned-up version of SPFuzz",
-            "homepage": null,
-            "id": 1363696698,
-            "language": "C",
-            "license": null,
-            "last_commit": "2026-11-16T00:14:01Z",
-            "open_issues": 0,
-            "owner": "spfuzz-pusher",
-            "repo": "spfuzz",
-            "stars": 0,
-            "topics": []
-          },
-          "first_seen": "2026-11-17T16:14:57.774Z"
-        }
-      ],
-      "title": "[CCS'26] SPFUZZ: Validating Secretly Patched Vulnerabilities by Patch Guided Fuzzing"
-    },
-    {
-      "description": null,
-      "items": [
-        {
-          "node_type": "item",
           "title": "alessandroPalazzolo/mist",
           "description": "alessandroPalazzolo/mist",
           "children": [],
@@ -880,7 +853,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-20T15:37:22.811Z",
+    "last_updated": "2026-11-21T14:47:40.068Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",

@@ -1180,7 +1180,7 @@ Proof-of-Vulnerability (PoV) input generation is a critical task in software sec
 
 ### \[CCS'26] SPFUZZ: Validating Secretly Patched Vulnerabilities by Patch Guided Fuzzing
 
-[\[paper\]](https://dl.acm.org/doi/epdf/10.1145/3830454.3846746) [\[project\]](https://github.com/spfuzz-pusher/spfuzz) ⭐ 0 | 🐛 0 | 🌐 C | 📅 2026-11-16
+[\[paper\]](https://dl.acm.org/doi/epdf/10.1145/3830454.3846746) [\[project\]](https://github.com/spfuzz-pusher/spfuzz)
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1263,4 +1263,4 @@ The evaluation of MIST on open-source projects led to the identification of four
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-20._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-21._
