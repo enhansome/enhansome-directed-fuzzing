@@ -628,7 +628,7 @@
             "open_issues": 0,
             "owner": "Siyuan-Li201",
             "repo": "TransferFuzz",
-            "stars": 16,
+            "stars": 17,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -853,7 +853,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-23T18:28:32.950Z",
+    "last_updated": "2026-11-24T17:56:33.801Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",

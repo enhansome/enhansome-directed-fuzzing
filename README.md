@@ -868,7 +868,7 @@ in describing the difficulty of triggering the target vulnerability. In addition
 
 ### \[arxiv'24] TransferFuzz: Fuzzing with Historical Trace for Verifying Propagated Vulnerability Code
 
-[\[paper\]](https://arxiv.org/pdf/2411.18347) [\[project\]](https://github.com/Siyuan-Li201/TransferFuzz) ⭐ 16 | 🐛 0 | 🌐 C | 📅 2025-03-27
+[\[paper\]](https://arxiv.org/pdf/2411.18347) [\[project\]](https://github.com/Siyuan-Li201/TransferFuzz) ⭐ 17 | 🐛 0 | 🌐 C | 📅 2025-03-27
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1263,4 +1263,4 @@ The evaluation of MIST on open-source projects led to the identification of four
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-23._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-24._
