@@ -466,7 +466,7 @@
             "open_issues": 4,
             "owner": "5hadowblad3",
             "repo": "Titan",
-            "stars": 57,
+            "stars": 58,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -853,7 +853,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-26T17:05:12.508Z",
+    "last_updated": "2026-11-27T16:49:48.584Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
@@ -865,7 +865,7 @@
       "open_issues": 0,
       "owner": "strongcourage",
       "repo": "awesome-directed-fuzzing",
-      "stars": 607,
+      "stars": 608,
       "topics": [
         "awesome",
         "awesome-list",

@@ -627,7 +627,7 @@ and 73% higher test case throughput, respectively); (2) reachability (achieving 
 
 ### \[S\&P'24] Titan : Efficient Multi-target Directed Greybox Fuzzing
 
-[\[paper\]](https://5hadowblad3.github.io/files/Oakland24-Titan.pdf) [\[project\]](https://github.com/5hadowblad3/Titan) ⭐ 57 | 🐛 4 | 🌐 Shell | 📅 2026-07-30
+[\[paper\]](https://5hadowblad3.github.io/files/Oakland24-Titan.pdf) [\[project\]](https://github.com/5hadowblad3/Titan) ⭐ 58 | 🐛 4 | 🌐 Shell | 📅 2026-07-30
 
 <details>
   <summary>Click to see the abstract!</summary>
@@ -1263,4 +1263,4 @@ The evaluation of MIST on open-source projects led to the identification of four
 
 ***
 
-> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-26._
+> _Enhansomed by [enhansome](https://github.com/enhansome) on 2026-11-27._
