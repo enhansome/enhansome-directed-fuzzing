@@ -682,7 +682,7 @@
             "open_issues": 0,
             "owner": "vul337",
             "repo": "IDFuzz",
-            "stars": 94,
+            "stars": 95,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -768,7 +768,7 @@
             "open_issues": 1,
             "owner": "vul337",
             "repo": "TrigFuzz",
-            "stars": 41,
+            "stars": 42,
             "topics": []
           },
           "first_seen": "2026-08-28T18:50:02.983Z"
@@ -853,7 +853,7 @@
     }
   ],
   "metadata": {
-    "last_updated": "2026-11-27T16:49:48.584Z",
+    "last_updated": "2026-11-28T15:41:10.182Z",
     "original_repository_info": {
       "archived": false,
       "description": "A curated list of awesome directed fuzzing research papers",
